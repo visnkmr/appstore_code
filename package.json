@@ -1,0 +1,16 @@
+{
+  "name": "homepage",
+  "version": "0.0.1",
+  "description": "homepage",
+  "scripts": {},
+  "author": "visnkmr",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "@types/react": "^18.2.6",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4"
+  }
+}
