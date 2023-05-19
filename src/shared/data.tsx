@@ -5,7 +5,7 @@ export const stores: Storelist = {
       {
         name: 'Github',
         link: 'https://github.com/visnkmr',
-        src: "http://github.com/badge",
+        src: "https://raw.githubusercontent.com/patzly/grocy-android/master/assets/badge_github.png",
         alt: 'Github',
       },
       {
