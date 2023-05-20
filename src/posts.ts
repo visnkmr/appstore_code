@@ -40,10 +40,11 @@ export const fetchapps = async (fromwhere:string) => {
 /** */
 export const findLatestapps= async (fromwhere:string)=> {
   // console.log(fromwhere)
-  const _count =  4;
+  // const _count =  4;
   const apps = await fetchapps(fromwhere);
 
-  return apps ? apps.slice(_count * -1) : [];
+  return apps;
+  // return apps ? apps.slice(_count * -1) : [];
 };
 
 /** */

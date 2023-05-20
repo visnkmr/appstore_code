@@ -1,7 +1,6 @@
 import { reviews } from "../shared/data";
-import Aas from "../stores/aas";
-import Gp from "../stores/gp";
-import Mas from "../stores/mas";
+import StoreIcons from "./storeicons";
+
 
 export default function Reviews(){
     return (
@@ -9,10 +8,7 @@ export default function Reviews(){
         <div className="grid sm:grid-cols-2 xl:grid-cols-4">
         {reviews.map(({ appname, review, storename }: { 
     appname: string, review: string, storename: string }) => {
-      const showaas = storename==='aas'; 
-      const showgps =  storename===('gp'); 
-      const showmas =  storename===('ms'); 
-      const showgh =  storename===('gh');
+      
       return ( 
     <div 
     key={storename} 
@@ -24,26 +20,11 @@ export default function Reviews(){
       </div> */}
       <div className="text-center w-full">
       <h3 className="font-bold text-center m-4">{appname}</h3>
-      <p className="line-clamp-4 text-center">{review}</p>
-      <h5 className="font-bold text-center m-4">{storename}</h5>
+      <p className="line-clamp-2 text-center">{review}</p>
+      {/* <h5 className="font-bold text-center m-4">{storename}</h5> */}
 
       {/* <img src={image} className="w-32"/> */}
-      <div className="flex items-center justify-center">
-      {showaas && (
-      <Aas/>
-      )} 
-      {showgps && (
-      <Gp/>
-      )} 
-      {showmas && (
-      <Mas/>
-      )} 
-      {showgh && (
-      <span className="flex items-center justify-center">
-        Github
-      </span>
-      )}
-      </div>
+      <StoreIcons{...{storename:storename,w:0}}/>
       </div>
     </div>
       );

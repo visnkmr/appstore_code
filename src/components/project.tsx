@@ -8,16 +8,14 @@ import Mas from "../stores/mas"
 
    
 import { findLatestapps } from "../posts";
+import StoreIcons from "./storeicons";
+import LineClamp from "./LineClamp";
 async function appsfetcher() {
   const apps = await findLatestapps("projects");
   return (
     <>
-  {apps.map(({ slug, title, image,tags, content,excerpt }: { 
-    slug: string, title: string, image: string, tags:Array<string>,content:string, excerpt:string }) => {
-      const showaas = tags.includes('aas'); 
-      const showgps = tags.includes('gp'); 
-      const showmas = tags.includes('ms'); 
-      const showgh = tags.includes('gh');
+  {apps.map(({ slug, title, image,tags, content,excerpt,download }: { 
+    slug: string, title: string, image: string, tags:Array<string>,content:string, excerpt:string,download:string }) => {
       return ( 
     <div 
     key={slug} 
@@ -29,26 +27,15 @@ async function appsfetcher() {
       </div> */}
       <div className="text-center w-full">
       <h3 className="font-bold text-center m-4">{title}</h3>
-      <p className="line-clamp-4 text-center">{content}</p>
+      <LineClamp text={content} lines={2} />
+
+      {/* <p className="line-clamp-2 text-center">{content}</p> */}
       <h5 className="line-clamp-2 font-bold text-center m-4">{excerpt}</h5>
 
       {/* <img src={image} className="w-32"/> */}
-      <div className="flex items-center justify-center">
-      {showaas && (
-      <Aas/>
-      )} 
-      {showgps && (
-      <Gp/>
-      )} 
-      {showmas && (
-      <Mas/>
-      )} 
-      {showgh && (
-      <span className="flex items-center justify-center">
-        Github
-      </span>
-      )}
-      </div>
+      <StoreIcons storename={tags} w={1}/>
+      {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
+      <LineClamp className="font-bold text-center m-4" text={download} lines={2}/>
       </div>
     </div>
       );
