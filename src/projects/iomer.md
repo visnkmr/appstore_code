@@ -5,6 +5,7 @@ description: 'A simple, High Performance file explorer built in rust for PC.'
 excerpt: 'superfast'
 image: ''
 tags: [gh]
+oss: t
 ---
 
 A simple, High Performance file explorer built in rust for PC.
