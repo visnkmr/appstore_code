@@ -1,4 +1,5 @@
 import { reviews } from "../shared/data";
+import LineClamp from "./LineClamp";
 import StoreIcons from "./storeicons";
 
 
@@ -20,7 +21,7 @@ export default function Reviews(){
       </div> */}
       <div className="text-center w-full">
       <h3 className="font-bold text-center m-4">{appname}</h3>
-      <p className="line-clamp-2 text-center">{review}</p>
+      <LineClamp className="text-center" lines={2} text={review}/>
       {/* <h5 className="font-bold text-center m-4">{storename}</h5> */}
 
       {/* <img src={image} className="w-32"/> */}

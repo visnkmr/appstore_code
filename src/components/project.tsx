@@ -30,7 +30,7 @@ async function appsfetcher() {
       <LineClamp text={content} lines={2} />
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
-      <h5 className="line-clamp-2 font-bold text-center m-4">{excerpt}</h5>
+      <LineClamp text={excerpt} className="font-bold text-center m-4"/>
 
       {/* <img src={image} className="w-32"/> */}
       <StoreIcons storename={tags} w={1}/>
