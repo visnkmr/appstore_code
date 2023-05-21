@@ -1,10 +1,6 @@
 // 'use client';
 
-import React from "react";
 // import { useState } from "react";
-import Aas from "../stores/aas"
-import Gp from "../stores/gp"
-import Mas from "../stores/mas"
 
    
 import { findLatestapps } from "../posts";

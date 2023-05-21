@@ -1,12 +1,28 @@
+// 'use client'
+
 import React from "react";
 import Topthread from "./topthread";
 import DarkButton from "../../app/but";
 import Stores from "./Stores";
-import Storelist from "../shared/types";
+// import Storelist from "../shared/types";
 import { stores } from "../shared/data";
+// import showon from '../../app/but'
+// import { useEffect } from 'react';
+
 export default function Homepage(){
+    // var randval="no";
+    // useEffect(() => {
+    //     if(showon()){
+    //         randval="ol"
+    //     }else{
+    //         randval="po"
+    //     }
+    //     // This function will run whenever the value of showon changes
+    //     console.log('showon has changed to', showon);
+    //   }, [showon]);
     return(
         <>
+        
         <div className="bg-slate-100">
         <Topthread/>
         <DarkButton/>
