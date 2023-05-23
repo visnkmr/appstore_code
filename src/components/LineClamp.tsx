@@ -38,7 +38,7 @@ const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => 
     <div className={classnames(clamped ? `line-clamp-${lines}` : "", className)} ref={containerRef} onClick={toggleClass} {...props}>
       {text}
       {showButton && (
-        <button onClick={handleClick} className="absolute right-0 bottom-0 bg-white text-blue-500 hover:text-blue-700">
+        <button onClick={handleClick} className="absolute right-0 bottom-0 text-blue-500 hover:text-blue-700">
           {clamped ? "..." : "<See Less"}
         </button>
       )}

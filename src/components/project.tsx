@@ -7,7 +7,8 @@ import { findLatestapps } from "../posts";
 import StoreIcons from "./storeicons";
 import LineClamp from "./LineClamp";
 async function appsfetcher() {
-  const apps = await findLatestapps("projects");
+  var apps = await findLatestapps("projects");
+  //  apps = await findLatestapps("projects/inp");
   return (
     <>
   {apps.map(({ slug, title, image,tags, content,excerpt,download }: { 

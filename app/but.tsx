@@ -7,7 +7,7 @@ export default function DarkButton() {
   // console.log(localStorage.getItem("dark"))
   const [showon, setshow] = useLocalStorage("dark",true);
   // const [showon, setshow] = useLocalStorage("dark",true);
-  console.log("onload"+showon)
+  // console.log("onload"+showon)
   useEffect(() => {
     const darkIcon = document.getElementById("theme-toggle-dark-icon")!;
     const lightIcon = document.getElementById("theme-toggle-light-icon")!;
@@ -28,7 +28,7 @@ export default function DarkButton() {
         id="theme-toggle"
         type="button"
         className="text-gray-500  rounded-lg text-sm p-2.5"
-        onClick={() => setshow(!showon)}
+        onClick={() => setshow((value:boolean)=>{return !value})}
       >
         <svg
           id="theme-toggle-dark-icon"

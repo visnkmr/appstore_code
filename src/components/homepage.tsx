@@ -25,18 +25,22 @@ export default function Homepage(){
         
         <div className="bg-slate-100">
         <Topthread/>
-        <DarkButton/>
+        {/* <DarkButton/> */}
         <div className="mx-auto px-4 max-w-7xl sm:px-6 2xl:h-auto md:flex sm:h-screen ">
             <div className="block md:flex lg:py-16 md:py-12 md:text-left py-12 text-center">
             <div className="flex items-center basis-3/5 md:pb-0 md:pr-16 md:py-0 mx-auto pb-12">
-            <div>
-            <h1 className="font-bold mb-4 font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-5xl"><span className="hidden">Coding with Passion and Purpose.</span> Products available for Android, Fire OS, Windows, Linux, Mac, Web Android.
+            <div className="w-full">
+            <h1 className="font-bold mb-4 font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-5xl"><span className="hidden">Coding with Passion and Purpose.</span> 
+            {/* Innovative software solutions crafted with expertise. */}
+            Building efficient and effective software for a better world
+            {/* Products available for Android, Fire OS, Windows, Linux, Mac, Web Android. */}
             </h1>
-            <div className="mx-auto max-w-3xl">
-            <p className="text-gray-600 dark:text-slate-400 text-xl mb-8">
-            Our products have featured on most media around the world, in most languages. 
+            <div className="mx-auto">
+            <p className="text-gray-900 dark:text-slate-400 text-xl mb-8">
+            {/* Our products have featured on most media outlets around the world, in most languages.  */}
+            Products available for Android, Fire OS, Windows, Linux, Mac, Web.
             </p>
-            <div className="flex justify-center flex-col flex-nowrap gap-4 m-auto max-w-xs md:justify-start md:m-0 sm:flex-row sm:max-w-md">
+            <div className="flex items-center justify-center flex-col flex-nowrap gap-4 m-auto w-full md:justify-start md:m-0 sm:flex-row sm:w-full">
             
                 <Stores {...stores} />
             </div>

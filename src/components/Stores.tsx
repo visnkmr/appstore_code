@@ -4,7 +4,7 @@ export default function storeslist({stores}:Storelist){
     return (
         <>
         {stores.map(({ src, alt, link }, index) => (
-            <div className="flex w-full sm:w-auto">
+            <div className="flex sm:w-auto">
                 <a 
                 className="w-full btn btn-primary sm:mb-0" 
                 href={link} 
