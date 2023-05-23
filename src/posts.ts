@@ -26,11 +26,11 @@ const load = (fromwhere:string) => {
   return apps;
 };
 
-let _apps:any;
 
 /** */
 export const fetchapps = async (fromwhere:string) => {
   // console.log(fromwhere)
+  let _apps:any;
   _apps = _apps || load(fromwhere);
   // console.log(fromwhere)
 
