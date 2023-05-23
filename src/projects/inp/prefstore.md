@@ -1,12 +1,12 @@
 ---
 publishDate: ''
-title: 'Iomer'
+title: 'Prefstore'
 description: 'A simple, High Performance file explorer built in rust for PC.'
-excerpt: 'superfast'
+excerpt: ''
 download: ''
 image: ''
 tags: [gh]
 oss: t
 ---
 
-A simple, High Performance file explorer built in rust for PC.
+Rust lib to save preferences with one line of code.
