@@ -31,9 +31,9 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
       {showgps && (
       <Gp/>
       )} 
-      {showmas && (
+      {/* {showmas && (
       <Mas/>
-      )} 
+      )}  */}
       {showgh && (
       <span className="flex items-center justify-center">
         Github

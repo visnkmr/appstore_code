@@ -11,11 +11,10 @@ async function appsfetcher() {
   //  apps = await findLatestapps("projects/inp");
   return (
     <>
-  {apps.map(({ slug, title, image,tags, content,excerpt,download }: { 
-    slug: string, title: string, image: string, tags:Array<string>,content:string, excerpt:string,download:string }) => {
+  {apps.map((app:any) => {
       return ( 
     <div 
-    key={slug} 
+    key={app.slug} 
     className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
       {/* <div className="w-120 p-4">
           <img
@@ -23,16 +22,16 @@ async function appsfetcher() {
           className="w-120 "/>
       </div> */}
       <div className="text-center w-full">
-      <h3 className="font-bold text-center m-4">{title}</h3>
-      <LineClamp text={content} lines={2} />
+      <h3 className="font-bold text-center m-4">{app.title}</h3>
+      <LineClamp text={app.content} lines={2} />
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
-      <LineClamp text={excerpt} className="font-bold text-center m-4"/>
+      <LineClamp text={app.excerpt} className="font-bold text-center m-4"/>
 
       {/* <img src={image} className="w-32"/> */}
-      <StoreIcons storename={tags} w={1}/>
+      <StoreIcons storename={app.tags} w={1}/>
       {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
-      <LineClamp className="font-bold text-center m-4" text={download} lines={2}/>
+      <LineClamp className="font-bold text-center m-4" text={app.download} lines={2}/>
       </div>
     </div>
       );

@@ -5,7 +5,7 @@ export const stores: Storelist = {
       {
         name: 'Github',
         link: 'https://github.com/visnkmr',
-        src: "https://raw.githubusercontent.com/patzly/grocy-android/master/assets/badge_github.png",
+        src: "https://raw.githubusercontent.com/visnkmr/.github/dee2748a4392c7c5f034d062345a02cf01b6fbb4/sogh.svg",
         alt: 'Github',
       },
       {
@@ -20,12 +20,12 @@ export const stores: Storelist = {
         src: 'https://play.google.com/intl/en_us/badges/images/badge_new.png',
         alt: 'Google Play',
       },
-      {
-        name:'Microsoft Store',
-        link: 'https://apps.microsoft.com/store/search?publisher=Vishnu%20N%20K',
-        src: 'https://get.microsoft.com/images/en-us%20dark.svg',
-        alt: 'Microsoft store',
-      },
+      // {
+      //   name:'Microsoft Store',
+      //   link: 'https://apps.microsoft.com/store/search?publisher=Vishnu%20N%20K',
+      //   src: 'https://get.microsoft.com/images/en-us%20dark.svg',
+      //   alt: 'Microsoft store',
+      // },
     ],
   };
   
@@ -64,5 +64,11 @@ export const stores: Storelist = {
       storename:"aas"
     },
 
-  ]
-  ;
+  ];
+
+  export const apab = new Map<string, string>([
+    ['bapl', 'Background Apps and Process List'],
+    ['fx', 'File Explorer'],
+    ['wfm', 'Wireless File Manager']
+  ]);
+  
