@@ -10,7 +10,7 @@ export default function Reviews(){
       
       return ( 
     <div 
-    key={review.storename} 
+    // key={review.} 
     className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 w-302 ">             
       {/* <div className="w-120 p-4">
           <img

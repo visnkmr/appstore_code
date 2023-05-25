@@ -2,11 +2,11 @@
 import fs from 'fs';
 // import appdirs from 'appdirs';
 export default function gtr(){
-  const appdirs = require('appdirs');
-  const path = require('path');
-  const configDir = appdirs.userConfigDir();
-  const configFilePath = path.join(configDir, 'gtr', 'gtr.json');
-  const file = fs.readFileSync(configFilePath);
+  // const appdirs = require('appdirs');
+  // const path = require('path');
+  // const configDir = appdirs.userConfigDir();
+  // const configFilePath = path.join(configDir, 'gtr', 'gtrl.json');
+  const file = fs.readFileSync('/home/roger/.config/gtr/gtrl.json');
   const data = file.toString();
 //   console.log(data)
 //   const data = JSON.parse(file.toString());

@@ -36,7 +36,12 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
       )}  */}
       {showgh && (
       <span className="flex items-center justify-center">
+        <a 
+        href="https://github.com/visnkmr" 
+        rel="noopener" 
+        target="_blank">
         Github
+        </a>
       </span>
       )}
       </div>

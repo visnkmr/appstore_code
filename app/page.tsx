@@ -10,7 +10,7 @@ import Commits from "../src/components/commits";
 // import dwc from "../src/dealcommits";
 // import gtr from "./api/gtr";
 
-export default function Page() {
+export default async function Page() {
   // console.log("hello world")
   // console.log(JSON.parse(gtr()))
   // console.log(dwc())
@@ -21,8 +21,8 @@ export default function Page() {
       <Homepage/>
       {/* <Planglist/> */}
       <Commits/>
-      <Workinp/>
-      <Project/>
+      {await Workinp()}
+      {await Project()}
       <Ct/>
       <Footer/>
       </>

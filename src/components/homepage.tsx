@@ -24,10 +24,10 @@ export default function Homepage(){
     return(
         <>
         
-        <div className="bg-slate-100">
         <Topthread/>
+        <div className="w-full h-full">
         {/* <DarkButton/> */}
-        <div className="mx-auto px-4 sm:px-6 2xl:h-auto md:flex sm:h-screen ">
+        <div className="mx-auto px-4 sm:px-6 md:flex h-auto">
             <div className="block md:flex lg:py-16 md:py-12 md:text-left py-12 text-center">
             <div className="flex items-center basis-3/5 md:pb-0 md:pr-16 md:py-0 mx-auto pb-12">
             <div className="w-full">

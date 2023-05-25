@@ -1,40 +1,31 @@
 'use client';
-// import _ from 'lodash';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import debounce from 'lodash.debounce';
+import { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 
 interface LineClampProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
   lines?: number;
 }
-const debounce = (func: { (): void; (arg0: any): void; }, delay: number | undefined) => {
-  let timeoutId: string | number | NodeJS.Timeout | undefined;
-  return (...args:any) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      func(...args);
-    }, delay);
-  };
-};
+
 const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => {
   const [clamped, setClamped] = useState(true);
   const [showButton, setShowButton] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const checkButtonAvailability = useCallback(() => {
-    const hasClamping = containerRef.current!.clientHeight < containerRef.current!.scrollHeight;
-    setShowButton(hasClamping);
-  }, []);
+
   useEffect(() => {
-    
+    const checkButtonAvailability = debounce(() => {
+      const hasClamping = containerRef.current!.clientHeight < containerRef.current!.scrollHeight;
+      setShowButton(hasClamping);
+    }, 100);
 
     checkButtonAvailability();
-    const debouncedCheckButtonAvailability = debounce(checkButtonAvailability, 100);
-    window.addEventListener('resize', debouncedCheckButtonAvailability);
+    window.addEventListener('resize', checkButtonAvailability);
 
     return () => {
-      window.removeEventListener('resize', debouncedCheckButtonAvailability);
+      window.removeEventListener('resize', checkButtonAvailability);
     }
-  }, [checkButtonAvailability]);
+  }, []);
 
   const handleClick = () => setClamped(!clamped);
 
@@ -48,7 +39,7 @@ const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => 
       {text}
       {showButton && (
         <button onClick={handleClick} className="absolute right-0 bottom-0 text-blue-500 hover:text-blue-700">
-          {clamped ? "..." : "<See Less"}
+          {clamped ? "..." : "<"}
         </button>
       )}
     </div>

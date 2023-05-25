@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="m-10">
             <div className="">
               <span>
-                Copyright © {new Date().getFullYear()}. All rights are reserved
+                Copyright © {new Date().getFullYear()} Vishnu N K. All rights reserved.
               </span>
               <span className="float-right">
                 <a
@@ -24,9 +24,18 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   href="https://github.com/visnkmr"
-                  className="mr-5"
+                  className="mr-2"
                 >
                   Github
+                </a>
+                <a
+                  aria-label="github"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://vishnunkmr.t.me/"
+                  className="mr-5"
+                >
+                  Telegram
                 </a>
               </span>
             </div>

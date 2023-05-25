@@ -39,12 +39,13 @@ async function appsfetcher() {
   </>
   );
 }
-export default function Project() {
+export default async function Project() {
+
     // const [scroll, setScroll] = useState(false);
     return (
       <>
       <div className="grid sm:grid-cols-2 xl:grid-cols-4">
-      {appsfetcher()}
+      {await appsfetcher()}
       </div>
       </>
     );

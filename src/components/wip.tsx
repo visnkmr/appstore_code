@@ -27,14 +27,14 @@ async function appsfetcher() {
     </>
     );
   }
-export default function Workinp(){
+export default async function Workinp(){
     return (
         <>
-        <div className="p-2 flex flex-col items-center mt-20 w-full">
-        <div className='text-center font-bold mb-4 leading-tighter tracking-tighter md:px-0 md:text-[2.48rem] px-4 text-5xl m-15'>Recent Projects</div>
+        <div className="p-2 flex flex-col">
+        {/* <div className='text-center font-bold mb-4 leading-tighter tracking-tighter md:px-0 md:text-[2.48rem] px-4 text-5xl m-15'>Recent Projects</div> */}
 
-        <div className="mt-10 mb-8 grid text-center lg:mb-0 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-        {appsfetcher()}
+        <div className="mt-10 mb-8 grid text-center lg:mb-0 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 place-items-center">
+        {await appsfetcher()}
         </div>
         </div>
 
