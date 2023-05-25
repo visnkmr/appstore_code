@@ -1,31 +1,40 @@
 'use client';
-import _ from 'lodash';
-import { useState, useEffect, useRef } from 'react';
+// import _ from 'lodash';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import classnames from 'classnames';
 
 interface LineClampProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
   lines?: number;
 }
-
+const debounce = (func: { (): void; (arg0: any): void; }, delay: number | undefined) => {
+  let timeoutId: string | number | NodeJS.Timeout | undefined;
+  return (...args:any) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
 const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => {
   const [clamped, setClamped] = useState(true);
   const [showButton, setShowButton] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
+  const checkButtonAvailability = useCallback(() => {
+    const hasClamping = containerRef.current!.clientHeight < containerRef.current!.scrollHeight;
+    setShowButton(hasClamping);
+  }, []);
   useEffect(() => {
-    const checkButtonAvailability = _.debounce(() => {
-      const hasClamping = containerRef.current!.clientHeight < containerRef.current!.scrollHeight;
-      setShowButton(hasClamping);
-    }, 100);
+    
 
     checkButtonAvailability();
-    window.addEventListener('resize', checkButtonAvailability);
+    const debouncedCheckButtonAvailability = debounce(checkButtonAvailability, 100);
+    window.addEventListener('resize', debouncedCheckButtonAvailability);
 
     return () => {
-      window.removeEventListener('resize', checkButtonAvailability);
+      window.removeEventListener('resize', debouncedCheckButtonAvailability);
     }
-  }, []);
+  }, [checkButtonAvailability]);
 
   const handleClick = () => setClamped(!clamped);
 
