@@ -10,8 +10,8 @@ export default async function Iou(){
     return (
         <>
         {/* <div className="text-bold text-center">hello</div> */}
-        <Infiscrollcomp item={apps}/>
+        <Infiscrollcomp item={dwc("gtr.json",-1)}/>
         </>
 
     );
-}
+} 

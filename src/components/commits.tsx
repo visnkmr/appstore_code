@@ -13,7 +13,7 @@ export function appsfetcher() {
   //  apps = await findLatestapps("projects/inp");
   return (
     <>
-  {dwc().map((ic) => {
+  {dwc("gtrl.json",5).map((ic) => {
       return ( 
     <div 
     // key={ic.time} 

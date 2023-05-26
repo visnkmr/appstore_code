@@ -15,8 +15,10 @@ const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => 
 
   useEffect(() => {
     const checkButtonAvailability = debounce(() => {
-      const hasClamping = containerRef.current!.clientHeight < containerRef.current!.scrollHeight;
-      setShowButton(hasClamping);
+      if (containerRef.current) {
+        const hasClamping = containerRef.current.clientHeight < containerRef.current.scrollHeight;
+        setShowButton(hasClamping);
+      }
     }, 100);
 
     checkButtonAvailability();
@@ -24,7 +26,7 @@ const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => 
 
     return () => {
       window.removeEventListener('resize', checkButtonAvailability);
-    }
+    };
   }, []);
 
   const handleClick = () => setClamped(!clamped);
@@ -35,14 +37,14 @@ const LineClamp = ({ text, lines = 2, className, ...props }: LineClampProps) => 
 
   return (
     <div className='relative'>
-    <div className={classnames(clamped ? `line-clamp-${lines}` : "", className)} ref={containerRef} onClick={toggleClass} {...props}>
-      {text}
-      {showButton && (
-        <button onClick={handleClick} className="absolute right-0 bottom-0 text-blue-500 hover:text-blue-700">
-          {clamped ? "..." : "<"}
-        </button>
-      )}
-    </div>
+      <div className={classnames(clamped ? `line-clamp-${lines}` : "", className)} ref={containerRef} onClick={toggleClass} {...props}>
+        {text}
+        {showButton && (
+          <button onClick={handleClick} className="absolute right-0 bottom-0 text-blue-500 hover:text-blue-700">
+            {clamped ? "..." : "<"}
+          </button>
+        )}
+      </div>
     </div>
   );
 };

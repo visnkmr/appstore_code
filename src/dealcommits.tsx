@@ -7,14 +7,21 @@ import gtr from '../app/api/gtr';
 import take from 'lodash.take';
 
 
-export default function dwc(){
-    const commits: Commits[] = JSON.parse(gtr());
+export default function dwc(path:string,limit:number){
+    const commits: Commits[] = JSON.parse(gtr(path));
     
 
     var myCommits=[];
     
-
-          for (const commit of take(commits,5)) {
+          const whatsthelimit = (thelist:Commits[])=>{
+            if(limit!==-1){
+              return take(thelist,limit);
+            } 
+            else{
+              return thelist;
+            }
+          };
+          for (const commit of whatsthelimit(commits)) {
             const dateTime = DateTime.fromMillis(commit.time * 1000); // Convert timestamp to DateTime object
             const utcDateTime = dateTime.toUTC(); // Convert DateTime object to UTC time
             const utcTime = utcDateTime.toFormat('dd MMM'); // Format UTC time in ddmmyyhhss format
