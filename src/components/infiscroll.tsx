@@ -24,8 +24,13 @@ const columnCount=9;
 const columnWidth=300;
 
 function Infiscrollcomp(a:{item: any}) {
-
-function cellRenderer({columnIndex, key, rowIndex, style}) {
+type CellRendererParams = {
+  columnIndex: number;
+  key: string;
+  rowIndex: number;
+  style: React.CSSProperties;
+};
+function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
   var post=
     rowIndex * columnCount+ columnIndex;
   if(post<a.item.length){
