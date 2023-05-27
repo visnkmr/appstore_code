@@ -8,6 +8,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
   
+  basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
   webpack: (config
     // , { dev, isServer }

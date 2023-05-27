@@ -25,12 +25,19 @@ import { oCommits } from '../shared/types';
 
 function Infiscrollcomp(a:{item: any}) {
 const [columnCount, setcolcount] = useState(3);
+if (typeof window !== 'undefined') {
+  // return null; // exclude from server-side bundle
+// }
 
   useEffect(()=>{
     // console.log(window.innerWidth/225)
   setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
   
   },[window.innerWidth])
+  useEffect(() => {
+    
+  },[])
+}
 type CellRendererParams = {
   columnIndex: number;
   key: string;
@@ -73,7 +80,10 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
     </>
   );
 }
-  
+if (typeof window !== 'undefined') {
+  // return null; // exclude from server-side bundle
+// }
+
   // Render your grid
   return(
     <div>
@@ -94,7 +104,13 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
     </div>
     // document.getElementById('example'),
   );
-  
+}
+else{
+  return(
+    <>
+    </>
+  );
+}
 }
 
 export default Infiscrollcomp;

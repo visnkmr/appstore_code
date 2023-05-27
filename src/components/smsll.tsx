@@ -61,11 +61,14 @@ function Smsll(a:{item: any}) {
 //   }
 
 const [columnCount, setcolcount] = useState(3);
-useEffect(()=>{
-  // console.log(window.innerWidth/225)
-setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
+if (typeof window !== 'undefined') {
 
-},[window.innerWidth])
+  useEffect(()=>{
+    // console.log(window.innerWidth/225)
+  setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
+
+  },[window.innerWidth])
+// }
 const [showMore, setShowMore] = useState(true);
 const [showLess, setShowLess] = useState(false);
 const [index, setIndex] = useState(1);
@@ -161,6 +164,8 @@ function rowRenderer({ columnIndex, key, rowIndex, style, parent }:CellRendererP
     setShowMore(newShowMore);
     setShowLess(newShowLess);
   };
+// if (typeof window !== 'undefined') {
+
   return (
     
     // <div className=''>
@@ -192,6 +197,14 @@ function rowRenderer({ columnIndex, key, rowIndex, style, parent }:CellRendererP
      
   </div>
   );
+}
+return(
+  <>
+  <div>
+    <p></p>
+  </div>
+  </>
+);
 }
 
 export default Smsll;
