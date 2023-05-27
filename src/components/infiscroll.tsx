@@ -3,7 +3,7 @@
 
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AutoSizer, CellMeasurer, CellMeasurerCache, List, Grid } from 'react-virtualized';
 import 'react-virtualized/styles.css';
 import dwc from '../dealcommits';
@@ -15,15 +15,22 @@ import { appsfetcher } from './commits';
 import LineClamp from './LineClamp';
 import { oCommits } from '../shared/types';
 // import { concat, slice } from 'lodash';
-import StoreIcons from './storeicons';
-// const rowCount = 5000;
-// const listHeight = 400;
-// const rowHeight = 200;
-// const rowWidth = 700;
-const columnCount=9;
-const columnWidth=300;
+// import StoreIcons from './storeicons';
+// // const rowCount = 5000;
+// // const listHeight = 400;
+// // const rowHeight = 200;
+// // const rowWidth = 700;
+// const columnCount=9;
+// const columnWidth=300;
 
 function Infiscrollcomp(a:{item: any}) {
+const [columnCount, setcolcount] = useState(3);
+
+  useEffect(()=>{
+    // console.log(window.innerWidth/225)
+  setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
+  
+  },[window.innerWidth])
 type CellRendererParams = {
   columnIndex: number;
   key: string;
@@ -42,7 +49,7 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
     return (
       <div 
         style={style}
-        key={ic.time} 
+        key={key} 
         className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
       <div className="text-center w-full flex-row">
       <a href={ic.commit} className="font-bold text-center m-4">{ic.reponame}</a>
@@ -74,7 +81,7 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
       <Grid
         cellRenderer={cellRenderer}
         columnCount={columnCount}
-        columnWidth={columnWidth}
+        columnWidth={Math.ceil(window.innerWidth/columnCount)}
         height={window.innerHeight}
         overscanRowCount={1}
         overscanColumnCount={1}
