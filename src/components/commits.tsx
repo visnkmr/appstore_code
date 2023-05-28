@@ -7,6 +7,7 @@
 import LineClamp from "./LineClamp";
 import dwc from "../dealcommits";
 import Infiscrollcomp from "./infiscroll";
+import Otherview from "./Otherview";
 export function appsfetcher() {
   // console.log(dwc().length)
   // var apps = await findLatestapps("projects");
@@ -25,7 +26,9 @@ export function appsfetcher() {
       </div> */}
       <div className="text-center w-full">
       <a href={ic.commit} className="font-bold text-center m-4">{ic.reponame}</a>
-      <LineClamp text={ic.message} lines={2} />
+      {/* <LineClamp text={ic.message} lines={2} /> */}
+      <div className={`line-clamp-2`}>{ic.message}</div>
+      <Otherview ic={ic}/>
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
       {/* <LineClamp text={ */}
