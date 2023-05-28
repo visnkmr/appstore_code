@@ -1,7 +1,9 @@
 export default function Modal({open,onclose,ic}){
     return(
         
-        <div onClick={onclose} className={`fixed inset-0 flex justify-center items-center transition-colors ${open?"visible bg-white/100":"invisible" } `}>
+        <div onClick={onclose} 
+        className=        {`fixed inset-0 flex justify-center items-center transition-colors ${open?"visible bg-white/100":"invisible" } `}
+        >
             <button onClick={onclose} className="absolute top-2 right-2 p-1 rounded-lg text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600">x</button>
             <div 
             // key={ic.time} 
@@ -14,7 +16,7 @@ export default function Modal({open,onclose,ic}){
             
             <div onClick={e=>e.stopPropagation()}
             className="">
-            <a href={ic.commit} className="font-bold text-center m-4">{ic.reponame}</a>
+            <a href={ic.commit} className="font-bold text-center m-4 break-all">{ic.reponame}</a>
             <div>
                 {ic.message}
                 
