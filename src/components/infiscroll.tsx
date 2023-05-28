@@ -65,9 +65,20 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
         lines={2} />
 
       <div className="font-bold text-center m-4">
-      <LineClamp  lines={2} text=
-      {"(+) "+ic.additions.toString()+" (-) "+ic.deletions.toString()+" (Total) "+ic.total.toString()}
-       />
+      <div className="">
+      <span className="text-green-500">
+
+        {"(+) "+ic.additions.toString()}
+      </span>
+      <span className="text-rose-500">
+      
+        {" (-) "+ic.deletions.toString()}
+      </span>  
+      <span>
+
+        {" (Total) "+ic.total.toString()}
+      </span>
+      </div>
       </div>
 
       <h5 className="line-clamp-2 font-bold text-center m-4">{ic.time}</h5>

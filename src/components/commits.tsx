@@ -28,7 +28,22 @@ export function appsfetcher() {
       <LineClamp text={ic.message} lines={2} />
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
-      <LineClamp text={"(+) "+ic.additions.toString()+" (-) "+ic.deletions.toString()+" (Total) "+ic.total.toString()} className="font-bold text-center m-4"/>
+      {/* <LineClamp text={ */}
+      <div className="">
+      <span className="text-green-500">
+
+        {"(+) "+ic.additions.toString()}
+      </span>
+      <span className="text-rose-500">
+      
+        {" (-) "+ic.deletions.toString()}
+      </span>  
+      <span>
+
+        {" (Total) "+ic.total.toString()}
+      </span>
+      </div>
+        {/* } className="font-bold text-center m-4"/> */}
 
       {/* <img src={image} className="w-32"/> */}
       {/* <StoreIcons storename={tags} w={1}/> */}
