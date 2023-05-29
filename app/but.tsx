@@ -1,34 +1,59 @@
 'use client';
-import { useState,useEffect } from 'react';
+import { useState,useEffect, useContext } from 'react';
 // import React from "react";
 import { useLocalStorage } from '../src/components/useLocalStorage';
-
+import { ThemeContext } from '../src/components/ThemeContext';
+// export function darkorwhite(){
+//   let key="dark";
+//   let wtr=false;
+//   try {
+//     // Get from local storage by key
+//     const item = window.localStorage.getItem(key);
+//     console.log(item)
+//     // Parse stored json or if none return initialValue
+//     wtr= item ? JSON.parse(item) : false;
+//   } catch (error) {
+//     // If error also return initialValue
+//     console.log(error);
+//     wtr= false;
+//   }
+//   if(wtr){
+//     return(
+//       <>
+//       </>
+//     )
+//   }
+//   // return {wtr}
+// }
 export default function DarkButton() {
   // console.log(localStorage.getItem("dark"))
-  const [showon, setshow] = useLocalStorage("dark",true);
+  // const [showon, setshow] = useLocalStorage("dark",true);
+  const { dark, toggle } = useContext(ThemeContext);
   // const [showon, setshow] = useLocalStorage("dark",true);
   // console.log("onload"+showon)
   useEffect(() => {
     const darkIcon = document.getElementById("theme-toggle-dark-icon")!;
     const lightIcon = document.getElementById("theme-toggle-light-icon")!;
-    if (showon) {
+    if (dark) {
       darkIcon.style.display = "block";
       lightIcon.style.display = "none";
     } else {
       darkIcon.style.display = "none";
       lightIcon.style.display = "block";
     }
-  }, [showon]);
+  }, [dark]);
   // useEffect(() => {
   //   console.log("sadsd")
   // },[showon]);
   return (
     <>
+    <div className='dark:bg-gray-900'>
+
       <button
         id="theme-toggle"
         type="button"
         className="text-gray-500  rounded-lg text-sm p-2.5"
-        onClick={() => setshow((value:boolean)=>{return !value})}
+        onClick={toggle}
       >
         <svg
           id="theme-toggle-dark-icon"
@@ -51,6 +76,8 @@ export default function DarkButton() {
           ></path>
         </svg>
       </button>
+    </div>
+
     </>
   );
 }

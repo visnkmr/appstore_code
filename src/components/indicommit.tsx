@@ -5,7 +5,7 @@ export default function Indicommit({ic}){
 return (
     <div 
     // key={key} 
-    className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
+    className="mt-5 sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
       {/* <div className="w-120 p-4">
           <img
           src={image}
@@ -28,10 +28,10 @@ return (
       
         {" (-) "+ic.deletions.toString()}
       </span>  
-      <span>
+      {/* <span>
 
         {" (Total) "+ic.total.toString()}
-      </span>
+      </span> */}
       </div>
         {/* } className="font-bold text-center m-4"/> */}
 

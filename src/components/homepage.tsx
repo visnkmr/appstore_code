@@ -24,14 +24,13 @@ export default function Homepage(){
     return(
         <>
         
-        <Topthread/>
-        <div className="w-full h-full">
-        {/* <DarkButton/> */}
+        
+        <div className="dark:bg-gray-900 pb-20">
         <div className="mx-auto px-4 sm:px-6 md:flex h-auto">
             <div className="block md:flex lg:py-16 md:py-12 md:text-left py-12 text-center">
             <div className="flex items-center basis-3/5 md:pb-0 md:pr-16 md:py-0 mx-auto pb-12">
             <div className="w-full">
-            <h1 className="font-bold mb-4 font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-5xl">
+            <h1 className="font-bold mb-4 font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-5xl dark:text-white">
                 {/* <span className="hidden">Coding with Passion and Purpose.</span>  */}
             {/* Innovative software solutions crafted with expertise. */}
             Building efficient and effective software for a better world

@@ -2,7 +2,7 @@ export default function Modal({open,onclose,ic}){
     return(
         
         <div onClick={onclose} 
-        className=        {`fixed inset-0 flex justify-center items-center transition-colors ${open?"visible bg-white/100":"invisible" } `}
+        className=        {`fixed inset-0 flex justify-center items-center transition-colors ${open?"visible bg-white/100 dark:bg-gray-900/100":"invisible" } `}
         >
             <button onClick={onclose} className="absolute top-2 right-2 p-1 rounded-lg text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600">x</button>
             <div 

@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
     return (
       <>
-        <footer>
-          <div className="m-10">
+        <footer className="dark">
+          <div className="p-10 dark:bg-gray-900 dark:text-white">
             <div className="">
               <span>
                 Copyright © {new Date().getFullYear()} Vishnu N K. All rights reserved.

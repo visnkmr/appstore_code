@@ -56,6 +56,7 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
     var div=(a.item.length/columnCount);
     return (
       <div 
+      className='bg-white dark:bg-gray-900 dark:text-white'
         style={style}
         key={key} 
         > 
@@ -75,8 +76,8 @@ if (typeof window !== 'undefined') {
 
   // Render your grid
   return(
-    <div>
-      <div className='text-bold'>{a.item.length}</div>
+    <div className='dark'>
+      <div className='text-bold bg-white dark:bg-gray-900 dark:text-white'>{a.item.length}</div>
       <Grid
         cellRenderer={cellRenderer}
         columnCount={columnCount}

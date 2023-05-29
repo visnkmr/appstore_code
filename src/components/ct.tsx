@@ -4,8 +4,8 @@ import '../../styles/globals.css'
 export default function Ct(){
     return (
         <>
-        <div className="block">
-        <div className="items-center leading-tighter tracking-tight  justify-center font-bold text-4xl m-10">
+        <div className="block dark:bg-gray-900 dark:text-white">
+        <div className="items-center leading-tighter tracking-tight  justify-center font-bold text-4xl p-10 pb-18">
         {/* <span className="bg-gray-300"> */}
          Here is what our users are saying about our products.
         {/* </span> */}
