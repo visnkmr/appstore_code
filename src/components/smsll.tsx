@@ -148,7 +148,7 @@ function rowRenderer({ columnIndex, key, rowIndex, style, parent }:CellRendererP
   return (
     
     // <div className=''>
-     <div className='dark'>
+     <div>
       <div className=' dark:bg-gray-900 dark:text-white'>
 
       <p>{list.length}</p>

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-export function getfromls(key,initialValue){
+export function getfromls(key:string,initialValue:boolean){
   try {
     // Get from local storage by key
     const item = window.localStorage.getItem(key);

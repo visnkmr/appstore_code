@@ -1,4 +1,11 @@
-export default function Modal({open,onclose,ic}){
+import { oCommits } from "../shared/types";
+
+interface modalprops extends React.HTMLAttributes<HTMLDivElement> {
+    open: boolean;
+    onclose: ()=>void;
+    ic:oCommits
+  }
+export default function Modal({open,onclose,ic}:modalprops){
     return(
         
         <div onClick={onclose} 

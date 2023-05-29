@@ -1,7 +1,10 @@
+import { oCommits } from "../shared/types";
 import Otherview from "./Otherview";
+interface icprops extends React.HTMLAttributes<HTMLDivElement> {
+  ic:oCommits
+}
 
-
-export default function Indicommit({ic}){
+export default function Indicommit({ic}:icprops){
 return (
     <div 
     // key={key} 

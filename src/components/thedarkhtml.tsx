@@ -11,8 +11,10 @@ import '../../styles/globals.css'
 //   text: string;
 //   lines?: number;
 // }
+interface tdhprops extends React.HTMLAttributes<HTMLDivElement> {
 
-const Thedarkhtml = ({ children,...props}
+  }
+const Thedarkhtml = ({ children,...props}:tdhprops
     // : 
     // LineClampProps
     ) => {

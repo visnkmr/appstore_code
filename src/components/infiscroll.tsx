@@ -76,7 +76,7 @@ if (typeof window !== 'undefined') {
 
   // Render your grid
   return(
-    <div className='dark'>
+    <div>
       <div className='text-bold bg-white dark:bg-gray-900 dark:text-white'>{a.item.length}</div>
       <Grid
         cellRenderer={cellRenderer}

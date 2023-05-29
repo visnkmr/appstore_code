@@ -1,8 +1,11 @@
 'use client'
 import { useState } from "react"
 import Modal from "./modal"
-
-export default function Otherview({ic}){
+import { oCommits } from "../shared/types"
+interface ovprops extends React.HTMLAttributes<HTMLDivElement> {
+    ic:oCommits;
+  }
+export default function Otherview({ic}:ovprops){
     let [open,setopen]=useState(false)
 
     return(

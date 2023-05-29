@@ -6,8 +6,10 @@ import { getfromls, useLocalStorage } from './useLocalStorage';
      dark: getfromls("dark",false),
      toggle: () => {},
    });
-
-   export const ThemeProvider = ({ children }) => {
+   interface tpprops extends React.HTMLAttributes<HTMLDivElement> {
+ 
+  }
+   export const ThemeProvider = ({ children }:tpprops) => {
      const [dark, setDark] = useLocalStorage("dark",true);
     console.log("getting.."+ dark)
      const toggle = () => {
