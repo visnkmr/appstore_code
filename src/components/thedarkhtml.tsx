@@ -2,16 +2,17 @@
 import debounce from 'lodash.debounce';
 import { useState, useEffect, useRef, useContext } from 'react';
 import classnames from 'classnames';
-import { darkorwhite } from '../../app/but';
+// import { darkorwhite } from '../../app/but';
 import { ThemeContext } from './ThemeContext';
 import { useLocalStorage } from './useLocalStorage';
+import '../../styles/globals.css'
 
 // interface LineClampProps extends React.HTMLAttributes<HTMLDivElement> {
 //   text: string;
 //   lines?: number;
 // }
 
-const Thedarkhtml = ({ children}
+const Thedarkhtml = ({ children,...props}
     // : 
     // LineClampProps
     ) => {
@@ -40,25 +41,44 @@ const Thedarkhtml = ({ children}
 //   const toggleClass = () => {
 //     setClamped(!clamped);
 //   };
+const [isReady, setIsReady] = useState(false);
+
 const { dark } = useContext(ThemeContext);
-console.log(dark)
+useEffect(() => {
+    setIsReady(true);
+  }, [dark]);
+
+  if (!isReady) {
+    return (
+        <>
+        <div className='dark'>
+
+        </div>
+        </>
+    );
+  }
+console.log("changing...."+dark)
 // const [dark, setshow] = useLocalStorage("dark",true);
 // console.log(dark)
 // let dow=darkorwhite();
 if(dark){
+
     return (
     
-        <div className= {dark?"dark":""} >
+        <div className= "dark" {...props}>
           {children}
         </div>
     );
 }
-  return (
-    
-      <div >
-        {children}
-      </div>
-  );
+else{
+
+    return (
+      
+        <div className='bg-white' {...props}>
+          {children}
+        </div>
+    );
+}
 };
 
 export default Thedarkhtml;

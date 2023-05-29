@@ -1,14 +1,15 @@
    'use client'
    import React, { createContext, useState } from 'react';
+import { getfromls, useLocalStorage } from './useLocalStorage';
 
    export const ThemeContext = createContext({
-     dark: false,
+     dark: getfromls("dark",false),
      toggle: () => {},
    });
 
    export const ThemeProvider = ({ children }) => {
-     const [dark, setDark] = useState(false);
-
+     const [dark, setDark] = useLocalStorage("dark",true);
+    console.log("getting.."+ dark)
      const toggle = () => {
        setDark(!dark);
      };
