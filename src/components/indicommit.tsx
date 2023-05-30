@@ -1,15 +1,18 @@
 import { oCommits } from "../shared/types";
 import LineClamp from "./LineClamp";
+import '../../styles/globals.css'
+
 import Otherview from "./Otherview";
 interface icprops extends React.HTMLAttributes<HTMLDivElement> {
   ic:oCommits
 }
 
+
 export default function Indicommit({ic}:icprops){
 return (
     <div 
     // key={key} 
-    className="w-60 mt-5 sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
+    className="h-60 hover:h-auto w-60 mt-5 flex flex-row shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
       {/* <div className="w-120 p-4">
           <img
           src={image}
@@ -17,8 +20,8 @@ return (
       </div> */}
       <div className="text-center w-full">
       <a href={ic.commit} className="font-bold text-center m-4 break-all line-clamp-1 overflow-hidden direction-rtl">{ic.reponame}</a>
-      {/* <LineClamp text={ic.message} lines={2} /> */}
-      <LineClamp lines={2} text={ic.message}/>
+      <LineClamp text={ic.message} lines={2} />
+      {/* <div className={`line-clamp-2`}>{ic.message}</div> */}
       {/* <Otherview ic={ic}/> */}
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}

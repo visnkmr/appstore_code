@@ -8,10 +8,13 @@ import Stores from "./Stores";
 import { stores } from "../shared/data";
 import Stats from "./stats";
 import Mq from "./mq";
+import Marquee from "react-fast-marquee";
+
+import Workinp from "./wip";
 // import showon from '../../app/but'
 // import { useEffect } from 'react';
 
-export default function Homepage(){
+export default async function Homepage(){
     // var randval="no";
     // useEffect(() => {
     //     if(showon()){
@@ -28,7 +31,8 @@ export default function Homepage(){
         
         <div className="dark:bg-gray-900 pb-20">
         <div className="mx-auto px-4 sm:px-6 md:flex h-auto">
-            <div className="block md:flex lg:py-16 md:py-12 md:text-left py-12 text-center">
+            <div className="block md:flex md:text-left text-center">
+            {/* <div className="block md:flex lg:py-16 md:py-12 md:text-left py-12 text-center"> */}
             <div className="flex items-center basis-3/5 md:pb-0 md:pr-16 md:py-0 mx-auto pb-12">
             <div className="w-full">
             <h1 className="font-bold mb-4 font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-5xl dark:text-white">
@@ -48,6 +52,7 @@ export default function Homepage(){
             </div>
             </div>
             <Stats/>
+            
           
 
             </div>
@@ -57,6 +62,15 @@ export default function Homepage(){
             </div>
             
         </div>
+        <div className="w-full">
+            <noscript>
+                {await Workinp()}
+            </noscript>
+            <Marquee pauseOnHover>
+
+              {await Workinp()}
+            </Marquee>
+          </div>
         {/* <Mq/> */}
 
         </div>

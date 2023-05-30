@@ -31,12 +31,11 @@ export default async function Page() {
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
       
-          <Homepage/>
+          {await Homepage()}
           {/* <Planglist/> */}
-          <Commits/>
-          {await Workinp()}
           {await Project()}
           <Ct/>
+          <Commits/>
       </div>
 
         {/* </div> */}

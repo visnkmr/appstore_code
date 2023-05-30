@@ -17,7 +17,7 @@ export function appsfetcher() {
   //  apps = await findLatestapps("projects/inp");
   return (
     <>
-  {dwc("gtrl.json",5).map((ic) => {
+  {dwc("gtr.json",5).map((ic) => {
       return ( 
         <Indicommit ic={ic}/>
       );
@@ -39,6 +39,9 @@ export default function Commits() {
           {/* <button onClick={()=>whichone===1?setwhichone(0):setwhichone(1)}>
             Scroll/List
           </button> */}
+          <noscript>
+        {showlistorscroll(0)}
+        </noscript>
         {showlistorscroll(1)}
         <a
         href="/iou"

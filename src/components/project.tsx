@@ -23,6 +23,10 @@ async function appsfetcher() {
       </div> */}
       <div className="text-center w-full">
       <h3 className="font-bold text-center m-4">{app.title}</h3>
+      <noscript>
+
+             <div >{app.content}</div>
+            </noscript>
       <LineClamp text={app.content} lines={2} />
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}

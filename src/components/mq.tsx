@@ -7,6 +7,7 @@ import indireview from "./indireview";
 import { appsfetcher } from "./commits";
 import dwc from "../dealcommits";
 import Indicommit from "./indicommit";
+import take from "lodash.take";
 
 
 export default function Mq(fromwhere:number){
@@ -29,6 +30,7 @@ export default function Mq(fromwhere:number){
                     className="w-120 "/>
                 </div> */}
     
+                {/* {take(reviews,5).map((review) => { */}
                 {reviews.map((review) => {
                     return indireview(review);
                 })}

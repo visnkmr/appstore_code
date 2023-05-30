@@ -19,6 +19,10 @@ export default function Reviews(){
       </div> */}
       <div className="text-center w-full">
       <h3 className="font-bold text-center m-4">{apab.get(review.appname)!}</h3>
+      <noscript>
+
+             <div className="text-center">{review.review}</div>
+            </noscript>
       <LineClamp className="text-center" lines={2} text={review.review}/>
       {/* <h5 className="font-bold text-center m-4">{storename}</h5> */}
 

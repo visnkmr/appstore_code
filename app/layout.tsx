@@ -2,7 +2,7 @@
 // import { ThemeProvider } from "../src/components/ThemeContext"
 import { Providers } from "../src/components/ThemeContext"
 import Footer from "../src/components/footer"
-import Thedarkhtml from "../src/components/thedarkhtml"
+// import Thedarkhtml from "../src/components/thedarkhtml"
 import Topthread from "../src/components/topthread"
 import { useLocalStorage } from "../src/components/useLocalStorage"
 import '../styles/globals.css'

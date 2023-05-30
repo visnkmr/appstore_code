@@ -11,7 +11,10 @@ export default function Ct(){
          Here is what our users are saying about our products.
         {/* </span> */}
         </div>
-        {showlistorscroll(1)}
+        <noscript>
+            {showlistorscroll(0)}
+        </noscript>
+            {showlistorscroll(1)}
         <div
         className="flex w-full justify-center items-center">
 
@@ -27,7 +30,12 @@ export default function Ct(){
 export function showlistorscroll(whichone:number){
     if(whichone===1)return (
       <>
+      <div 
+      className="flex flex-row"
+      >
+
     {Mq(1)}
+      </div>
       </>
 
     );

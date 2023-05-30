@@ -3,7 +3,8 @@ import React from "react";
 export default function Stats(){
     return (
         <>
-        <div className="mx-auto px-9 sm:px-6 lg:px-8 lg:py-20 md:px-24 md:py-16 py-8" >
+        {/* <div className="mx-auto px-9 sm:px-6 lg:px-8 lg:py-20 md:px-24 md:py-16 py-8" > */}
+        <div className="mx-auto p-10" >
         <div className="sm:flex justify-center"
         // className="grid sm:grid-cols-3"
         >
