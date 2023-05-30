@@ -10,6 +10,7 @@ import Ct from "../src/components/ct";
 import Commits from "../src/components/commits";
 import Topthread from "../src/components/topthread";
 import DarkButton from "./but";
+import Mq from "../src/components/mq";
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';

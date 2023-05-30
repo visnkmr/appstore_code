@@ -7,6 +7,7 @@ import Stores from "./Stores";
 // import Storelist from "../shared/types";
 import { stores } from "../shared/data";
 import Stats from "./stats";
+import Mq from "./mq";
 // import showon from '../../app/but'
 // import { useEffect } from 'react';
 
@@ -47,11 +48,17 @@ export default function Homepage(){
             </div>
             </div>
             <Stats/>
+          
 
             </div>
+            
             </div>
+            
             </div>
+            
         </div>
+        {/* <Mq/> */}
+
         </div>
         </>
     );

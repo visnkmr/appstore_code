@@ -1,5 +1,6 @@
 import Reviews from "./reviews";
 import '../../styles/globals.css'
+import Mq from "./mq";
 
 export default function Ct(){
     return (
@@ -10,8 +11,7 @@ export default function Ct(){
          Here is what our users are saying about our products.
         {/* </span> */}
         </div>
-        
-        <Reviews/>
+        {showlistorscroll(1)}
         <div
         className="flex w-full justify-center items-center">
 
@@ -24,3 +24,17 @@ export default function Ct(){
         </>
     );
 }
+export function showlistorscroll(whichone:number){
+    if(whichone===1)return (
+      <>
+    {Mq(1)}
+      </>
+
+    );
+    return (
+      <>
+        <Reviews/>
+      </>
+
+    )
+  }
