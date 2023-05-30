@@ -2,7 +2,8 @@
 import { useState,useEffect, useContext } from 'react';
 // import React from "react";
 import { useLocalStorage } from '../src/components/useLocalStorage';
-import { ThemeContext } from '../src/components/ThemeContext';
+// import { ThemeContext } from '../src/components/ThemeContext';
+import { useTheme } from 'next-themes';
 // export function darkorwhite(){
 //   let key="dark";
 //   let wtr=false;
@@ -25,23 +26,27 @@ import { ThemeContext } from '../src/components/ThemeContext';
 //   }
 //   // return {wtr}
 // }
+
 export default function DarkButton() {
   // console.log(localStorage.getItem("dark"))
   // const [showon, setshow] = useLocalStorage("dark",true);
-  const { dark, toggle } = useContext(ThemeContext);
+  const { theme, setTheme } = useTheme()
+  // const { dark, toggle } = useContext(ThemeContext);
+  // const [ dark, setdark ] = useState(false);
   // const [showon, setshow] = useLocalStorage("dark",true);
   // console.log("onload"+showon)
   useEffect(() => {
+    // dark?setTheme('light'):setTheme('dark');
     const darkIcon = document.getElementById("theme-toggle-dark-icon")!;
     const lightIcon = document.getElementById("theme-toggle-light-icon")!;
-    if (dark) {
+    if (theme === 'dark') {
       darkIcon.style.display = "block";
       lightIcon.style.display = "none";
     } else {
       darkIcon.style.display = "none";
       lightIcon.style.display = "block";
     }
-  }, [dark]);
+  }, [theme]);
   // useEffect(() => {
   //   console.log("sadsd")
   // },[showon]);
@@ -53,7 +58,7 @@ export default function DarkButton() {
         id="theme-toggle"
         type="button"
         className="text-gray-500  rounded-lg text-sm p-2.5"
-        onClick={toggle}
+        onClick={()=>setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         <svg
           id="theme-toggle-dark-icon"

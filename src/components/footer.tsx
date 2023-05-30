@@ -14,7 +14,7 @@ export default function Footer() {
                   aria-label="linkedin"
                   target="_blank"
                   rel="noreferrer"
-                  href=""
+                  href="https://www.linkedin.com/in/vishnunk-59124/"
                   className="mr-2"
                 >
                   Linkedin

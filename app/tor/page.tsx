@@ -13,8 +13,12 @@ export default async function Tor(){
         {/* <div className="text-bold text-center">hello</div> */}
         
         {/* <Footer/> */}
+      {/* <div 
+      className="bg-white dark:bg-gray-900 block"
+      > */}
 
-        <Smsll item={dwc("gtr.json",-1)}/>
+        <Smsll  item={dwc("gtr.json",-1)}/>
+      {/* </div> */}
         </>
 
     );

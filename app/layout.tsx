@@ -1,5 +1,6 @@
 // 'use client'
-import { ThemeProvider } from "../src/components/ThemeContext"
+// import { ThemeProvider } from "../src/components/ThemeContext"
+import { Providers } from "../src/components/ThemeContext"
 import Footer from "../src/components/footer"
 import Thedarkhtml from "../src/components/thedarkhtml"
 import Topthread from "../src/components/topthread"
@@ -20,17 +21,17 @@ export default function RootLayout({
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
     
-    <html className="" lang="en">
+    <html suppressHydrationWarning className="" lang="en">
       <body className="dark:bg-gray-900">
-        <ThemeProvider>
+        <Providers>
 
-        <Thedarkhtml>
+        {/* <Thedarkhtml> */}
         <Topthread/>
         <DarkButton/>
         {children}
         <Footer/>
-        </Thedarkhtml>
-        </ThemeProvider>
+        {/* </Thedarkhtml> */}
+        </Providers>
 
       </body>
 
