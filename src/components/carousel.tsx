@@ -9,9 +9,9 @@ export default function Caro(){
     return(
         <>
         {/* // <Carousel showArrows={true} dynamicHeight={false} > */}
-        <div style={{width:1000}} className='hidden sm:block'>
+        <div style={{width:1000}} className='hidden sm:block '>
 
-        <Carousel show={1}>
+        <Carousel show={2} infiniteLoop={true} withIndicator={true}>
 
             <div>
 
