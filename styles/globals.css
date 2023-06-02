@@ -54,6 +54,15 @@
   .screen-3{
     bottom: -440%;
   } */
+  .screen1:hover {
+    z-index: 1; /* Increase the z-index value */
+  } 
+  .screen2:hover {
+    z-index: 1; /* Increase the z-index value */
+  } 
+  .screen3:hover {
+    z-index: 1; /* Increase the z-index value */
+  }
   .screen1 img {
     bottom: -100%; 
     /* bottom: -195%; amz */
