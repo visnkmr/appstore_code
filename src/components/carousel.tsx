@@ -19,7 +19,18 @@ export default function Caro(){
                     <a href='https://play.google.com/store/apps/developer?id=Vishnu+N+K' aria-label="google play page screenshot"
                     rel="noopener" 
                     target="_blank">
-                        <img  src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png"></img>
+                        <picture>
+                            <source media='(max-width: 767px)'
+                                    sizes='1px'
+                                    srcSet='blank.gif 1w'/>
+                            <source media='(min-width: 768px)' 
+                                    sizes='300px' 
+                                    srcSet='
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 300w'/>
+                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png' alt='google play profile of vishnu n k'/>
+                        </picture>
+                        {/* <img  src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png"></img> */}
                     </a>
                 </div>
                 </div><div>
@@ -28,7 +39,18 @@ export default function Caro(){
                 <a href='https://www.amazon.com/gp/mas/dl/android?p=io.github.visnkmr.bapl&showAll=1'
                     rel="noopener" aria-label='amazon appstore page screenshot'
                     target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png"></img>
+                        <picture>
+                            <source media='(max-width: 767px)'
+                                    sizes='1px'
+                                    srcSet='blank.gif 1w'/>
+                            <source media='(min-width: 768px)' 
+                                    sizes='300px' 
+                                    srcSet='
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 300w'/>
+                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png' alt='amazon profile of vishnu n k'/>
+                        </picture>
+                    {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png"></img> */}
                 </a>
                 </div>
 
@@ -40,7 +62,18 @@ export default function Caro(){
                     aria-label='github page screenshot'
                     rel="noopener" 
                     target="_blank">
-                        <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png"></img>
+                        <picture>
+                            <source media='(max-width: 767px)'
+                                    sizes='1px'
+                                    srcSet='blank.gif 1w'/>
+                            <source media='(min-width: 768px)' 
+                                    sizes='300px' 
+                                    srcSet='
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 300w'/>
+                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png' alt='github profile of vishnu n k'/>
+                        </picture>
+                        {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png"></img> */}
                     </a>
                 </div>
             </div>
