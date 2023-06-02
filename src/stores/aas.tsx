@@ -9,6 +9,7 @@ export default function Aas(){
         rel="noopener" 
         target="_blank">
         <img
+        alt="amazon appstore image"
             src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-white.png"
             className="w-32 p-4"/>
     </a>

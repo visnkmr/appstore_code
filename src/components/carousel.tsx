@@ -16,7 +16,7 @@ export default function Caro(){
             <div>
 
                 <div className="screen1">
-                    <a href='https://play.google.com/store/apps/developer?id=Vishnu+N+K'
+                    <a href='https://play.google.com/store/apps/developer?id=Vishnu+N+K' aria-label="google play page screenshot"
                     rel="noopener" 
                     target="_blank">
                         <img  src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png"></img>
@@ -26,7 +26,7 @@ export default function Caro(){
 
                 <div className="screen2">
                 <a href='https://www.amazon.com/gp/mas/dl/android?p=io.github.visnkmr.bapl&showAll=1'
-                    rel="noopener" 
+                    rel="noopener" aria-label='amazon appstore page screenshot'
                     target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png"></img>
                 </a>
@@ -37,6 +37,7 @@ export default function Caro(){
 
                 <div className="screen3">
                     <a href='https://github.com/visnkmr'
+                    aria-label='github page screenshot'
                     rel="noopener" 
                     target="_blank">
                         <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png"></img>

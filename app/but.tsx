@@ -57,6 +57,7 @@ export default function DarkButton() {
       <button
         id="theme-toggle"
         type="button"
+        aria-label='light dark mode toggle'
         className="text-gray-500  rounded-lg text-sm p-2.5"
         onClick={()=>setTheme(theme === 'light' ? 'dark' : 'light')}
       >

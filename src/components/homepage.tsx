@@ -65,7 +65,7 @@ export default async function Homepage(){
                 </div>
                 </span>
                 <span className="flex items-center justify-center">
-                    <img className="rounded-full w-32 sm:w-96 " src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg"/>
+                    <img alt="image of Vishnu N K" className="rounded-full w-32 sm:w-96 " src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg"/>
                 </span>
             </div>
 

@@ -10,7 +10,7 @@ export default function Otherview({ic}:ovprops){
 
     return(
         <div>
-            <button onClick={()=>setopen(true)} className="relative right-0 bottom-0 text-blue-500 hover:text-blue-700">...</button>
+            <button aria-label="show more" onClick={()=>setopen(true)} className="relative right-0 bottom-0 text-blue-500 hover:text-blue-700">...</button>
         <Modal open={open} onclose={()=>setopen(false)} ic={ic}/>
         </div>
     )

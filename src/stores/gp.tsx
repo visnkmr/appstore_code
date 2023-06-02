@@ -9,6 +9,7 @@ export default function Gp(){
         rel="noopener" 
         target="_blank">
         <img
+        alt="download from google play"
           src="https://play.google.com/intl/en_us/badges/images/badge_new.png"
           className="w-32 p-4"/>
     </a>
