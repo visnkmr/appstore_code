@@ -14,6 +14,7 @@ import '../../styles/globals.css'
 
 import Workinp from "./wip";
 import Caro from "./carousel";
+import recentprojs from "./recentprojs";
 // import showon from '../../app/but'
 // import { useEffect } from 'react';
 
@@ -80,15 +81,7 @@ export default async function Homepage(){
             </div>
             
         </div>
-        <div className="w-full">
-            <noscript>
-                {await Workinp()}
-            </noscript>
-            <Marquee pauseOnHover>
-
-              {await Workinp()}
-            </Marquee>
-          </div>
+        {await recentprojs()}
         {/* <Mq/> */}
 
         </div>

@@ -7,16 +7,48 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
+  experimental: {
+    // appDir: true,
+    // optimizeCss: true,
+    esmExternals: true,
+    forceSwcTransforms: true,
+    scrollRestoration: true,
+    legacyBrowsers: false,
+  },
+  // typescript: {
+  //   ignoreBuildErrors: true
+  // },
+  // eslint: {
+  //   ignoreDuringBuilds: true
+  // },
   
-  basePath: '/tmp/webpage/out',
+  // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
-  webpack: (config
+  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/',
+  // amp:false,
+  // basePath: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@master/',
+  // async rewrites(){
+  //   return [
+  //     {
+  //       source: `/tmp/webpage/out/_next/:path*`,
+  //       destination: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@master/_next/:path*',
+  //       permanent:true
+  //     }
+  //   ]
+  // },
+  webpack: (config,{nextRuntime}
     // , { dev, isServer }
     ) => {
+      config.resolve.fallback = {
+        fs: false,
+        net: false,
+        tls: false
+      };
       config.optimization = {
         minimize: true,
         minimizer: [
           new TerserPlugin({
+            // minify: TerserPlugin.swcMinify,
             parallel: true,
             extractComments:false,
             terserOptions: {
@@ -66,6 +98,7 @@ module.exports = withBundleAnalyzer({
             ],
           }),
         ],
+        
       };
     // Set the output path to /tmp/next
     // config.output.path = '/tmp/.next';
@@ -84,7 +117,12 @@ module.exports = withBundleAnalyzer({
 
     // Merge chunks instead of creating new ones
     config.optimization.minimize = true;
-
+//     if (typeof nextRuntime === "undefined") {
+//       config.resolve.fallback = {
+//                 ...config.resolve.fallback,
+//                 fs: false,
+//          };  
+// }
     // Always create a single chunk for all code
     config.optimization.splitChunks = {
       cacheGroups: {
@@ -105,6 +143,7 @@ module.exports = withBundleAnalyzer({
 
     return config;
   },
+
   // webpackDevMiddleware: config => {
   //   // Perform customizations to webpack dev middleware config
   //   // console.log(config, '@@')
@@ -119,7 +158,9 @@ module.exports = withBundleAnalyzer({
   //   // staticFolder: '/static',
   //   isDev, // Pass through env variables
   // },
-  
+  // experimental:{
+  //   serverActions:true,
+  // },
   reactStrictMode: true,
   output:"export",
 },
