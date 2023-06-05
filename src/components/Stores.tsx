@@ -3,21 +3,24 @@ import { Storelist } from "../shared/types";
 export default function storeslist({stores}:Storelist){
     return (
         <>
+        <div className="flex flex-row">
+
         {stores.map((store) => (
-            <div className="flex sm:w-auto">
+            <div className="pr-4 h-7 sm:h-10">
                 <a 
-                className="w-full btn btn-primary sm:mb-0" 
+                className="btn btn-primary sm:mb-0" 
                 href={store.link} 
                 rel="noopener" 
                 target="_blank">
                     <img
                     src={store.src}
                     alt={store.alt}
-                    className="h-8"
+                    className="h-full object-cover w-full"
                     />
                 </a>
             </div>
             ))}
+        </div>
         
         </>
     );

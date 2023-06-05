@@ -28,6 +28,17 @@ export default function Footer() {
                     Github
                   </a>
                 </div>
+                <div>
+                  <a
+                    aria-label="github"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://codeberg.org/visnk"
+                    
+                  >
+                    Codeberg
+                  </a>
+                </div>
                 
 
               </div>
