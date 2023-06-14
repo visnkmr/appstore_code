@@ -165,6 +165,7 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <div className='flex items-center justify-end space-x-2 py-4'>
+        <p className='absolute left-0'>Total {table.getPageCount()} pages.</p>
         <Button
           variant='outline'
           size='sm'
