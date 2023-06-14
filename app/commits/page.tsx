@@ -27,17 +27,17 @@ export default function DemoPage() {
   const data = getData();
 
   return (
-    <section className='container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24 text-black  ring-1 ring-gray-900/10'>
+    <section className='justify-center items-center w-full flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24 dark:text-white'>
       <div className='relative mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]'>
-        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-black '>
+        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl '>
           Commits List
         </h2>
-        <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
-          using Shadcn ui and tanstack{' '}
-        </p>
       </div>
 
       <DataTable columns={columns} data={data} />
+        <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
+          using Shadcn ui and tanstack{' '}
+        </p>
     </section>
   );
 }
