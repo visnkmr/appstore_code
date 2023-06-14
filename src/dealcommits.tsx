@@ -11,7 +11,7 @@ export default function dwc(path:string,limit:number){
     const commits: Commits[] = JSON.parse(gtr(path));
     
 
-    var myCommits=[];
+    var myCommits:oCommits[]=[];
     
           const whatsthelimit = (thelist:Commits[])=>{
             if(limit!==-1){

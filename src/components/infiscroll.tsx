@@ -30,14 +30,14 @@ if (typeof window !== 'undefined') {
   // return null; // exclude from server-side bundle
 // }
 
-  // useEffect(()=>{
-  //   // console.log(window.innerWidth/225)
-  // setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
+  useEffect(()=>{
+    // console.log(window.innerWidth/225)
+  setcolcount(Math.max(Math.ceil(window.innerWidth/250),2));
   
-  // },[window.innerWidth])
-  // useEffect(() => {
+  },[window.innerWidth])
+  useEffect(() => {
     
-  // },[])
+  },[])
 }
 type CellRendererParams = {
   columnIndex: number;

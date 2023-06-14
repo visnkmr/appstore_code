@@ -1,5 +1,6 @@
 // 'use client'
 // import { ThemeProvider } from "../src/components/ThemeContext"
+import React from "react"
 import { Providers } from "../src/components/ThemeContext"
 import Footer from "../src/components/footer"
 // import Thedarkhtml from "../src/components/thedarkhtml"
