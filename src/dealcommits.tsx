@@ -24,7 +24,7 @@ export default function dwc(path:string,limit:number){
           for (const commit of whatsthelimit(commits)) {
             const dateTime = DateTime.fromMillis(commit.time * 1000); // Convert timestamp to DateTime object
             const utcDateTime = dateTime.toUTC(); // Convert DateTime object to UTC time
-            const utcTime = utcDateTime.toFormat('dd MMM'); // Format UTC time in ddmmyyhhss format
+            const utcTime = utcDateTime.toFormat('dd MMM yy'); // Format UTC time in ddmmyyhhss format
             const myCommit: oCommits = {
               reponame:commit.reponame,
               additions: commit.additions,
@@ -43,4 +43,7 @@ export default function dwc(path:string,limit:number){
           }
         return myCommits;
         
+}
+export function tabledata(path:string): Commits[]{
+    return JSON.parse(gtr(path));        
 }

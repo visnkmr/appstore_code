@@ -10,6 +10,7 @@ import Infiscrollcomp from "./infiscroll";
 import Otherview from "./Otherview";
 import Indicommit from "./indicommit";
 import Mq from "./mq";
+import React from "react";
 // import { useState } from "react";
 export function appsfetcher() {
   // console.log(dwc().length)

@@ -1,57 +1,43 @@
-import { oCommits } from "../../src/shared/types";
+import React from 'react';
+import { eCommit, columns } from './columns';
+import { DataTable } from './data-table';
+import dwc, { tabledata } from '../../src/dealcommits';
 
-import React from "react";
-import Infiscrollcomp from "../../src/components/infiscroll";
-import dwc from "../../src/dealcommits";
-import { findLatestapps } from "../../src/posts";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../../components/ui/table"
-import { Rrow } from "../../src/components/tr";
-// import '../../styles/globals.css'
+function getData(): eCommit[] {
+  // nextjs 13 fetching api from our api folder/payments
+  const res =
+  tabledata("gtr.json");
 
-export default function Committable(){
-  let loc=dwc("gtr.json",5);
-  var sc:oCommits={
-    reponame: "a",
-    additions: 0,
-    deletions: 0,
-    total: 0,
-    message: "",
-    time: "",
-    committer: "",
-    commit: ""
-  }
-  // let loc=[sc,]
-  console.log("loc loaded")
-  // var apps = await findLatestapps("projects");
+  //  await fetch('http://localhost:3000/api/payments' || 'https://demo-table-eight.vercel.app', {
+  //   method: 'GET',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  // });
 
-    return (
-        <>
-        <div className="text-bold text-center">hello</div>
-<Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Reponame</TableHead>
-            <TableHead>addition</TableHead>
-            <TableHead>deletions</TableHead>
-            <TableHead className="text-right">commit message</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-        <Rrow  item={dwc("gtr.json",-1)}/>
-        
-        
-        </TableBody>
-      </Table>
-        </>
+  const data: eCommit[] = res.map(commit => {
+    const { reponame, additions, deletions, message,time } = commit;
+    return { reponame, additions, deletions, message,time };
+  });
+  // const data = await res.json();
+  return data;
+}
 
-    );
-} 
+export default function DemoPage() {
+  const data = getData();
+
+  return (
+    <section className='container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24 text-black  ring-1 ring-gray-900/10'>
+      <div className='relative mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]'>
+        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-black '>
+          Commits List
+        </h2>
+        <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
+          using Shadcn ui and tanstack{' '}
+        </p>
+      </div>
+
+      <DataTable columns={columns} data={data} />
+    </section>
+  );
+}

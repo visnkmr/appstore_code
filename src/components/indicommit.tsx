@@ -3,6 +3,7 @@ import LineClamp from "./LineClamp";
 import '../../styles/globals.css'
 
 import Otherview from "./Otherview";
+import React from "react";
 interface icprops extends React.HTMLAttributes<HTMLDivElement> {
   ic:oCommits
 }

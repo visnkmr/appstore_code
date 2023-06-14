@@ -53,7 +53,7 @@ function cellRenderer({columnIndex, key, rowIndex, style}:CellRendererParams) {
     const ic:oCommits = a.item[
       post
     ];
-    var div=(a.item.length/columnCount);
+    // var div=(a.item.length/columnCount);
     return (
       <div 
       className='bg-white dark:bg-gray-900 dark:text-white'
