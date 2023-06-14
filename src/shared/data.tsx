@@ -60,7 +60,7 @@ export const stores: Storelist = {
       storename:"aas"
     },{
       appname:"wfm",
-      review:'Just for its purposed, very simple but working pretty well. - JMD',
+      review:'Just for its purpose, very simple but working pretty well. - JMD',
       storename:"aas"
     },
 
