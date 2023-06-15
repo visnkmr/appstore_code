@@ -6,11 +6,25 @@ export default function Ct(){
     return (
         <>
         <div className="block dark:bg-gray-900 dark:text-white">
+        <div className="text-center md:mb-0 ">
+          <div className="font-bold font-heading text-4xl lg:text-5xl text-[#039de1] xl:text-6xl">
+            150k+
+            </div>
+          <p className="text-sm dark:text-slate-400 font-medium lg:text-base text-gray-800 tracking-widest uppercase">Reviews</p>
+        </div>
+        {/* <div className="mx-5 h-12 w-1 dark:border-slate-200 ">
+
+        </div>
+        <div className="text-center dark:md:border-slate-500">
+          <div className="font-bold lg:text-5xl text-4xl text-[#039de1] xl:text-6xl">15M+</div>
+          <p className="text-sm dark:text-slate-400 font-medium lg:text-base text-gray-800 tracking-widest uppercase">sessions</p>
+        </div> */}
         <div className="items-center leading-tighter tracking-tight  justify-center font-bold text-4xl p-10 pb-18">
         {/* <span className="bg-gray-300"> */}
          Here is what our users are saying about our products.
         {/* </span> */}
         </div>
+        
         <noscript>
             {showlistorscroll(0)}
         </noscript>

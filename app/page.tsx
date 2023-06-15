@@ -11,6 +11,7 @@ import Commits from "../src/components/commits";
 import Topthread from "../src/components/topthread";
 import DarkButton from "./but";
 import Mq from "../src/components/mq";
+import Contactme from "../src/components/contactme";
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';
@@ -36,6 +37,7 @@ export default async function Page() {
           {await Project()}
           <Ct/>
           <Commits/>
+          <Contactme/>
       </div>
 
         {/* </div> */}

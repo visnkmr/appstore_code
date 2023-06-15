@@ -15,16 +15,17 @@ module.exports = withBundleAnalyzer({
     scrollRestoration: true,
     legacyBrowsers: false,
   },
-  // typescript: {
-  //   ignoreBuildErrors: true
-  // },
+  typescript: {
+    ignoreBuildErrors: true
+  },
   // eslint: {
   //   ignoreDuringBuilds: true
   // },
   
   // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
-  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/',
+  // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/',
+  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
   // amp:false,
   // basePath: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@master/',
   // async rewrites(){

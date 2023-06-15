@@ -14,6 +14,7 @@ import {
   ColumnFiltersState,
   getFilteredRowModel,
   VisibilityState,
+  createColumnHelper,
 } from '@tanstack/react-table';
 
 import {
@@ -31,6 +32,10 @@ import {
   TableHeader,
   TableRow,
 } from '../../components/ui/table';
+import { eCommit } from './columns';
+import { DateTime } from 'luxon';
+
+
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -41,11 +46,47 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  console.log(columns);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-
+  
+  // const columnHelper = createColumnHelper<eCommits>()
+  // columns=[columnHelper.accessor('time', 
+  // {
+    
+  //   cell: props => {
+  //     const dateTime = DateTime.fromMillis(props.getValue() * 1000); // Convert timestamp to DateTime object
+  //           const utcDateTime = dateTime.toUTC(); // Convert DateTime object to UTC time
+  //           const utcTime = utcDateTime.toFormat('dd MMM yy'); // Format UTC time in ddmmyyhhss format
+  //   <span>{`${dateTime}`}</span>
+  //   },
+  // }),columnHelper.accessor('reponame', 
+  // {
+    
+  //   cell: props => {
+  //   <span>{`${props.getValue()}`}</span>
+  //   },
+  // }),columnHelper.accessor('additions', 
+  // {
+    
+  //   cell: props => {
+  //   <span>{`${props.getValue()}`}</span>
+  //   },
+  // }),columnHelper.accessor('deletions', 
+  // {
+    
+  //   cell: props => {
+  //   <span>{`${props.getValue()}`}</span>
+  //   },
+  // }),columnHelper.accessor('message', 
+  // {
+    
+  //   cell: props => {
+  //   <span>{`${props.getValue()}`}</span>
+  //   },
+  // })];
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
 
@@ -96,7 +137,7 @@ export function DataTable<TData, TValue>({
             Columns
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align='end' className='bg-background text-gray-600'>
+        <DropdownMenuContent align='end' className='bg-white dark:bg-gray-900'>
           {table
             .getAllColumns()
             .filter((column) => column.getCanHide())
@@ -104,9 +145,9 @@ export function DataTable<TData, TValue>({
               return (
                 <DropdownMenuCheckboxItem
                   key={column.id}
-                  className='capitalize '
+                  className='capitalize text-black dark:text-white'
                   checked={column.getIsVisible()}
-                  onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                  onCheckedChange={(value:boolean) => column.toggleVisibility(!!value)}
                 >
                   {column.id}
                 </DropdownMenuCheckboxItem>
@@ -164,8 +205,8 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
       </div>
-      <div className='flex items-center justify-end space-x-2 py-4'>
-        <p className='absolute left-0'>Total {table.getPageCount()} pages.</p>
+        <p className='flex justify-start pt-4'>Total {table.getPageCount()} pages.</p>
+      <div className='flex justify-end space-x-2 py-4'>
         <Button
           variant='outline'
           size='sm'

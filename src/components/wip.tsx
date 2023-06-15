@@ -9,7 +9,7 @@ async function appsfetcher() {
     {apps.map((app:any) => {
         return ( 
             <div
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 "
+            className="group border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4  p-4 "
         >
             <a 
             className={`mb-3 text-2xl font-semibold line-clamp-1`}
@@ -20,11 +20,11 @@ async function appsfetcher() {
             </a>
             <noscript>
 
-             <div className="m-4 max-w-[30ch] text-sm opacity-50">{app.content}</div>
+             <div className="m-4 max-w-[30ch] text-sm">{app.content}</div>
             </noscript>
             {/* <div id="whenjs" style={{display: "none"}}> */}
 
-             <LineClamp className="m-4 max-w-[30ch] text-sm opacity-50" text={app.content} lines={2}/>
+             <LineClamp className="m-4 max-w-[30ch] text-sm" text={app.content} lines={2}/>
             {/* </div> */}
              <StoreIcons storename={app.tags} w={1}/>
         </div>

@@ -2,10 +2,11 @@ import React from 'react';
 import { eCommit, columns } from './columns';
 import { DataTable } from './data-table';
 import dwc, { tabledata } from '../../src/dealcommits';
-
+import '../../styles/committablestyle.css'
 function getData(): eCommit[] {
   // nextjs 13 fetching api from our api folder/payments
   const res =
+  // tabledata("gtr.json");
   tabledata("gtr.json");
 
   //  await fetch('http://localhost:3000/api/payments' || 'https://demo-table-eight.vercel.app', {
@@ -15,29 +16,42 @@ function getData(): eCommit[] {
   //   },
   // });
 
-  const data: eCommit[] = res.map(commit => {
-    const { reponame, additions, deletions, message,time } = commit;
-    return { reponame, additions, deletions, message,time };
+  const data: eCommit[] = res.map(scommit => {
+    const { reponame, additions, deletions, message,time,commit } = scommit;
+    return { reponame, additions, deletions, message,time,commit };
   });
   // const data = await res.json();
   return data;
 }
 
-export default function DemoPage() {
+function Dtable() {
   const data = getData();
 
   return (
-    <section className='justify-center items-center w-full flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24 dark:text-white'>
-      <div className='relative mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]'>
-        <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl '>
-          Commits List
-        </h2>
-      </div>
-
+    
       <DataTable columns={columns} data={data} />
-        <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
+        
+  );
+}
+
+export default function ListCommits(){
+  return(
+    <div className='center'>
+        <section className='committablestyle flex gap-6 dark:text-white'>
+          <div className='m-auto'>
+
+          <div className='mx-auto gap-4 md:max-w-[58rem]'>
+            <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl '>
+              Commits List
+            </h2>
+          </div>
+          <Dtable/>
+          <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
           using Shadcn ui and tanstack{' '}
         </p>
+      </div>
+
     </section>
+    </div>
   );
 }

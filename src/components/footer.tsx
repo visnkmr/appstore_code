@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <a
-                    aria-label="github"
+                    aria-label="codeberg"
                     target="_blank"
                     rel="noreferrer"
                     href="https://codeberg.org/visnk"
@@ -45,7 +45,7 @@ export default function Footer() {
              <div className="flex flex-col space-y-2">
             <div  >
             <a
-                    aria-label="linkedin"
+                    aria-label="youtube"
                     target="_blank"
                     rel="noreferrer"
                     href="https://youtube.com/@vishnunk"
@@ -56,7 +56,7 @@ export default function Footer() {
                   </div>
                 <div  >
                 <a
-                  aria-label="github"
+                  aria-label="telegram"
                   target="_blank"
                   rel="noreferrer"
                   href="https://vishnunkmr.t.me/"
@@ -69,10 +69,10 @@ export default function Footer() {
 
                 </div>
                 <div>
-                  <a href="/privacy">Privacy Policy</a>
+                  <a aria-aria-label="privacy policy" href="/privacy">Privacy Policy</a>
                 </div>
                 <div>
-                  <a href="https://appchoose.blogspot.com">AppChoose</a>
+                  <a aria-aria-label="appchoose" href="https://appchoose.blogspot.com">AppChoose</a>
                 </div>
             </div>
           </div>
