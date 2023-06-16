@@ -13,7 +13,7 @@ export default function Ct(){
             <noscript>
               150k+
               </noscript>
-              <CountUp end={150000}/>
+              <CountUp enableScrollSpy end={150000}/>+
             </div>
           <p className="text-sm dark:text-slate-400 font-medium lg:text-base text-gray-800 tracking-widest uppercase">Reviews</p>
         </div>
