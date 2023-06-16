@@ -12,7 +12,8 @@ import Indicommit from "./indicommit";
 import Mq from "./mq";
 import React from "react";
 import Textspin from "./textloop";
-import Dtable from "../../app/commits/page";
+import Dtable from "../../app/commits/dtable";
+import { columns } from "../../app/commits/columns";
 // import { useState } from "react";
 export function appsfetcher() {
   // console.log(dwc().length)
@@ -54,12 +55,12 @@ export default function Commits() {
           </button> */}
           <div className="hidden sm:block">
 
-          <Dtable />
+          <Dtable columns={columns}/>
           </div>
           <noscript>
         {showlistorscroll(0)}
         </noscript>
-        <div className="sm:hidden">
+        <div className="sm:hidden w-full">
 
         {showlistorscroll(1)}
         </div>

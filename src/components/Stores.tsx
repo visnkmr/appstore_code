@@ -15,7 +15,7 @@ export default function storeslist({stores}:Storelist){
                     <img
                     src={store.src}
                     alt={store.alt}
-                    className="h-full object-cover w-full"
+                    className="h-full object-contain"
                     />
                 </a>
             </div>

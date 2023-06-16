@@ -1,38 +1,7 @@
-import React from 'react';
-import { eCommit, columns } from './columns';
-import { DataTable } from './data-table';
-import dwc, { tabledata } from '../../src/dealcommits';
+
 import '../../styles/committablestyle.css'
-function getData(): eCommit[] {
-  // nextjs 13 fetching api from our api folder/payments
-  const res =
-  // tabledata("gtr.json");
-  tabledata("gtr.json");
-
-  //  await fetch('http://localhost:3000/api/payments' || 'https://demo-table-eight.vercel.app', {
-  //   method: 'GET',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  // });
-
-  const data: eCommit[] = res.map(scommit => {
-    const { reponame, additions, deletions, message,time,commit } = scommit;
-    return { reponame, additions, deletions, message,time,commit };
-  });
-  // const data = await res.json();
-  return data;
-}
-
-function Dtable() {
-  const data = getData();
-
-  return (
-    
-      <DataTable columns={columns} data={data} />
-        
-  );
-}
+import { columns_full } from './columns_full';
+import Dtable from './dtable'
 
 export default function ListCommits(){
   return(
@@ -45,7 +14,7 @@ export default function ListCommits(){
               Commits List
             </h2>
           </div>
-          <Dtable/>
+          <Dtable columns={columns_full}/>
           <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
           using Shadcn ui and tanstack{' '}
         </p>

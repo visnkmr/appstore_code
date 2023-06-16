@@ -3,6 +3,6 @@ import CountUp from 'react-countup';
 
 export default function Upto(){
     return (
-        <CountUp end={1500000} duration={10}/>
+        <CountUp end={15000000} duration={20}/>
     );
 }

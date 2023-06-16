@@ -1,9 +1,18 @@
 'use client';
 
-import {  ColumnDef } from '@tanstack/react-table';
-import {  ArrowUpDown } from 'lucide-react';
+import { ColumnDef } from '@tanstack/react-table';
+import { ArrowUpDown } from 'lucide-react';
 
 import { Button } from '../../components/ui/button';
+// import { Checkbox } from '../../components/ui/checkbox';
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuLabel,
+//   DropdownMenuSeparator,
+//   DropdownMenuTrigger,
+// } from '../../components/ui/dropdown-menu';
 import React from 'react';
 import { DateTime } from 'luxon';
 import LetterClamp from '../../src/components/letterclamp';
@@ -33,7 +42,7 @@ export type eCommit = {
 // 	});
 // });
 
-export const columns: ColumnDef<eCommit>[] = [
+export const columns_full: ColumnDef<eCommit>[] = [
  
   // {
   //   accessorKey: 'reponame',
@@ -83,7 +92,7 @@ export const columns: ColumnDef<eCommit>[] = [
       const rname = getValue()
 
       return (
-          <a className='w-32' href={commit}>{`${rname}`}</a>
+          <a href={commit}>{`${rname}`}</a>
         // <div className="text-right">
         //   {original_price_incl_tax !== price && (
         //     <Tooltip
@@ -158,7 +167,7 @@ export const columns: ColumnDef<eCommit>[] = [
       const rname = getValue()
 
       return (
-          <p className='w-10 sm:w-64 wolc'><LetterClamp text={message}/><br/>
+          <p className='wolc'><LetterClamp text={message}/><br/>
       <span className="text-green-500">
 
       {"(+) "+additions.toString()}
