@@ -13,18 +13,17 @@ async function appsfetcher() {
     <>
   {apps.map((app:any) => {
       return ( 
-        <div className="flex justify-center w-full">
-          
     <div 
     key={app.slug} 
-    className="w-72 shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  m-auto p-4   ">             
-    <img src="https://play-lh.googleusercontent.com/NtXjy17Ve1e91vP6zRcaFK5Gil8fEJ0xML9bcmLI_6Ubjgkuh4JujhfCvs5nlFCu_Is=w2560-h1440-rw" className="w-full object-contain h-64 flex justify-center "/>
+    className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
+    
       {/* <div className="w-120 p-4">
           <img
           src={image}
           className="w-120 "/>
       </div> */}
-      <div className="text-center">
+      <div className="text-center w-full">
+         <img src="https://play-lh.googleusercontent.com/NtXjy17Ve1e91vP6zRcaFK5Gil8fEJ0xML9bcmLI_6Ubjgkuh4JujhfCvs5nlFCu_Is=w2560-h1440-rw" className="w-full object-contain h-64 flex justify-center "/>
       <h3 className="font-bold text-center m-4">{app.title}</h3>
       <noscript>
 
@@ -41,8 +40,6 @@ async function appsfetcher() {
       <LineClamp className="font-bold text-center m-4" text={app.download} lines={2}/>
       </div>
     </div>
-    </div>
-
       );
   })}
   </>
@@ -53,7 +50,7 @@ export default async function Project() {
     // const [scroll, setScroll] = useState(false);
     return (
       <>
-      <div className="dark:bg-gray-900 dark:text-white">
+      <div className="grid sm:grid-cols-2 xl:grid-cols-4 dark:bg-gray-900 dark:text-white">
       {await appsfetcher()}
       </div>
       </>
