@@ -1,5 +1,5 @@
 import React from "react";
-import Commits from "../../src/components/commits";
+// import Commits from "../../src/components/commits";
 import recentprojs from "../../src/components/recentprojs";
 import '../../styles/ppstyle.css'
 
@@ -148,7 +148,7 @@ For detailed information on Google Firebase and data privacy, please refer to<br
 </ul>
 
         </div>
-<Commits/>
+{/* <Commits/> */}
         </div>
 
     );

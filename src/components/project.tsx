@@ -23,10 +23,10 @@ async function appsfetcher() {
           className="w-120 "/>
       </div> */}
       <div className="text-center w-full">
-        <div className="h-96 overflow-hidden">
+        {/* <div className="h-96 overflow-hidden">
 
          <img src="https://play-lh.googleusercontent.com/NtXjy17Ve1e91vP6zRcaFK5Gil8fEJ0xML9bcmLI_6Ubjgkuh4JujhfCvs5nlFCu_Is=w2560-h1440-rw" className="w-full object-contain flex justify-center rounded-2xl"/>
-        </div>
+        </div> */}
       <h3 className="font-bold text-center m-4">{app.title}</h3>
       <noscript>
 

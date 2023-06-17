@@ -86,9 +86,9 @@ export default function DarkButton() {
         </svg>
       </button>
       </span>
-<span className='p-2.5 absolute left-0'>
+<span className='p-2.5 absolute left-0 z-10'>
 
-                    <img alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20 " src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg"/>
+                    <img alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg" />
 </span>
     </div>
 
