@@ -22,8 +22,14 @@ import Upto from "./countup";
 // import { useEffect } from 'react';
 const TEXTS = [
     "Efficient",
-    "Fast",
+    "Responsive",
     "Secure",
+    ];
+const DTEXTS = [
+    "Phone",
+    "Tablet",
+    "PC",
+    "TV",
     ];
 export default async function Homepage(){
     

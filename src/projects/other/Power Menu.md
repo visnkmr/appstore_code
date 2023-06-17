@@ -2,7 +2,7 @@
 publishDate: ''
 title: 'Power Menu'
 description: 'A Simple, secure root less accessibility based software power menu for android.'
-download: '500k+ downloads'
+download: '500k+ '
 image: ''
 tags: [gp,gh]
 ---

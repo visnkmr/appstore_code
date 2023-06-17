@@ -3,8 +3,8 @@ publishDate: ''
 title: 'Netspeed monitor'
 description: 'Monitor live bandwidth usage/ network speed.'
 excerpt: ''
-download: '100k+ downloads'
-image: ''
+download: '100k+ '
+image: 'https://play-lh.googleusercontent.com/X3DKmfqINWisTLdWa1QJbcpo8u4CBHMSx8GDZgNSCsGiA6VazysCExFQYWNjXYURFa6D=w2560-h1440-rw'
 tags: [aas,mas,gp,gh]
 oss: t
 techused: [sse,http,tauri,rust,tkinter,python,tcl,serde,chrono,prefstore,json,tiny_http,human-panic]

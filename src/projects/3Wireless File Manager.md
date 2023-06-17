@@ -2,9 +2,9 @@
 publishDate: ''
 title: 'Wireless File Manager'
 description: 'Transfer, Manage files on your Android, Fire TV, Tablet, Phone (Internal Storage, External Storage) using any web browser.'
-excerpt: '#2 most downloaded app of all time for Fire TV in respective category'
-download: '500k+ downloads'
-image: ''
+excerpt: '#2 on Fire TV in respective category'
+download: '500k+ '
+image: 'https://play-lh.googleusercontent.com/iL4beyEJ5LTLW-ImNf5l91zzZT996DiEwRl8QlY6WQm4AwjLxO1jTwhb_Gd0398tums=w2560-h1440-rw'
 tags: [aas,mas,gp,gh]
 oss: f
 ---

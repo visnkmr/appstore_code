@@ -2,9 +2,9 @@
 publishDate: ''
 title: 'Netspeed Test'
 description: 'Test Internet download speed, latency (ping), scan LAN / WiFi for connected devices; all while consuming the minimum amount of data required.'
-excerpt: '#2 most downloaded app of all time for Fire TV in respective category'
-download: '2.5m+ downloads'
-image: ''
+excerpt: '#2 on Fire TV in respective category'
+download: '2.5m+ '
+image: 'https://play-lh.googleusercontent.com/omsf9IxM_NN69cUtdqYZuWlAhUJe1l6SDjrROZtHoLCjanHLBYGHHKuo5GEjsqk07Dk=w2560-h1440-rw'
 tags: [aas,mas,gp,gh]
 oss: f
 ---
