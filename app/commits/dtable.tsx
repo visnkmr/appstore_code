@@ -1,3 +1,5 @@
+'use client';
+
 import { eCommit} from './columns';
 import { DataTable } from './data-table';
 import dwc, { tabledata } from '../../src/dealcommits';

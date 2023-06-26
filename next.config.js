@@ -2,6 +2,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
+
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -41,6 +43,13 @@ module.exports = withBundleAnalyzer({
   webpack: (config,{nextRuntime}
     // , { dev, isServer }
     ) => {
+      // if (options.isServer) {
+      //   config.externals = ['@tanstack/react-query', ...config.externals];
+      // }
+      // config.resolve.alias['@tanstack/react-query'] = path.resolve(
+      //   './node_modules/@tanstack/react-query'
+      // );
+    
       config.resolve.fallback = {
         fs: false,
         net: false,

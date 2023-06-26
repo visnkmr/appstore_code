@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Infiscrollcomp from "../../src/components/infiscroll";
 import dwc from "../../src/dealcommits";

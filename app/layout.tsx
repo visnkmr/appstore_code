@@ -19,9 +19,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
-    
     <html suppressHydrationWarning className="" lang="en">
       <body className="dark:bg-gray-900">
         <Providers>

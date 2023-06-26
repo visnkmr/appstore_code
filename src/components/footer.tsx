@@ -79,10 +79,9 @@ export default function Footer() {
           <div className="p-10 ">
             <div className="">
               <span>
-                <h1>
-                  Copyright © {new Date().getFullYear()} Vishnu N K. All rights reserved.<br/>
-                Made from scratch using NextJS, React and Tailwind.
-                  </h1>
+                <p>
+                  Copyright © {new Date().getFullYear()} Vishnu N K. All rights reserved.
+                  </p>
               </span>
             </div>
           </div>

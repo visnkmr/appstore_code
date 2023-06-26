@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 // import mycommits from './getcommits';
 import { Commits, oCommits } from './shared/types';
 import { DateTime } from 'luxon';
@@ -8,7 +8,7 @@ import take from 'lodash.take';
 
 
 export default function dwc(path:string,limit:number){
-    const commits: Commits[] = JSON.parse(gtr(path));
+    const commits: Commits[] = gtr(path);
     
 
     var myCommits:oCommits[]=[];
@@ -45,5 +45,5 @@ export default function dwc(path:string,limit:number){
         
 }
 export function tabledata(path:string): Commits[]{
-    return JSON.parse(gtr(path));        
+    return gtr(path)        
 }

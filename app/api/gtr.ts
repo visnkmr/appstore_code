@@ -1,16 +1,36 @@
 // import { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+// import fs from 'fs';
+// import useSWR from 'swr'
 // import appdirs from 'appdirs';
+'use client'
+import { useEffect, useState } from "react";
+import { Commits } from "../../src/shared/types";
+
 export default function gtr(path:string){
+  const [dta,setd]=useState([] as Commits[])
+  const [isloading,setild]=useState(true)
+  useEffect(() => {
+    async function fetchd(){
+
+      const response = await fetch('https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/'+path)
+      const cdata = await response.json()
+      console.log(cdata)
+      setd(cdata)
+      setild(false)
+
+    }
+    fetchd();
+  },[])
   // const appdirs = require('appdirs');
   // const path = require('path');
   // const configDir = appdirs.userConfigDir();
   // const configFilePath = path.join(configDir, 'gtr', 'gtrl.json');
-  const file = fs.readFileSync('/home/roger/.config/gtr/'+path);
-  const data = file.toString();
+  // const file = fs.readFileSync('/home/roger/.config/gtr/'+path);
+  // console.log(file)
+  // const data = file.toString();
 //   console.log(data)
 //   const data = JSON.parse(file.toString());
-  return data;
+  return dta;
 
 };
 
