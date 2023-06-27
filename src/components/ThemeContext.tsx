@@ -1,5 +1,7 @@
    'use client'
    import React, { createContext, useState, useEffect } from 'react';
+   import {QueryClient, QueryClientProvider, useQuery} from '@tanstack/react-query'
+   import axios from 'axios'
 // import { getfromls, useLocalStorage } from './useLocalStorage';
 
 //    export const ThemeContext = createContext({
@@ -27,6 +29,9 @@
 import { ThemeProvider } from 'next-themes'
 
 export function Providers({ children }:tpprops) {
+  const [queryClient] = React.useState(() => new QueryClient())
+  
+
     // const [mounted, setMounted] = useState(false)
     // const { theme, setTheme } = useTheme()
   
@@ -38,5 +43,9 @@ export function Providers({ children }:tpprops) {
     // if (!mounted) {
     //   return null
     // }
-  return <ThemeProvider attribute='class'>{children}</ThemeProvider>
+  return <ThemeProvider attribute='class'>
+    <QueryClientProvider client={queryClient}>
+    {children}
+    </QueryClientProvider>
+    </ThemeProvider>
 }

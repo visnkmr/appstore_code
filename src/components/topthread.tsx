@@ -1,9 +1,17 @@
+'use client'
 import React from "react";
 import ScrollText from "./ScrollText";
 import Lightbulb from "./Lightbulb";
 import Marquee from "react-fast-marquee";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export default function Topthread(){
+    // const { data } = useQuery({ queryKey: ['posts'], queryFn: async()=>{
+    //     const response = await axios.get('https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/gtrl.json')
+    //     console.log(response.data)
+    //       return await response.data
+    //   } })
     return(
         <>
         {/* <ScrollText text="This is a scrolling text.This is a scrolling text." speed={20} /> */}
