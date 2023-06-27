@@ -63,6 +63,15 @@ export default function Commits() {
         <div className="sm:hidden w-full">
 
         {showlistorscroll(1)}
+        <div
+        className="flex w-full justify-center items-center">
+
+        <a
+        href="/commits"
+        target="_blank"
+        className="text-center sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 rounded-full place-self-center hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ">Browse Commit Table
+        </a>
+        </div>
         </div>
         {/* <a
         href="/commits"
@@ -76,7 +85,7 @@ export default function Commits() {
   export function showlistorscroll(whichone:number){
     if(whichone===1)return (
       <>
-    {Mq(0)}
+        {Mq(0)}
       </>
 
     );

@@ -118,7 +118,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div>
+    <div className=''>
       <div className='flex items-center py-5'>
         <Input
           placeholder='Filter message...'
@@ -156,7 +156,7 @@ export function DataTable<TData, TValue>({
         </DropdownMenuContent>
       </DropdownMenu>
       <div className='rounded-md border shadow-md'>
-        <Table>
+        <Table className='text-center'>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>

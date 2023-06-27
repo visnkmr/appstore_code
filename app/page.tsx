@@ -38,7 +38,7 @@ export default async function Page() {
           <Ct/>
           <Commits/>
           <Contactme/>
-          <p className="flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
+          <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
       </div>
 
         {/* </div> */}

@@ -28,7 +28,7 @@ const TEXTS=[
 ];
 export default function Contactme(){
     return(
-        <div className="m-20">
+        <div className="mb-10">
         <h1 className="text-gray-900 text-center font-bold font-heading leading-tighter tracking-tighter xl:px-0 xl:text-[3.48rem] px-4 text-2xl sm:text-5xl dark:text-white ">
                 {/* Our products have featured on most media outlets around the world, in most languages.  */}
                 Find me on <Textspin text={TEXTS} direction={"down"} interval={1000}/>

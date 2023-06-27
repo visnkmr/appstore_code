@@ -41,16 +41,17 @@ export default function Mq(fromwhere:number){
     }
     else{
         return(
-            <Marquee pauseOnHover direction="left" className="pt-5">    
-                {appsfetcher()}
-                {/* {dwc("gtrl.json",5).map((ic) => {
+            <Marquee pauseOnHover direction="left" className="pt-5">   
+             
+                {/* {appsfetcher()} */}
+                {dwc("gtrl.json",5).map((ic) => {
                     return ( 
-                        // <Indicommit ic={ic}/>
-                        <div className="text-bold">
-                            {ic.reponame}
-                        </div>
+                        <Indicommit ic={ic}/>
+                        // <div className="text-bold">
+                        //     {ic.reponame}
+                        // </div>
                     );
-                })} */}
+                })}
             </Marquee>
         );
     }
