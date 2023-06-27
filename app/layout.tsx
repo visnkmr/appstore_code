@@ -8,8 +8,9 @@ import Topthread from "../src/components/topthread"
 import { useLocalStorage } from "../src/components/useLocalStorage"
 import '../styles/globals.css'
 import DarkButton from "./but"
+import {Metadata} from 'next'
 
-export const metadata = {
+export const metadata:Metadata = {
   title: 'Vishnu N K',
   description: 'Platform agnostic Dekstop, TV, Mobile, Web app developer. Experience with Rust, Typescript, Kotlin, Java. Apps available on Google Play, Amazon Appstore, Microsoft App Store. On github, codeberg, gitea. Website build using NextJS SSG, Tailwind, React.',
 }
