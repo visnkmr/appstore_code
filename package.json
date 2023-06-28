@@ -64,6 +64,7 @@
   "dependencies": {
     "@next/bundle-analyzer": "^13.4.3",
     "class-variance-authority": "^0.6.0",
+    "next-optimized-images": "^3.0.0-canary.10",
     "react-fast-marquee": "^1.6.0",
     "react-lazy-load-image-component": "^1.6.0"
   }

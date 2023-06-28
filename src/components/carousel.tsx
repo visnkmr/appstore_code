@@ -27,11 +27,11 @@ export default function Caro(){
                             <source media='(min-width: 768px)' 
                                     sizes='300px' 
                                     srcSet='
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 600w,                
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 300w'/>
-                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png' alt='google play profile of vishnu n k'/>
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/gplay.webp 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/gplay.webp 300w'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/gplay.webp' alt='google play profile of vishnu n k'/>
                         </picture>
-                        {/* <img  src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png"></img> */}
+                        {/* <img  src="/gplay.webp"></img> */}
                     </a>
                 </div>
                 </div><div>
@@ -47,11 +47,11 @@ export default function Caro(){
                             <source media='(min-width: 768px)' 
                                     sizes='300px' 
                                     srcSet='
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 600w,                
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 300w'/>
-                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png' alt='amazon profile of vishnu n k'/>
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/amzstore.webp 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/amzstore.webp 300w'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/amzstore.webp' alt='amazon profile of vishnu n k'/>
                         </picture>
-                    {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png"></img> */}
+                    {/* <img src="/amzstore.webp"></img> */}
                 </a>
                 </div>
 
@@ -70,11 +70,11 @@ export default function Caro(){
                             <source media='(min-width: 768px)' 
                                     sizes='300px' 
                                     srcSet='
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 600w,                
-                                    https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 300w'/>
-                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png' alt='github profile of vishnu n k'/>
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ghub.webp 600w,                
+                                    https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ghub.webp 300w'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ghub.webp' alt='github profile of vishnu n k'/>
                         </picture>
-                        {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png"></img> */}
+                        {/* <img src="/ghub.webp"></img> */}
                     </a>
                 </div>
             </div>

@@ -4,7 +4,7 @@ title: 'Taotlus'
 description: ''
 excerpt: '#1 on Fire TV in respective category'
 download: '100k+ '
-image: 'https://play-lh.googleusercontent.com/6oMZAAecybS4Ga63--q_34EAxwL4vBOxLYNvsT9HN5n_NrpLYOPq_Qjfc4SF87Zvdp4=w2560-h1440-rw'
+image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/taotlus.webp'
 tags: [aas,mas,gp,gh]
 oss: f
 ---

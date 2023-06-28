@@ -31,7 +31,7 @@ const DTEXTS = [
     "PC",
     "TV",
     ];
-export default async function Homepage(){
+export default function Homepage(){
     
     // var randval="no";
     // useEffect(() => {
@@ -103,7 +103,7 @@ export default async function Homepage(){
             </div>
             
         </div>
-        {await recentprojs()}
+        {recentprojs()}
         {/* <Mq/> */}
         <Stats/>
 

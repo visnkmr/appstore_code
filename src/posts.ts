@@ -53,6 +53,7 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
 
   try {
     const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
+    // const matter = (await import('gray-matter')).default
     const { data: frontmatter, content } = matter(readFile);
     return {
       slug,

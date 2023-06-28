@@ -1,13 +1,20 @@
 // 'use client'
-import Project from "../src/components/project";
+import dynamic from 'next/dynamic'
+
+// import Project from "../src/components/project";
+const Project =dynamic(()=>import ("../src/components/project"));
+
 import Homepage from "../src/components/homepage";
 // import Planglist from "../src/components/planlist";
 // import Stats from "../src/components/stats";
 import Workinp from "../src/components/wip";
 import Footer from "../src/components/footer";
 import '../styles/globals.css'
-import Ct from "../src/components/ct";
-import Commits from "../src/components/commits";
+// import Ct from "../src/components/ct";
+const Ct =dynamic(()=>import ("../src/components/ct"));
+
+const Commits =dynamic(()=>import ("../src/components/commits"));
+// import Commits from "../src/components/commits";
 import Topthread from "../src/components/topthread";
 import DarkButton from "./but";
 import Mq from "../src/components/mq";
@@ -19,7 +26,7 @@ import Contactme from "../src/components/contactme";
 // import dwc from "../src/dealcommits";
 // import gtr from "./api/gtr";
 
-export default async function Page() {
+export default function Page() {
   // console.log("hello world")
   // console.log(JSON.parse(gtr()))
   // console.log(dwc())
@@ -32,9 +39,9 @@ export default async function Page() {
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
       
-          {await Homepage()}
+          <Homepage/>
           {/* <Planglist/> */}
-          {await Project()}
+          <Project/>
           <Ct/>
           <Commits/>
           <Contactme/>

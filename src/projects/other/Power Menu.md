@@ -3,7 +3,7 @@ publishDate: ''
 title: 'Power Menu'
 description: 'A Simple, secure root less accessibility based software power menu for android.'
 download: '500k+ '
-image: ''
+image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images'
 tags: [gp,gh]
 ---
 
