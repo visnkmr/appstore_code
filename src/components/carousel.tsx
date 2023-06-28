@@ -3,6 +3,7 @@
 import Carousel  from './Carousel/Carousel';
 import './Carousel/Carousel.css';
 import '../../styles/globals.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 export default function Caro(){
@@ -28,7 +29,7 @@ export default function Caro(){
                                     srcSet='
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 600w,                
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png 300w'/>
-                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png' alt='google play profile of vishnu n k'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png' alt='google play profile of vishnu n k'/>
                         </picture>
                         {/* <img  src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gp.png"></img> */}
                     </a>
@@ -48,7 +49,7 @@ export default function Caro(){
                                     srcSet='
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 600w,                
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png 300w'/>
-                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png' alt='amazon profile of vishnu n k'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png' alt='amazon profile of vishnu n k'/>
                         </picture>
                     {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/amz.png"></img> */}
                 </a>
@@ -71,7 +72,7 @@ export default function Caro(){
                                     srcSet='
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 600w,                
                                     https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png 300w'/>
-                            <img src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png' alt='github profile of vishnu n k'/>
+                            <LazyLoadImage src='https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png' alt='github profile of vishnu n k'/>
                         </picture>
                         {/* <img src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/gho.png"></img> */}
                     </a>

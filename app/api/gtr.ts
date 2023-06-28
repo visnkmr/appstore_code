@@ -23,7 +23,7 @@ export default function gtr(path:string){
   //   }
   //   fetchd();
   // },[])
-  let { data } = useQuery({ queryKey: ['posts'], queryFn: async()=>{
+  let { data } = useQuery({ queryFn: async()=>{
         const response = await axios.get('https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/'+path)
         console.log(response.data)
           return await response.data

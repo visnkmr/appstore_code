@@ -5,6 +5,7 @@ import { useLocalStorage } from '../src/components/useLocalStorage';
 // import { ThemeContext } from '../src/components/ThemeContext';
 import { useTheme } from 'next-themes';
 import '../styles/imgstutter.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // export function darkorwhite(){
 //   let key="dark";
 //   let wtr=false;
@@ -88,7 +89,7 @@ export default function DarkButton() {
       </span>
 <span className='p-2.5 absolute left-0 z-10'>
 
-                    <img alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg" />
+                    <LazyLoadImage alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/1654419210688.jpg" />
 </span>
     </div>
 

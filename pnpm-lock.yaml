@@ -51,6 +51,9 @@ devDependencies:
   '@types/react':
     specifier: ^18.2.6
     version: 18.2.6
+  '@types/react-lazy-load-image-component':
+    specifier: ^1.5.3
+    version: 1.5.3
   '@types/react-virtualized':
     specifier: ^9.21.22
     version: 9.21.22
@@ -2418,6 +2421,13 @@ packages:
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react-lazy-load-image-component@1.5.3:
+    resolution: {integrity: sha512-hTzsQQ64mmPR6W03DQr6zhzeBGn17ExnVd7sLHqTQZQVd9Oi0Dy7tfSPgK0+AZV5YNC+e8Jw7oq9kzYfDkCDCA==}
+    dependencies:
+      '@types/react': 18.2.6
+      csstype: 3.1.2
     dev: true
 
   /@types/react-virtualized@9.21.22:

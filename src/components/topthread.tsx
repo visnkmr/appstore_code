@@ -5,6 +5,7 @@ import Lightbulb from "./Lightbulb";
 import Marquee from "react-fast-marquee";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Topthread(){
     // const { data } = useQuery({ queryKey: ['posts'], queryFn: async()=>{

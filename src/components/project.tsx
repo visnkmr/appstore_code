@@ -7,8 +7,10 @@ import { findLatestapps } from "../posts";
 import StoreIcons from "./storeicons";
 import LineClamp from "./LineClamp";
 import { Download } from "lucide-react/";
+import Llimage from "./llimage";
 async function appsfetcher() {
   var apps = await findLatestapps("projects");
+  // var apps = [] as any;
   //  apps = await findLatestapps("projects/inp");
   return (
     <>
@@ -31,8 +33,8 @@ async function appsfetcher() {
         <LineClamp text={app.excerpt} className="font-bold text-center m-4" lines={1}/>
         </div>
         <div className="h-96 overflow-hidden">
-
-         <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/>
+        <Llimage url={app.image}/>
+         {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
         </div>
         <div className="rounded-xl">
 
