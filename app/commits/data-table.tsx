@@ -49,7 +49,8 @@ export function DataTable<TData, TValue>({
 }: DataTableProps<TData, TValue>) {
   const searchParams = useSearchParams()
  
-  const reponame = searchParams.get('reponame')
+  const reponame = searchParams.get('reponame')!==null?searchParams.get('reponame'):""
+  const message = searchParams.get('message')!==null?searchParams.get('message'):""
   // console.log(columns);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -123,6 +124,7 @@ export function DataTable<TData, TValue>({
   React.useEffect(() => {
     
       table.getColumn('reponame')?.setFilterValue(reponame);
+      table.getColumn('message')?.setFilterValue(message);
       // console.log("ran once")
         
     // code to run after render goes here
