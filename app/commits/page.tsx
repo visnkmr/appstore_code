@@ -2,11 +2,13 @@
 'use client';
 
 import React from 'react';
+
 import '../../styles/committablestyle.css'
 import { columns_full } from './columns_full';
 import Dtable from './dtable'
 
 export default function ListCommits(){
+  
   return(
     <div className='center'>
         <section className='committablestyle flex gap-6 dark:text-white'>

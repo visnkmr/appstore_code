@@ -21,6 +21,7 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../../components/ui/dropdown-menu';
 
@@ -34,7 +35,7 @@ import {
 } from '../../components/ui/table';
 import { eCommit } from './columns';
 import { DateTime } from 'luxon';
-
+import { useSearchParams } from 'next/navigation'
 
 
 interface DataTableProps<TData, TValue> {
@@ -46,6 +47,9 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  const searchParams = useSearchParams()
+ 
+  const reponame = searchParams.get('reponame')
   // console.log(columns);
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -116,15 +120,25 @@ export function DataTable<TData, TValue>({
     // getFacetedRowModel: getFacetedRowModel(),
     // getFacetedUniqueValues: getFacetedUniqueValues(),
   });
+  React.useEffect(() => {
+    
+      table.getColumn('reponame')?.setFilterValue(reponame);
+      // console.log("ran once")
+        
+    // code to run after render goes here
+  }, []) // <-- empty array means 'run once'
 
   return (
     <div className=''>
       <div className='flex items-center py-5'>
         <Input
-          placeholder='Filter message...'
+          placeholder='Search in commit message for...'
           value={(table.getColumn('message')?.getFilterValue() as string) ?? ''}
           onChange={(event) =>
-            table.getColumn('message')?.setFilterValue(event.target.value)
+            {
+              table.getColumn('message')?.setFilterValue(event.target.value)
+              // || table.getColumn('reponame')?.setFilterValue(event.target.value)
+            }
           }
           className='max-w-sm'
         />
@@ -155,6 +169,42 @@ export function DataTable<TData, TValue>({
             })}
         </DropdownMenuContent>
       </DropdownMenu>
+      <div className='flex items-center py-5'>
+        <Input
+          placeholder='Filter by reponame...'
+          value={(table.getColumn('reponame')?.getFilterValue() as string) ?? ''}
+          onChange={(event) =>
+            table.getColumn('reponame')?.setFilterValue(event.target.value)
+          }
+          className='max-w-sm'
+        />
+      </div>
+      {/* <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button 
+            // variant='outline' 
+            className='ml-auto'>
+            Reponame
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align='end' className='bg-white dark:bg-gray-900'>
+          {table
+            .getAllColumns()
+            .filter((column) => column.getCanHide())
+            .map((column) => {
+              return (
+                <DropdownMenuCheckboxItem
+                  key={column.id}
+                  className='capitalize text-black dark:text-white'
+                  checked={column.getIsVisible()}
+                  onCheckedChange={(value:boolean) => column.toggleVisibility(!!value)}
+                >
+                  {column}
+                </DropdownMenuCheckboxItem>
+              );
+            })}
+        </DropdownMenuContent>
+      </DropdownMenu> */}
       <div className='rounded-md border shadow-md'>
         <Table className='text-center'>
           <TableHeader>
