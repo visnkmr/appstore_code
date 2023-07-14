@@ -24,6 +24,10 @@ export default function RootLayout({
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
     <html suppressHydrationWarning className="" lang="en">
+      <head>
+        {/* google verification for site ownership v */}
+      <meta name="google-site-verification" content="xp7_dmcns-vHy2f1ga7pYmGO779Zoy3Kk6RmMixlx-A" />
+      </head>
       <body className="dark:bg-gray-900">
         <Providers>
 

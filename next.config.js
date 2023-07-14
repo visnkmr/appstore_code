@@ -1,6 +1,8 @@
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+const withOptimizedImages = require('next-optimized-images');
+
 
 
 
@@ -9,6 +11,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
+  // withOptimizedImages,
   experimental: {
     // appDir: true,
     // optimizeCss: true,

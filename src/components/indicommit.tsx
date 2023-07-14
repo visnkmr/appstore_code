@@ -13,7 +13,7 @@ export default function Indicommit({ic}:icprops){
 return (
     <div 
     // key={key} 
-    className="h-60 hover:h-auto w-60 mt-5 flex flex-row shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
+    className="h-60 w-60 mt-5 flex flex-row shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
       {/* <div className="w-120 p-4">
           <img
           src={image}
