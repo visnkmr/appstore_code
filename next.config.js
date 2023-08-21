@@ -29,7 +29,7 @@ module.exports = withBundleAnalyzer({
   
   // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
-  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/',
+  // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/',
   // assetPrefix: 'https://visnk.pages.dev/',
   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
   // amp:false,

@@ -2,7 +2,8 @@
 import dynamic from 'next/dynamic'
 
 // import Project from "../src/components/project";
-const Project =dynamic(()=>import ("../src/components/project"));
+const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
+const Projects =dynamic(()=>import ("../src/components/project"));
 
 import Homepage from "../src/components/homepage";
 // import Planglist from "../src/components/planlist";
@@ -39,11 +40,12 @@ export default function Page() {
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
       
-          <Homepage/>
+          {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <Project/>
+          <OtherProjects/>
+          <Projects/>
           <Ct/>
-          <Commits/>
+          {/* <Commits/> */}
           <Contactme/>
           <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
       </div>

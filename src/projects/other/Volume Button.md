@@ -9,4 +9,4 @@ tags: [gp,gh]
 oss: f
 ---
 
-A Simple, secure root less way to access volume slider when the volume button isn't functional.
+Software Volume button for android.
