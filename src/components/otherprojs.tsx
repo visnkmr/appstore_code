@@ -8,6 +8,7 @@ import StoreIcons from "./storeicons";
 import LineClamp from "./LineClamp";
 import { Download } from "lucide-react/";
 import Llimage from "./llimage";
+import { Button } from "../../components/ui/button";
 async function appsfetcher() {
   var apps = await findLatestapps("projects/other");
   // var apps = [] as any;
@@ -26,9 +27,9 @@ async function appsfetcher() {
           className="w-120 "/>
       </div> */}
       <div className="text-center w-full ">
-      <div className="flex justify-center m-4">
+      {/* <div className="flex justify-center m-4">
         <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
-        </div>
+        </div> */}
         <div className="">
         <LineClamp text={app.excerpt} className="font-bold text-center m-4" lines={1}/>
         </div>
@@ -46,7 +47,13 @@ async function appsfetcher() {
       <LineClamp text={app.content} lines={2} />
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
-      
+      <a 
+        href="https://github.com/visnkmr" 
+        className="flex justify-center m-4 mr-2 rounded-md border shadow-md p-5 bg-green-400 dark:bg-green-800"
+        rel="noopener" 
+        target="_blank">
+        <Download className="mr-5"/>Download
+        </a>
 
       {/* <img src={image} className="w-32"/> */}
       <StoreIcons storename={app.tags} w={1}/>
