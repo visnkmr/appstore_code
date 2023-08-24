@@ -7,7 +7,7 @@ export default function indireview(review:review){
         return ( 
             <div 
             // key={review.} 
-            className="h-60 w-60 sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 " >             
+            className="min-h-[15rem] w-60 sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 " >             
             {/* <div className="w-120 p-4">
                 <img
                 src={image}
