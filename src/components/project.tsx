@@ -25,7 +25,7 @@ async function appsfetcher() {
           src={image}
           className="w-120 "/>
       </div> */}
-      <div className="text-center w-full ">
+      <div className="text-center w-full m-5">
       {/* <div className="flex justify-center m-4">
         <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
         </div> */}
@@ -36,6 +36,13 @@ async function appsfetcher() {
         <Llimage url={app.image}/>
          /~ <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> ~/
         </div>*/}
+        <div className="flex justify-center">
+         <div className="h-32 w-32 overflow-hidden">
+         {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
+        <Llimage url={`https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/${app.image}.png`}/>
+         {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
+        </div>
+        </div>
         <div className="rounded-xl">
 
       <h3 className="font-bold text-center m-4">{app.title}</h3>

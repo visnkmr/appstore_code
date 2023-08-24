@@ -4,7 +4,7 @@ title: 'V File Explorer (File explorer on Amazon Appstore)'
 description: 'Fast, clean file explorer for android.'
 excerpt: '#1 on Fire TV '
 download: '1m+ '
-image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/fx.webp'
+image: 'fx'
 tags: [aas,ms,gh]
 ---
 

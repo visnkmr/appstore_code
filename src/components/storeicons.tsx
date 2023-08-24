@@ -24,7 +24,7 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
     return (
         <>
         
-        <div className="flex items-center justify-center m-5">
+        <div className="flex items-center justify-center">
       {showaas && (
       <Aas/>
       )} 
