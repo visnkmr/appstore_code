@@ -2,9 +2,9 @@
 publishDate: ''
 title: 'Taotlus'
 description: ''
-excerpt: '#1 on Fire TV in respective category'
+excerpt: '#1 on Fire TV '
 download: '100k+ '
-image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/taotlus.webp'
+image: 'taotlus'
 tags: [aas,mas,gp,gh]
 oss: f
 ---
