@@ -26,16 +26,16 @@ async function appsfetcher() {
           className="w-120 "/>
       </div> */}
       <div className="text-center w-full ">
-      <div className="flex justify-center m-4">
+      {/* <div className="flex justify-center m-4">
         <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
-        </div>
-        <div className="">
+        </div> */}
+        {/* <div className="">
         <LineClamp text={app.excerpt} className="font-bold text-center m-4" lines={1}/>
-        </div>
-        <div className="h-96 overflow-hidden">
+        </div> */}
+        {/*<div className="h-96 overflow-hidden">
         <Llimage url={app.image}/>
-         {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
-        </div>
+         /~ <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> ~/
+        </div>*/}
         <div className="rounded-xl">
 
       <h3 className="font-bold text-center m-4">{app.title}</h3>
@@ -47,7 +47,16 @@ async function appsfetcher() {
 
       {/* <p className="line-clamp-2 text-center">{content}</p> */}
       
-
+      <a 
+        href="https://github.com/visnkmr" 
+        className="flex justify-center m-4 mr-2 rounded-md border shadow-md p-5 bg-green-400 hover:bg-green-700 dark:bg-green-800"
+        rel="noopener" 
+        target="_blank">
+      <Download className="mr-5"/>Download
+      </a>
+      <div className="flex justify-center m-4">
+        <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
+        </div>
       {/* <img src={image} className="w-32"/> */}
       <StoreIcons storename={app.tags} w={1}/>
       {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
