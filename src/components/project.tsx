@@ -37,9 +37,9 @@ async function appsfetcher() {
          /~ <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> ~/
         </div>*/}
         <div className="flex justify-center">
-         <div className="h-32 w-32 overflow-hidden">
+         <div className="overflow-hidden">
          {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-        <Llimage url={`https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/${app.image}.png`}/>
+        <Llimage url={`https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/images/${app.image}.png`}/>
          {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
         </div>
         </div>
