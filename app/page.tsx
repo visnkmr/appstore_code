@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 // import Project from "../src/components/project";
 const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
 const Projects =dynamic(()=>import ("../src/components/project"));
+const Search =dynamic(()=>import ("../src/components/search"));
 
 import Homepage from "../src/components/homepage";
 // import Planglist from "../src/components/planlist";
@@ -20,6 +21,8 @@ import Topthread from "../src/components/topthread";
 import DarkButton from "./but";
 import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
+import { Input } from '../components/ui/input';
+import React from 'react';
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';
@@ -28,6 +31,8 @@ import Contactme from "../src/components/contactme";
 // import gtr from "./api/gtr";
 
 export default function Page() {
+  // const [ss, setss] = React.useState("")
+  // console.log(ss)
   // console.log("hello world")
   // console.log(JSON.parse(gtr()))
   // console.log(dwc())
@@ -39,7 +44,7 @@ export default function Page() {
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-      
+          <Search/>
           {/* <Homepage/> */}
           {/* <Planglist/> */}
           <OtherProjects/>

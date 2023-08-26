@@ -30,7 +30,7 @@ module.exports = withBundleAnalyzer({
   // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/',
-  assetPrefix: 'https://visnkmr.github.io/appstore/',
+  // assetPrefix: 'https://visnkmr.github.io/appstore/',
   // assetPrefix: 'https://visnk.pages.dev/',
   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
   // amp:false,
