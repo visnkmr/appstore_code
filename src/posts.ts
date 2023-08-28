@@ -42,6 +42,7 @@ export const findLatestapps= async (fromwhere:string)=> {
   // console.log(fromwhere)
   // const _count =  4;
   const apps = await fetchapps(fromwhere);
+  console.log(JSON.stringify(apps))
 
   return apps;
   // return apps ? apps.slice(_count * -1) : [];
@@ -55,11 +56,12 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
     const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
     // const matter = (await import('gray-matter')).default
     const { data: frontmatter, content } = matter(readFile);
-    return {
+    let toret= {
       slug,
       ...frontmatter,
       content,
     };
+    return toret;
   } catch (e) {}
 
   return null;

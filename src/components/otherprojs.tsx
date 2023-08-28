@@ -13,7 +13,6 @@ import { useSearchParams } from "next/navigation";
 import { printindiproj } from "./printindiproj";
 async function appsfetcher() {
   var apps = await findLatestapps("projects/other");
-  console.log(apps)
   // var apps = [] as any;
   //  apps = await findLatestapps("projects/inp");
   
