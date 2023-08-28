@@ -1,13 +1,29 @@
+// 'use client'
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { join } from 'path';
+import path, { join } from 'path';
 
 // const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 // console.log(BLOG_DIR)
 
 
 
-const load = (fromwhere:string) => {
+const load = (fromwhere:string) => 
+// {
+//   let { data } = useQuery({ queryFn: async()=>{
+//     const response = await axios.get(`https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/${fromwhere}/list.json`+fromwhere)
+//     console.log(response.data)
+//       return await response.data
+//   } })
+//   if(!data){
+//     data=[]
+//   }
+//     return data;
+  
+// };
+{
 
   console.log(fromwhere)
   var loctr=join(join(process.cwd(), 'src'),fromwhere);
@@ -42,7 +58,7 @@ export const findLatestapps= async (fromwhere:string)=> {
   // console.log(fromwhere)
   // const _count =  4;
   const apps = await fetchapps(fromwhere);
-  console.log(JSON.stringify(apps))
+  // console.log(JSON.stringify(apps))
 
   return apps;
   // return apps ? apps.slice(_count * -1) : [];

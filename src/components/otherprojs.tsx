@@ -24,7 +24,8 @@ async function appsfetcher() {
   </>
   );
 }
-export default function OtherProjects() {
+export default function OtherProjects({searchfor}) {
+  console.log(searchfor.searchfor)
     
     // const [scroll, setScroll] = useState(false);
     return (
