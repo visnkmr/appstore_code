@@ -11,7 +11,7 @@ import Llimage from "./llimage";
 import { Button } from "../../components/ui/button";
 import { useSearchParams } from "next/navigation";
 import { printindiproj } from "./printindiproj";
-async function appsfetcher() {
+async function appsfetcher(searchfor) {
   var apps = await findLatestapps("projects/other");
   // var apps = [] as any;
   //  apps = await findLatestapps("projects/inp");
@@ -19,7 +19,7 @@ async function appsfetcher() {
   return (
     <>
   {apps.map((app:any) => {
-    return printindiproj(app);
+    return printindiproj(app,searchfor);
   })}
   </>
   );
@@ -32,7 +32,7 @@ export default function OtherProjects({searchfor}) {
       <>
       <div className="grid sm:grid-cols-2 xl:grid-cols-4 dark:bg-gray-900 dark:text-white">
         
-      {appsfetcher()}
+      {appsfetcher(searchfor)}
       </div>
       </>
     );
