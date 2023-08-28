@@ -11,5 +11,5 @@ jobs:
       - name: Mirror to Codeberg
         run: |
           git fetch --unshallow
-          git remote add codeberg https://visnk:${{secrets.CBERG_TOKEN}}@codeberg.org/visnk/appstore.git
+          git remote set-url --add --push origin https://visnk:${{secrets.CBERG_TOKEN}}@codeberg.org/visnk/appstore.git
           git push 
