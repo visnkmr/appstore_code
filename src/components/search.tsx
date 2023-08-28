@@ -4,18 +4,19 @@ import React, { useEffect } from "react"
 import { Input } from "../../components/ui/input"
 import { useRouter } from "next/navigation"
 import debounce from 'lodash.debounce';
+import { useDebounce } from "use-debounce";
 
 
 const Search=()=>{
     const router=useRouter();
       const [ss, setss] = React.useState("")
-    //   const debounced=debounce(()=>{ss},500);
+      const [debounced]=useDebounce(ss,500);
       useEffect(()=>{
         // debounce(()=>{
-            router.push(`/?searchfor=${ss}`)
-            console.log(ss)
+            router.push(`/?searchfor=${debounced}`)
+            console.log(debounced)
         // },500)
-      },[ss,router])
+      },[debounced,router])
     return (
         <div>
 
