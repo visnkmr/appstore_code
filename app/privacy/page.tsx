@@ -1,13 +1,14 @@
+'use client'
 import React from "react";
 // import Commits from "../../src/components/commits";
-import recentprojs from "../../src/components/recentprojs";
+// import recentprojs from "../../src/components/recentprojs";
 import '../../styles/ppstyle.css'
 
 export default async function policy(){
     return(
         <div>
         
-        {await recentprojs()}
+        {/* {await recentprojs()} */}
         <div className="pol">
         <a href="/"><h1 className="text-5xl p-10">{"< "}Go Back</h1></a>
         <h1 className="text-5xl pb-10">Privacy Policy</h1>
