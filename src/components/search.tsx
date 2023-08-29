@@ -7,9 +7,9 @@ import debounce from 'lodash.debounce';
 import { useDebounce } from "use-debounce";
 
 
-const Search=()=>{
+const Search=({change})=>{
     const router=useRouter();
-      const [ss, setss] = React.useState("")
+      const [ss, setss] = React.useState(change)
       const [debounced]=useDebounce(ss,500);
       useEffect(()=>{
         // debounce(()=>{

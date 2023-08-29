@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import dynamic from 'next/dynamic'
 
 // import Project from "../src/components/project";
@@ -22,8 +22,9 @@ import DarkButton from "./but";
 import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';
-import React from 'react';
-import { useSearchParams } from 'next/navigation';
+import React, { useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useDebounce } from 'use-debounce';
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';
@@ -32,10 +33,26 @@ import { useSearchParams } from 'next/navigation';
 // import gtr from "./api/gtr";
 
 export default function Page({
-  searchParams
+  // searchParams
 }) {
   // console.log(searchParams)
-  // const [ss, setss] = React.useState("")
+  const router=useRouter();
+  const urlitems=useSearchParams();
+  const [ss, setss] = React.useState("")
+  console.log("--------->"+urlitems!.get('searchfor'))
+  // if(urlitems!.get('searchfor')==="" && ss==="")
+  {
+    const [debounced]=useDebounce(ss,500);
+  // if()
+  useEffect(()=>{
+    // debounce(()=>{
+        router.push(`/?searchfor=${debounced}`)
+        // console.log(debounced)
+    // },500)
+  },[debounced,router])
+  
+  }
+  
   //  const searchParams = useSearchParams()
   //   // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
   //   let searchfor = searchParams.get('searchfor')!==null?searchParams.get('searchfor'):""
@@ -54,16 +71,29 @@ export default function Page({
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-          <Search/>
+      <div>
+
+        <Input 
+        className='m-5 w-[50%]' 
+        value={ss}
+        placeholder="Search.."
+        onChange={(event) =>
+            {
+              setss(event.target.value)
+              // || table.getColumn('reponame')?.setFilterValue(event.target.value)
+            }
+          }/>
+        </div>
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <OtherProjects searchfor={searchParams.searchfor}/>
-          <Projects searchfor={searchParams.searchfor}/>
+          <OtherProjects searchfor={ss}/>
+          <Projects searchfor={ss}/>
           <Ct/>
           {/* <Commits/> */}
           <Contactme/>
           <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
       </div>
+      
 
         {/* </div> */}
       {/* </ThemeProvider> */}
