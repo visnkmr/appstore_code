@@ -14,7 +14,7 @@ export function indiotherproj(app,searchfor){
     // if(!searchfor){
     //   searchfor=""
     // }
-    if(!app.title.includes(searchfor) && !app.content.includes(searchfor)){
+    if (!app.title.toLowerCase().includes(searchfor.toLowerCase()) && !app.content.toLowerCase().includes(searchfor.toLowerCase())) {
         return (
           <>
           
@@ -78,7 +78,7 @@ export function indiotherproj(app,searchfor){
 }
 
 export function indiprojs(app,searchfor){
-  if(!app.title.includes(searchfor) && !app.content.includes(searchfor)){
+  if (!app.title.toLowerCase().includes(searchfor.toLowerCase()) && !app.content.toLowerCase().includes(searchfor.toLowerCase())) {
     return (
       <>
       
