@@ -39,14 +39,19 @@ export default function Page({
   const router=useRouter();
   const urlitems=useSearchParams();
   const [ss, setss] = React.useState("")
-  console.log(urlitems)
-  const [debounced]=useDebounce(ss,500);
+  console.log("--------->"+urlitems!.get('searchfor'))
+  // if(urlitems!.get('searchfor')==="" && ss==="")
+  {
+    const [debounced]=useDebounce(ss,500);
+  // if()
   useEffect(()=>{
     // debounce(()=>{
         router.push(`/?searchfor=${debounced}`)
         // console.log(debounced)
     // },500)
   },[debounced,router])
+  
+  }
   
   //  const searchParams = useSearchParams()
   //   // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
