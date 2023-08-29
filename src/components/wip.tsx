@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { findLatestapps } from "../posts";
 import LineClamp from "./LineClamp";

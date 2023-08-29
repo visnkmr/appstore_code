@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import { Download } from "lucide-react";
 import LineClamp from "./LineClamp";

@@ -1,3 +1,4 @@
+'use client'
 import Marquee from "react-fast-marquee";
 import Workinp from "./wip";
 
