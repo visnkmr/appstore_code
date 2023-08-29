@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import fs from 'fs';
@@ -10,44 +10,47 @@ import path, { join } from 'path';
 
 
 
-const load = (fromwhere:string) => 
-// {
-//   let { data } = useQuery({ queryFn: async()=>{
-//     const response = await axios.get(`https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/${fromwhere}/list.json`+fromwhere)
-//     console.log(response.data)
-//       return await response.data
-//   } })
-//   if(!data){
-//     data=[]
-//   }
-//     return data;
-  
-// };
+const load = async (fromwhere:string) => 
 {
-
-  console.log(fromwhere)
-  var loctr=join(join(process.cwd(), 'src'),fromwhere);
-  console.log(loctr)
-  const files = fs.readdirSync(loctr);
-  // console.log(files)
-  const apps = Promise.all(
-    files
-      .filter((filename) => filename.endsWith('.md'))
-      .map(async (filename) => {
-        const slug = filename.replace('.md', '');
-        return await findPostBySlug(fromwhere,slug);
-      }),
-  );
-
-  return apps;
+  let { data } = useQuery(
+    { 
+      queryKey:[`${fromwhere}`],
+      queryFn: async()=>{
+    const response = await axios.get(`https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/${fromwhere}/list.json`)
+    console.log(response.data)
+      return await response.data
+  } })
+  if(!data){
+    data=[]
+  }
+    return data;
+  
 };
+// {
+
+//   console.log(fromwhere)
+//   var loctr=join(join(process.cwd(), 'src'),fromwhere);
+//   console.log(loctr)
+//   const files = fs.readdirSync(loctr);
+//   // console.log(files)
+//   const apps = Promise.all(
+//     files
+//       .filter((filename) => filename.endsWith('.md'))
+//       .map(async (filename) => {
+//         const slug = filename.replace('.md', '');
+//         return await findPostBySlug(fromwhere,slug);
+//       }),
+//   );
+
+//   return apps;
+// };
 
 
 /** */
 export const fetchapps = async (fromwhere:string) => {
   // console.log(fromwhere)
   let _apps:any;
-  _apps = _apps || load(fromwhere);
+  _apps = _apps ||await load(fromwhere);
   // console.log(fromwhere)
 
   return await _apps;

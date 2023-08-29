@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import dynamic from 'next/dynamic'
 
 // import Project from "../src/components/project";
@@ -32,10 +32,11 @@ import { useSearchParams } from 'next/navigation';
 // import gtr from "./api/gtr";
 
 export default function Page({
-  searchParams
+  // searchParams
 }) {
   // console.log(searchParams)
-  // const [ss, setss] = React.useState("")
+  const [ss, setss] = React.useState("")
+  
   //  const searchParams = useSearchParams()
   //   // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
   //   let searchfor = searchParams.get('searchfor')!==null?searchParams.get('searchfor'):""
@@ -54,16 +55,17 @@ export default function Page({
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-          <Search/>
+          <Search change={ss}/>
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <OtherProjects searchfor={searchParams.searchfor}/>
-          <Projects searchfor={searchParams.searchfor}/>
+          <OtherProjects searchfor={ss}/>
+          <Projects searchfor={ss}/>
           <Ct/>
           {/* <Commits/> */}
           <Contactme/>
           <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
       </div>
+      
 
         {/* </div> */}
       {/* </ThemeProvider> */}
