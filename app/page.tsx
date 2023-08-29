@@ -22,8 +22,9 @@ import DarkButton from "./but";
 import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';
-import React from 'react';
-import { useSearchParams } from 'next/navigation';
+import React, { useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useDebounce } from 'use-debounce';
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';
@@ -35,7 +36,17 @@ export default function Page({
   // searchParams
 }) {
   // console.log(searchParams)
+  const router=useRouter();
+  const urlitems=useSearchParams();
   const [ss, setss] = React.useState("")
+  console.log(urlitems)
+  const [debounced]=useDebounce(ss,500);
+  useEffect(()=>{
+    // debounce(()=>{
+        router.push(`/?searchfor=${debounced}`)
+        // console.log(debounced)
+    // },500)
+  },[debounced,router])
   
   //  const searchParams = useSearchParams()
   //   // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
@@ -55,7 +66,19 @@ export default function Page({
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-          <Search change={ss}/>
+      <div>
+
+        <Input 
+        className='m-5 w-[50%]' 
+        value={ss}
+        placeholder="Search.."
+        onChange={(event) =>
+            {
+              setss(event.target.value)
+              // || table.getColumn('reponame')?.setFilterValue(event.target.value)
+            }
+          }/>
+        </div>
           {/* <Homepage/> */}
           {/* <Planglist/> */}
           <OtherProjects searchfor={ss}/>

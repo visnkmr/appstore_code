@@ -7,7 +7,7 @@ import StoreIcons from "./storeicons";
 // import { useSearchParams } from "next/navigation";
 
 export function indiotherproj(app,searchfor){
-    console.log(app.title+"---"+searchfor+app.title.includes(searchfor))
+    // console.log(app.title+"---"+searchfor+app.title.includes(searchfor))
     // const searchParams = useSearchParams()
     // // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
     // let searchfor = searchParams.get('searchfor')!==null?searchParams.get('searchfor'):""
@@ -26,7 +26,7 @@ export function indiotherproj(app,searchfor){
 
           return ( 
         <div 
-        key={app.slug} 
+        key={app.title} 
         className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
         
           {/* <div className="w-120 p-4">
@@ -87,7 +87,7 @@ export function indiprojs(app,searchfor){
   }
   return ( 
     <div 
-    key={app.slug} 
+    key={app.title} 
     className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
     
       {/* <div className="w-120 p-4">
