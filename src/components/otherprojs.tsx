@@ -10,7 +10,7 @@ import { Download } from "lucide-react/";
 import Llimage from "./llimage";
 import { Button } from "../../components/ui/button";
 import { useSearchParams } from "next/navigation";
-import { printindiproj } from "./printindiproj";
+import { indiotherproj } from "./printindiproj";
 async function appsfetcher(searchfor) {
   var apps = await findLatestapps("projects/other");
   // var apps = [] as any;
@@ -19,13 +19,13 @@ async function appsfetcher(searchfor) {
   return (
     <>
   {apps.map((app:any) => {
-    return printindiproj(app,searchfor);
+    return indiotherproj(app,searchfor);
   })}
   </>
   );
 }
 export default function OtherProjects({searchfor}) {
-  console.log(searchfor.searchfor)
+  // console.log(searchfor.searchfor)
     
     // const [scroll, setScroll] = useState(false);
     return (

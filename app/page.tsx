@@ -58,7 +58,7 @@ export default function Page({
           {/* <Homepage/> */}
           {/* <Planglist/> */}
           <OtherProjects searchfor={searchParams.searchfor}/>
-          <Projects/>
+          <Projects searchfor={searchParams.searchfor}/>
           <Ct/>
           {/* <Commits/> */}
           <Contactme/>
