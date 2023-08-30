@@ -36,20 +36,20 @@ export default function Page({
   // searchParams
 }) {
   // console.log(searchParams)
-  const router=useRouter();
-  const urlitems=useSearchParams();
+  // const router=useRouter();
+  // const urlitems=useSearchParams();
   const [ss, setss] = React.useState("")
-  console.log("--------->"+urlitems!.get('searchfor'))
+  // console.log("--------->"+urlitems!.get('searchfor'))
   // if(urlitems!.get('searchfor')==="" && ss==="")
   {
     const [debounced]=useDebounce(ss,500);
   // if()
-  useEffect(()=>{
-    // debounce(()=>{
-        router.push(`/?searchfor=${debounced}`)
-        // console.log(debounced)
-    // },500)
-  },[debounced,router])
+  // useEffect(()=>{
+  //   // debounce(()=>{
+  //       router.push(`/?searchfor=${debounced}`)
+  //       // console.log(debounced)
+  //   // },500)
+  // },[debounced,router])
   
   }
   
