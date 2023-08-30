@@ -8,15 +8,15 @@ import { useDebounce } from "use-debounce";
 
 
 const Search=({change})=>{
-    const router=useRouter();
+    // const router=useRouter();
       const [ss, setss] = React.useState(change)
       const [debounced]=useDebounce(ss,500);
-      useEffect(()=>{
-        // debounce(()=>{
-            router.push(`/?searchfor=${debounced}`)
-            console.log(debounced)
-        // },500)
-      },[debounced,router])
+      // useEffect(()=>{
+      //   // debounce(()=>{
+      //       router.push(`/?searchfor=${debounced}`)
+      //       console.log(debounced)
+      //   // },500)
+      // },[debounced,router])
     return (
         <div>
 
