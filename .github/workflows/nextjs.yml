@@ -85,7 +85,7 @@ jobs:
       - name: Clone Target Repo
         run: git clone https://github.com/visnkmr/visnkmr.github.io.git
 
-      - name: Copy Files
+      - name: Copy Files to target from source
         run: |
           mkdir -p ./visnkmr.github.io/appstore
           cp -R ./out/* ./visnkmr.github.io/appstore/
