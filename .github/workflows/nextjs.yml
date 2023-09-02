@@ -77,7 +77,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
-      - name: Upload artifact
+      - name: Upload Built files to codeberg
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./out
