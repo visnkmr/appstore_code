@@ -92,6 +92,9 @@ jobs:
 
       - name: Push to Target Repo
         run: |
+          git config --global user.email "12533753+visnkmr@users.noreply.github.com"
+          git config --global user.name "fromghrunner"
+          git config --global init.defaultBranch main 
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic push from source repo"
           git push https://git:${{ secrets.TOKEN }}@github.com/visnkmr/visnkmr.github.io.git main
