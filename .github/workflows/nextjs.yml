@@ -7,7 +7,7 @@ name: Deploy Next.js site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    # branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -77,10 +77,28 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
-      - name: Upload artifact
+      - name: Upload Built files to codeberg
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./out
+
+      - name: Clone Target Repo
+        run: git clone https://github.com/visnkmr/visnkmr.github.io.git
+
+      - name: Copy Output files to github pages repo for jsdelivr cdn
+        run: |
+          mkdir -p ./visnkmr.github.io/appstore
+          cp -R ./out/* ./visnkmr.github.io/appstore/
+
+      - name: Push to Target Repo
+        run: |
+          git config --global user.email "12533753+visnkmr@users.noreply.github.com"
+          git config --global user.name "fromghrunner"
+          git config --global init.defaultBranch main 
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Automatic push from source repo"
+          git push https://git:${{ secrets.TOKEN }}@github.com/visnkmr/visnkmr.github.io.git main
+        working-directory: ./visnkmr.github.io
 
   # Deployment job
   deploy:
