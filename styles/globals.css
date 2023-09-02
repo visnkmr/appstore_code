@@ -12,8 +12,12 @@ nav{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
 }
+.eachapp{
+  @apply flex justify-center hover:bg-slate-200 hover:rounded-xl;
+}
 .sectitle{
-  padding-left: 5%;
+  margin: 0 0 2% 5%;
+  /* padding-left: 5%; */
   font-size: large;
   font-weight: 700;
   @apply text-gray-700;

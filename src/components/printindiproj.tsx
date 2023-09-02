@@ -27,7 +27,7 @@ export function indiotherproj(app,searchfor){
           return ( 
         <div 
         key={app.title} 
-        className=" ">             
+        className="eachapp">             
         
           {/* <div className="w-120 p-4">
               <img
@@ -50,7 +50,7 @@ export function indiotherproj(app,searchfor){
             </div>
             <div className="rounded-xl">
     
-          <h3 className="font-bold text-center m-4">{app.title}</h3>
+          <h3 className="font-bold text-center">{app.title}</h3>
           <noscript>
     
                  <div >{app.content}</div>
