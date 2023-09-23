@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
 const Projects =dynamic(()=>import ("../src/components/project"));
 const Search =dynamic(()=>import ("../src/components/search"));
+const Navbar =dynamic(()=>import ("../src/components/navbar"));
 
 import Homepage from "../src/components/homepage";
 // import Planglist from "../src/components/planlist";
@@ -42,14 +43,15 @@ export default function Page({
   // console.log("--------->"+urlitems!.get('searchfor'))
   // if(urlitems!.get('searchfor')==="" && ss==="")
   {
-    const [debounced]=useDebounce(ss,500);
+    const [debounced]=useDebounce(ss,1000);
   // if()
   // useEffect(()=>{
   //   // debounce(()=>{
-  //       router.push(`/?searchfor=${debounced}`)
-  //       // console.log(debounced)
+  //       // router.push(`/?searchfor=${debounced}`)
+  //       setss(debounced)
+  //       console.log(debounced)
   //   // },500)
-  // },[debounced,router])
+  // },[debounced])
   
   }
   
@@ -72,7 +74,8 @@ export default function Page({
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
       <div>
-
+        <h1 className="title">Appstore</h1>
+        <Navbar/>
         <Input 
         className='m-5 w-[50%]' 
         value={ss}

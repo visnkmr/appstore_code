@@ -1,7 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+}
+.eachapp{
+  @apply flex justify-center hover:bg-slate-200 hover:rounded-xl;
+}
+.sectitle{
+  margin: 0 0 0 1.75em;
+  /* padding-left: 5%; */
+  font-size: large;
+  font-weight: 700;
+  @apply text-gray-700;
+  /* letter-spacing: -.02em; */
+  /* color: ; */
+}
+.title{
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background: linear-gradient(0.25turn, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.8em;
+}
 /* body {
   background-color: #000;
 } */

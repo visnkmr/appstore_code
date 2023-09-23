@@ -30,7 +30,8 @@ export default function OtherProjects({searchfor}) {
     // const [scroll, setScroll] = useState(false);
     return (
       <>
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 dark:bg-gray-900 dark:text-white">
+      <h1 className="sectitle">Other Apps</h1>
+      <div className="box dark:bg-gray-900 dark:text-white">
         
       {appsfetcher(searchfor)}
       </div>

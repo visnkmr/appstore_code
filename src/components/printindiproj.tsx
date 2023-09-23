@@ -27,7 +27,7 @@ export function indiotherproj(app,searchfor){
           return ( 
         <div 
         key={app.title} 
-        className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 ">             
+        className="eachapp">             
         
           {/* <div className="w-120 p-4">
               <img
@@ -50,24 +50,24 @@ export function indiotherproj(app,searchfor){
             </div>
             <div className="rounded-xl">
     
-          <h3 className="font-bold text-center m-4">{app.title}</h3>
+          <h3 className="font-bold text-center">{app.title}</h3>
           <noscript>
     
                  <div >{app.content}</div>
                 </noscript>
-          <LineClamp text={app.content} lines={2} />
+          {/* <LineClamp text={app.content} lines={2} /> */}
     
           {/* <p className="line-clamp-2 text-center">{content}</p> */}
-          <a 
+          {/* <a 
             href="https://github.com/visnkmr" 
             className="flex justify-center m-4 mr-2 rounded-md border shadow-md p-5 bg-green-400 hover:bg-green-700 dark:bg-green-800"
             rel="noopener" 
             target="_blank">
             <Download className="mr-5"/>Download
-            </a>
+            </a> */}
     
           {/* <img src={image} className="w-32"/> */}
-          <StoreIcons storename={app.tags} w={1}/>
+          {/* <StoreIcons storename={app.tags} w={1}/> */}
           {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
           
             </div>
