@@ -75,20 +75,20 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
   if (!slug) return null;
 
   try {
-    // const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
+    const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
     // console.log(readFile)
     // console.log(md2json.parse(readFile))
     // const matter = (await import('gray-matter')).default
-    console.log(matter('---\ntitle: Home\n---\nOther stuff'));
-    // const { data: frontmatter, content } = matter('---\ntitle: Home\n---\nOther stuff');
+    // console.log(matter('---\ntitle: Home\n---\nOther stuff'));
+    const { data: frontmatter, content } = matter(readFile);
     // console.log(frontmatter)
-    // let toret= {
-    //   slug,
-    //   ...frontmatter,
-    //   content,
-    // };
-    // // console.log(JSON.stringify(toret))
-    // return toret;
+    let toret= {
+      slug,
+      ...frontmatter,
+      content,
+    };
+    console.log(JSON.stringify(toret))
+    return toret;
   } catch (e) {
     console.log("exception")
   }
