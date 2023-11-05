@@ -39,11 +39,11 @@ const load = async (fromwhere:string) =>
       .filter((filename) => filename.endsWith('.md'))
       .map(async (filename) => {
         const slug = filename.replace('.md', '');
-        console.log(slug)
+        // console.log(slug)
         return await findPostBySlug(fromwhere,slug);
       }),
   );
-  console.log(JSON.stringify(apps));
+  // console.log(JSON.stringify(apps));
     //   console.log(apps)
   return apps;
 };
@@ -64,7 +64,6 @@ export const findLatestapps= async (fromwhere:string)=> {
   // console.log(fromwhere)
   // const _count =  4;
   const apps = await fetchapps(fromwhere);
-//   console.log(JSON.stringify(apps))
 
   return apps;
   // return apps ? apps.slice(_count * -1) : [];
@@ -87,7 +86,7 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
       ...frontmatter,
       content,
     };
-    console.log(JSON.stringify(toret))
+    
     return toret;
   } catch (e) {
     console.log("exception")
@@ -119,5 +118,5 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
 //     ));
 // }
 
-
-findLatestapps("projects/other");
+fs.writeFileSync('./src/projects/other/list.json', JSON.stringify(await findLatestapps("projects/other")));
+fs.writeFileSync('./src/projects/list.json', JSON.stringify(await findLatestapps("projects")));
