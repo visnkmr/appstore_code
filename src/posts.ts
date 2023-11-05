@@ -1,7 +1,7 @@
 'use client'
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import fs from 'fs';
+// import fs from 'fs';
 import matter from 'gray-matter';
 import path, { join } from 'path';
 
@@ -61,30 +61,30 @@ export const findLatestapps= async (fromwhere:string)=> {
   // console.log(fromwhere)
   // const _count =  4;
   const apps = await fetchapps(fromwhere);
-  // console.log(JSON.stringify(apps))
+  console.log(JSON.stringify(apps))
 
   return apps;
   // return apps ? apps.slice(_count * -1) : [];
 };
 
 /** */
-export const findPostBySlug = async (fromwhere:string,slug:any) => {
-  if (!slug) return null;
+// export const findPostBySlug = async (fromwhere:string,slug:any) => {
+//   if (!slug) return null;
 
-  try {
-    const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
-    // const matter = (await import('gray-matter')).default
-    const { data: frontmatter, content } = matter(readFile);
-    let toret= {
-      slug,
-      ...frontmatter,
-      content,
-    };
-    return toret;
-  } catch (e) {}
+//   try {
+//     const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
+//     // const matter = (await import('gray-matter')).default
+//     const { data: frontmatter, content } = matter(readFile);
+//     let toret= {
+//       slug,
+//       ...frontmatter,
+//       content,
+//     };
+//     return toret;
+//   } catch (e) {}
 
-  return null;
-};
+//   return null;
+// };
 
 /** */
 // export const findappsByIds = async (ids) => {

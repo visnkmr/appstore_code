@@ -64,9 +64,11 @@
   "dependencies": {
     "@next/bundle-analyzer": "^13.4.3",
     "class-variance-authority": "^0.6.0",
+    "md-2-json": "^2.0.0",
     "next-optimized-images": "^3.0.0-canary.10",
     "react-fast-marquee": "^1.6.0",
     "react-lazy-load-image-component": "^1.6.0",
-    "use-debounce": "^9.0.4"
+    "use-debounce": "^9.0.4",
+    "yarn": "^1.22.19"
   }
 }

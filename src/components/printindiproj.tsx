@@ -4,6 +4,7 @@ import { Download } from "lucide-react";
 import LineClamp from "./LineClamp";
 import Llimage from "./llimage";
 import StoreIcons from "./storeicons";
+import Link from "next/link";
 // import { useSearchParams } from "next/navigation";
 
 export function indiotherproj(app,searchfor){
@@ -35,6 +36,7 @@ export function indiotherproj(app,searchfor){
               className="w-120 "/>
           </div> */}
           <div className="text-center w-full m-5">
+          <Link href={`/details/${app.title}`}>
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
             </div> */}
@@ -71,6 +73,7 @@ export function indiotherproj(app,searchfor){
           {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
           
             </div>
+            </Link>
           </div>
         </div>
           );

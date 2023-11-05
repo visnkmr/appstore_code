@@ -5,6 +5,7 @@
         "title": "Filedime",
         "description": "The rust based file explorer for PC.",
         "download": "",
+        "platform":"win,lx,mos",
         "image": "fx",
         "tags": [
             "pc",
