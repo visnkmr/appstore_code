@@ -82,7 +82,7 @@ export default function Details({ data }) {
           <div className="flex justify-center">
 
 <a 
-href="https://github.com/visnkmr" 
+href={`${app.downloadurl}`} 
 className="flex justify-center m-4 mr-2 rounded-md border shadow-md p-5 bg-green-400 hover:bg-green-700 dark:bg-green-800 w-40 "
 rel="noopener" 
 target="_blank">
@@ -92,7 +92,8 @@ target="_blank">
 
                  <div className="text-center p-20" >
                   {app.content}
-                  {app.platform}
+                  <br/><br/>
+                  {`${app.platform}`}
                   </div>
                   
                 {/* </noscript> */}

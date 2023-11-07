@@ -2,6 +2,7 @@
 publishDate: ''
 title: 'Background Apps and Process List'
 description: 'Force close apps that are running in the background.'
+downloadurl: 'https://github.com/visnkmr/backgroundappslist/releases'
 download: '5m+ '
 excerpt: '#2 on Fire TV '
 image: 'bapl'
