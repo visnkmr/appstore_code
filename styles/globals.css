@@ -20,7 +20,7 @@ nav{
   /* padding-left: 5%; */
   font-size: large;
   font-weight: 700;
-  @apply text-gray-700;
+  /* @apply ; */
   /* letter-spacing: -.02em; */
   /* color: ; */
 }
