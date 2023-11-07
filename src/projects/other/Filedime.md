@@ -4,8 +4,7 @@ title: 'Filedime'
 description: 'The rust based file explorer for PC.'
 download: ''
 image: 'fx'
-tags: [pc,gh]
-platform: [win,lx,mos]
+tags: [pc,gh,win,lx,mos]
 ---
 
 Filedime, an open source almost feature complete file explorer written in Rust (for all filesystem interaction,backend), Tauri(for frontend, front-backend intercom).

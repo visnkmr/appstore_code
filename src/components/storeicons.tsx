@@ -3,13 +3,16 @@ import Gp from "../stores/gp";
 import Mas from "../stores/mas";
 
 export default function StoreIcons(k:{storename:string |string[],w:number}){
-    var showaas,showgps,showmas,showgh
+    var showaas,showgps,showmas,showgh,showwin,showmos,showlx
     if(k.w===0 ){
         var storename=k.storename;
         showaas = storename==='aas'; 
         showgps =  storename===('gp'); 
         showmas =  storename===('ms'); 
         showgh =  storename===('gh');
+        showwin =  storename===('win');
+        showlx =  storename===('lx');
+        showmos =  storename===('mos');
 
     }
     else 
@@ -20,6 +23,9 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
          showgps = tags.includes('gp'); 
          showmas = tags.includes('ms'); 
          showgh = tags.includes('gh');
+         showwin =  tags.includes('win');
+        showlx =  tags.includes('lx');
+        showmos =  tags.includes('mos');
     }
     return (
         <>

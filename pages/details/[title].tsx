@@ -6,6 +6,7 @@ import DarkButton from "../../app/but"
 import { Providers } from "../../src/components/ThemeContext"
 import Contactme from "../../src/components/contactme";
 import { Download } from "lucide-react";
+import StoreIcons from "../../src/components/storeicons";
 
 export async function getStaticPaths() {
   // Get the path to the JSON file
@@ -65,6 +66,8 @@ export default function Details({ data }) {
         <h1 className="title">Appstore</h1>
         <Navbar/>
         <h3 className="font-bold p-10 text-center text-4xl">{app.title}</h3>
+<StoreIcons storename={app.tags} w={1}/>
+
     <div className="flex justify-center">
     
              <div className="overflow-hidden">
@@ -89,11 +92,8 @@ target="_blank">
 <Download className="mr-5"/>Download
 </a> 
 </div>
-
                  <div className="text-center p-20" >
                   {app.content}
-                  <br/><br/>
-                  {`${app.platform}`}
                   </div>
                   
                 {/* </noscript> */}
