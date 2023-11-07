@@ -63,16 +63,19 @@ export default function Details({ data }) {
 <DarkButton/>
     <div className="dark:bg-gray-900">
       <div>
-        <h1 className="title">Appstore</h1>
-        <Navbar/>
-        <h3 className="font-bold p-10 text-center text-4xl">{app.title}</h3>
+        {/* <h1 className="title">Appstore</h1> */}
+        {/* <Navbar/> */}
+        <div className="mt-10 mb-5">
+
+        <h3 className="font-bold text-center text-4xl">{app.title}</h3>
 <StoreIcons storename={app.tags} w={1}/>
+        </div>
 
     <div className="flex justify-center">
     
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> 
+            <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
             </div>
             </div>
             <div className="text-center" >

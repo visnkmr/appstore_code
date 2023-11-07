@@ -6,10 +6,10 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
     var showaas,showgps,showmas,showgh,showwin,showmos,showlx
     if(k.w===0 ){
         var storename=k.storename;
-        showaas = storename==='aas'; 
-        showgps =  storename===('gp'); 
-        showmas =  storename===('ms'); 
-        showgh =  storename===('gh');
+        showaas = false; 
+        showgps =  false; 
+        showmas =  false; 
+        showgh =  false;
         showwin =  storename===('win');
         showlx =  storename===('lx');
         showmos =  storename===('mos');
@@ -19,10 +19,10 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
     if(Array.isArray(k.storename))
     {
         var tags=k.storename;
-         showaas = tags.includes('aas'); 
-         showgps = tags.includes('gp'); 
-         showmas = tags.includes('ms'); 
-         showgh = tags.includes('gh');
+         showaas = false; 
+         showgps = false; 
+         showmas = false; 
+         showgh =false;
          showwin =  tags.includes('win');
         showlx =  tags.includes('lx');
         showmos =  tags.includes('mos');
@@ -36,6 +36,15 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
       )} 
       {showgps && (
       <Gp/>
+      )} 
+      {showwin && (
+      <p className="p-3">Windows</p>
+      )} 
+      {showlx && (
+      <p className="p-3">Linux</p>
+      )} 
+      {showmos && (
+      <p className="p-3">Mac OS</p>
       )} 
       {/* {showmas && (
       <Mas/>

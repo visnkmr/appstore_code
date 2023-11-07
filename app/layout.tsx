@@ -21,7 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  findLatestapps("projects/other");
+  // findLatestapps("projects/other");
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
     <html suppressHydrationWarning className="" lang="en">
