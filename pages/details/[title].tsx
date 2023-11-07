@@ -11,10 +11,11 @@ export async function getStaticPaths() {
   // Get the path to the JSON file
    // Get the path to the JSON file
    const others = await fetch(
-    `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/other/list.json`
+    `http://localhost:3000/otherappslist.json`
   ).then((res) => res.json())
   const apps = await fetch(
-    `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
+    `http://localhost:3000/list.json`
+    // `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
   ).then((res) => res.json())
   const products=[...others,...apps];
   // Read the JSON file
@@ -34,10 +35,10 @@ export async function getStaticProps({ params }) {
 
   // Get the path to the JSON file
   const others = await fetch(
-    `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/other/list.json`
+    `http://localhost:3000/otherappslist.json`
   ).then((res) => res.json())
   const apps = await fetch(
-    `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
+    `http://localhost:3000/list.json`
   ).then((res) => res.json())
   const products=[...others,...apps];
   // Find the object that matches the id
@@ -68,7 +69,7 @@ export default function Details({ data }) {
     
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <img src={`https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> 
+            <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> 
             </div>
             </div>
             <div className="text-center" >

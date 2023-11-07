@@ -118,5 +118,5 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
 //     ));
 // }
 
-fs.writeFileSync('./src/projects/other/list.json', JSON.stringify(await findLatestapps("projects/other")));
-fs.writeFileSync('./src/projects/list.json', JSON.stringify(await findLatestapps("projects")));
+fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
+fs.writeFileSync('./public/list.json', JSON.stringify(await findLatestapps("projects")));

@@ -10,7 +10,7 @@ import { Download } from "lucide-react/";
 import Llimage from "./llimage";
 import { indiotherproj, indiprojs } from "./printindiproj";
 async function appsfetcher(searchfor) {
-  var apps = await findLatestapps("projects");
+  var apps = await findLatestapps("list.json");
   // var apps = [] as any;
   //  apps = await findLatestapps("projects/inp");
   return (

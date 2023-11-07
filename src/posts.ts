@@ -16,7 +16,7 @@ const load = async (fromwhere:string) =>
     { 
       queryKey:[`${fromwhere}`],
       queryFn: async()=>{
-    const response = await axios.get(`https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/${fromwhere}/list.json`)
+    const response = await axios.get(`http://localhost:3000/${fromwhere}`)
     console.log(response.data)
       return await response.data
   } })
