@@ -13,7 +13,7 @@ nav{
   grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
 }
 .eachapp{
-  @apply flex justify-center hover:bg-slate-200 hover:rounded-xl;
+  @apply flex justify-center hover:bg-slate-200 hover:rounded-xl hover:text-gray-700;
 }
 .sectitle{
   margin: 0 0 0 1.75em;
