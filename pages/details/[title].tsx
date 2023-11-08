@@ -80,7 +80,7 @@ export default function Details({ data }) {
             </div>
             </div>
             <div className="slider p-5">
-  {app.screenshot.map((image, index) => (
+  {app.screenshot && app.screenshot.map((image, index) => (
     <img key={index} src={image} className="slide w-60 p-5" />
   ))}
   

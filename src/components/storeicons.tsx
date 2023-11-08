@@ -38,13 +38,13 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
       <Gp/>
       )} 
       {showwin && (
-      <p className="p-3">Windows</p>
+      <p className="border border-gray-300  m-3 p-2">Windows</p>
       )} 
       {showlx && (
-      <p className="p-3">Linux</p>
+      <p className="m-3 p-2 border border-gray-300 ">Linux</p>
       )} 
       {showmos && (
-      <p className="p-3">Mac OS</p>
+      <p className="m-3 p-2 border border-gray-300 ">Mac OS</p>
       )} 
       {/* {showmas && (
       <Mas/>
