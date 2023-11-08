@@ -11,6 +11,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
+  output: 'export',
   // withOptimizedImages,
   experimental: {
     // appDir: true,
@@ -29,7 +30,7 @@ module.exports = withBundleAnalyzer({
   
   // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
-  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/',
+  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/appstore',
   // assetPrefix: 'https://visnkmr.github.io/appstore',
   // assetPrefix: 'https://visnk.pages.dev/',
   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
