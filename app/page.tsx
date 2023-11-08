@@ -19,7 +19,7 @@ const Ct =dynamic(()=>import ("../src/components/ct"));
 const Commits =dynamic(()=>import ("../src/components/commits"));
 // import Commits from "../src/components/commits";
 import Topthread from "../src/components/topthread";
-import DarkButton from "./but";
+import DarkButton from "../src/components/Themetogglebutton";
 import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';

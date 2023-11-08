@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../src/components/navbar";
 import '../../styles/globals.css'
 import Footer from "../../src/components/footer"
-import DarkButton from "../../app/but"
+import DarkButton from "../../src/components/Themetogglebutton"
 import { Providers } from "../../src/components/ThemeContext"
 import Contactme from "../../src/components/contactme";
 import { Download } from "lucide-react";
@@ -63,11 +63,16 @@ export default function Details({ data }) {
 
 {/* <Thedarkhtml> */}
 {/* <Topthread/> */}
-<DarkButton/>
+<DarkButton showback={true}/>
     <div className="dark:bg-gray-900">
       <div>
         {/* <h1 className="title">Appstore</h1> */}
+        <div className="h-1">
+
+        </div>
         {/* <Navbar/> */}
+        
+
         <div className="mt-10 mb-5">
         <div className="m-3 text-center" >
                   {app.description}
@@ -94,7 +99,7 @@ target="_blank">
 <Download className="mr-5"/>Download
 </a> 
 </div>
-            <div className="slider p-5">
+            <div className="slider m-5">
   {app.screenshot && app.screenshot.map((image, index) => (
     <img key={index} src={image} className="slide w-60 p-5" />
   ))}
@@ -128,10 +133,10 @@ target="_blank">
           
             </div>
             </div>
-<PlatformList platformname={app.tags}/>
+            <PlatformList platformname={app.tags}/>
 
-            <DeviceList platformname={app.tags}/>
             <StoreIcons storename={app.tags} w={1}/>
+            <DeviceList platformname={app.tags}/>
             {/* <Contactme/> */}
           {/* <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p> */}
             </div>

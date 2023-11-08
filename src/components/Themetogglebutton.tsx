@@ -1,10 +1,11 @@
 'use client';
 import { useState,useEffect, useContext } from 'react';
 import React from "react";
-import { useLocalStorage } from '../src/components/useLocalStorage';
+import {ArrowLeft} from "lucide-react"
+// import { useLocalStorage } from './useLocalStorage';
 // import { ThemeContext } from '../src/components/ThemeContext';
 import { useTheme } from 'next-themes';
-import '../styles/imgstutter.css'
+import '../../styles/imgstutter.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 // export function darkorwhite(){
 //   let key="dark";
@@ -29,7 +30,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 //   // return {wtr}
 // }
 
-export default function DarkButton() {
+export default function DarkButton(k:{showback:boolean}) {
   // console.log(localStorage.getItem("dark"))
   // const [showon, setshow] = useLocalStorage("dark",true);
   const { theme, setTheme } = useTheme()
@@ -53,12 +54,21 @@ export default function DarkButton() {
   //   console.log("sadsd")
   // },[showon]);
   return (
-    <>
-    
-    <div className='dark:bg-gray-900 h-10'>
-    <span className='p-2.5 absolute right-0'>
+    <div className='dark:bg-gray-900'>
+      <div style={{ overflow: 'hidden' }}>
+        <div className='float-left p-2.5'>
+          <div className="flex justify-start " >
 
-      <button
+        {k.showback && <div style={{ display: 'flex', alignItems: 'center' }} className='m-3 p-2 border border-gray-300 whitespace-nowrap'>
+          <ArrowLeft />
+          <button onClick={()=>history.back()} style={{ marginLeft: '5px' }}>Back</button>
+        </div>}
+
+      </div>
+
+        </div>
+        <div className='float-right p-2.5'>
+<button
         id="theme-toggle"
         type="button"
         aria-label='light dark mode toggle'
@@ -86,13 +96,22 @@ export default function DarkButton() {
           ></path>
         </svg>
       </button>
-      </span>
+
+        </div>
+      </div>
+
+      
+    {/* <div className='dark:bg-gray-900 h-10'> */}
+    {/* <span className='p-2.5 absolute right-0'> */}
+
+      
+      {/* </span> */}
 {/* <span className='p-2.5 absolute left-0 z-10'>
 
                     <LazyLoadImage alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/profpic.webp" />
 </span> */}
     </div>
 
-    </>
+    // </div>
   );
 }
