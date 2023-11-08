@@ -67,7 +67,9 @@ export default function Details({ data }) {
         {/* <h1 className="title">Appstore</h1> */}
         {/* <Navbar/> */}
         <div className="mt-10 mb-5">
-
+        <div className="m-3 text-center" >
+                  {app.description}
+                  </div>
         <h3 className="font-bold text-center text-4xl">{app.title}</h3>
 <StoreIcons storename={app.tags} w={1}/>
         </div>
@@ -78,21 +80,10 @@ export default function Details({ data }) {
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
             <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
             </div>
+            {/* <div className="w-[20%]"></div> */}
+            
             </div>
-            <div className="slider p-5">
-  {app.screenshot && app.screenshot.map((image, index) => (
-    <img key={index} src={image} className="slide w-60 p-5" />
-  ))}
-  
-</div>
-            <div className="m-3 text-center" >
-                  {app.description}
-                  </div>
-            <div className="rounded-xl">
-    
-          
-          {/* <noscript> */}
-          <div className="flex justify-center">
+            <div className="grid place-items-center">
 
 <a 
 href={`${app.downloadurl}`} 
@@ -102,6 +93,18 @@ target="_blank">
 <Download className="mr-5"/>Download
 </a> 
 </div>
+            <div className="slider p-5">
+  {app.screenshot && app.screenshot.map((image, index) => (
+    <img key={index} src={image} className="slide w-60 p-5" />
+  ))}
+  
+</div>
+            
+            <div className="rounded-xl">
+    
+          
+          {/* <noscript> */}
+          
                  <div className="text-center p-5" >
                   {app.content}
                   </div>
