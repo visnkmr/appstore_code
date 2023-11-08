@@ -32,7 +32,7 @@ const load = async (fromwhere:string) =>
 {
 
   console.log(fromwhere)
-  var loctr=join(join(process.cwd(), 'src'),fromwhere);
+  var loctr=join(process.cwd(),"public",fromwhere);
   console.log(loctr)
   const files = fs.readdirSync(loctr);
   console.log(files)
@@ -77,8 +77,8 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
   if (!slug) return null;
 
   try {
-    const readFile = fs.readFileSync(join(process.cwd(),"src",fromwhere, `${slug}.md`), 'utf-8');
-    // console.log(readFile)
+    const readFile = fs.readFileSync(join(process.cwd(),"public",fromwhere, `${slug}.md`), 'utf-8');
+    console.log(join(process.cwd(),"public",fromwhere, `${slug}.md`))
     // console.log(md2json.parse(readFile))
     // const matter = (await import('gray-matter')).default
     // console.log(matter('---\ntitle: Home\n---\nOther stuff'));

@@ -6,7 +6,7 @@ downloadurl: 'https://github.com/visnkmr/backgroundappslist/releases'
 download: '5m+ '
 excerpt: '#2 on Fire TV '
 image: 'bapl'
-tags: [aas, gp, ms, gh]
+tags: [aas, gp, ms, gh,aos]
 screenshot: [http://localhost:3000/images/unnamed.webp,http://localhost:3000/images/unnamed.webp,http://localhost:3000/images/unnamed.webp,http://localhost:3000/images/unnamed.webp,http://localhost:3000/images/unnamed.webp,http://localhost:3000/images/unnamed.webp]
 ---
 

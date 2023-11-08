@@ -2,7 +2,7 @@ import Aas from "../stores/aas";
 import Gp from "../stores/gp";
 import Mas from "../stores/mas";
 
-export default function PlatformList(k:{platformname:string |string[]}){
+export default function DeviceList(k:{platformname:string |string[]}){
     var showaas,showgps,showmas,showgh,showwin,showmos,showlx,showaos
     // if(k.w===0 ){
     //     var platformname=k.platformname;
@@ -31,7 +31,8 @@ export default function PlatformList(k:{platformname:string |string[]}){
     return (
         <>
         
-        <div className="flex items-center justify-center">
+        <div className="">
+        <p className="text-xs text-center"> *Should work on</p>
       {/* {showaas && (
       <Aas/>
       )} 
@@ -39,31 +40,29 @@ export default function PlatformList(k:{platformname:string |string[]}){
       <Gp/>
       )}  */}
       {showwin && (
-      <p className="border border-gray-300  m-3 p-2">Windows</p>
+      <div className="flex justify-center">
+      <p className="text-xs text-center"> Windows 10, Windows 11. </p>
+    </div>
       )} 
       {showlx && (
-      <p className="m-3 p-2 border border-gray-300 ">Linux</p>
+      <div className="flex justify-center">
+      <p className="text-xs text-center">Arch, Debian, Nix (Build from source), Ubuntu etc. </p>
+    </div>
       )} 
       {showmos && (
-      <p className="m-3 p-2 border border-gray-300 ">Mac OS</p>
+      <div className="flex justify-center">
+      <p className="text-xs text-center">Mac OS 14 Sonoma, Mac OS 13 Ventura. </p>
+    </div>
       )} 
       {showaos && (
-        <div>
-        <div className="flex justify-center">
-      <p className="m-3 p-2 border border-gray-300 ">Android</p>
-      <p className="m-3 p-2 border border-gray-300 ">Graphene OS</p>
-      <p className="m-3 p-2 border border-gray-300 ">AOSP</p>
-      <p className="m-3 p-2 border border-gray-300 ">Fire OS</p>
-      </div>
-      {/* <div>
-        <p className="text-xs">Should work on Android Phone, Tablets, Android TVs, Fire TVs, Fire Tablets, Windows Subsystem for Linux (WSL). </p>
-      </div> */}
+      <div className="flex justify-center">
+        <p className="text-xs text-center">Android Phone, Tablets, Android TVs, Fire TVs, Fire Tablets, Windows Subsystem for Linux (WSL). </p>
       </div>
       )} 
       {/* {showmas && (
       <Mas/>
       )}  */}
-      {showgh && (
+      {/* {showgh && (
       <span className="flex items-center justify-center">
         <a 
         href="https://github.com/visnkmr" 
@@ -72,7 +71,7 @@ export default function PlatformList(k:{platformname:string |string[]}){
         Github
         </a>
       </span>
-      )}
+      )} */}
       </div>
         </>
     );

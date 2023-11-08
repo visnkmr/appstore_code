@@ -5,7 +5,7 @@ description: 'A Simple, secure yet functional minimise able, hide able keyboard 
 excerpt: ''
 download: '50k+ '
 image: 'nokb'
-tags: [gp,gh]
+tags: [gp,gh,aos]
 ---
 
 A Simple, secure yet functional minimise able, hide able keyboard to keep you productive.
