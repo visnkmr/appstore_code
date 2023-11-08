@@ -55,13 +55,13 @@ export default function DarkButton(k:{showback:boolean}) {
   // },[showon]);
   return (
     <div className='dark:bg-gray-900'>
-      <div style={{ overflow: 'hidden' }}>
+      <div className='overflow-hidden'>
         <div className='float-left p-2.5'>
           <div className="flex justify-start " >
 
-        {k.showback && <div style={{ display: 'flex', alignItems: 'center' }} className='m-3 p-2 border border-gray-300 whitespace-nowrap'>
+        {k.showback && <div className='flex items-center m-3 p-2 border border-gray-300 whitespace-nowrap'>
           <ArrowLeft />
-          <button onClick={()=>history.back()} style={{ marginLeft: '5px' }}>Back</button>
+          <button onClick={()=>history.back()} className='ml-1'>Back</button>
         </div>}
 
       </div>
