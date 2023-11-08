@@ -5,6 +5,7 @@ import LineClamp from "./LineClamp";
 import Llimage from "./llimage";
 import StoreIcons from "./storeicons";
 import Link from "next/link";
+import {asseturl} from "../../precompile/consturls"
 // import { useSearchParams } from "next/navigation";
 
 export function indiotherproj(app,searchfor){
@@ -46,7 +47,7 @@ export function indiotherproj(app,searchfor){
             <div className="flex justify-center">
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <Llimage url={`http://localhost:3000/images/${app.image}.png`}/>
+            <Llimage url={asseturl+`images/${app.image}.png`}/>
              {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
             </div>
             </div>
@@ -112,7 +113,7 @@ export function indiprojs(app,searchfor){
         <div className="flex justify-center">
          <div className="overflow-hidden">
          {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-        <Llimage url={`http://localhost:3000/images/${app.image}.png`}/>
+        <Llimage url={asseturl+`images/${app.image}.png`}/>
          {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
         </div>
         </div>

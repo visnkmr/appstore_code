@@ -4,6 +4,7 @@ import axios from 'axios';
 // import fs from 'fs';
 import matter from 'gray-matter';
 import path, { join } from 'path';
+import {asseturl} from "../precompile/consturls"
 
 // const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 // console.log(BLOG_DIR)
@@ -16,7 +17,7 @@ const load = async (fromwhere:string) =>
     { 
       queryKey:[`${fromwhere}`],
       queryFn: async()=>{
-    const response = await axios.get(`http://localhost:3000/${fromwhere}`)
+    const response = await axios.get(asseturl+`${fromwhere}`)
     console.log(response.data)
       return await response.data
   } })

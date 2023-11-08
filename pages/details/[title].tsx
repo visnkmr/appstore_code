@@ -9,15 +9,16 @@ import { Download } from "lucide-react";
 import PlatformList from "../../src/components/platformlist";
 import StoreIcons from "../../src/components/storeicons";
 import DeviceList from "../../src/components/devicelist";
+import {asseturl} from "../../precompile/consturls"
 
 export async function getStaticPaths() {
   // Get the path to the JSON file
    // Get the path to the JSON file
    const others = await fetch(
-    `http://localhost:3000/otherappslist.json`
+    asseturl+`otherappslist.json`
   ).then((res) => res.json())
   const apps = await fetch(
-    `http://localhost:3000/list.json`
+    asseturl+`list.json`
     // `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
   ).then((res) => res.json())
   const products=[...others,...apps];
@@ -38,10 +39,10 @@ export async function getStaticProps({ params }) {
 
   // Get the path to the JSON file
   const others = await fetch(
-    `http://localhost:3000/otherappslist.json`
+    asseturl+`otherappslist.json`
   ).then((res) => res.json())
   const apps = await fetch(
-    `http://localhost:3000/list.json`
+    asseturl+`list.json`
   ).then((res) => res.json())
   const products=[...others,...apps];
   // Find the object that matches the id
@@ -84,7 +85,7 @@ export default function Details({ data }) {
     
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
+            <img src={asseturl+`images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
             </div>
             {/* <div className="w-[20%]"></div> */}
             
