@@ -21,6 +21,9 @@ nav{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
 }
+.eachplatform{
+  @apply m-3 p-2 border border-gray-300 whitespace-nowrap ;
+}
 .eachapp{
   @apply flex justify-center hover:bg-slate-200 hover:rounded-xl hover:text-gray-700;
 }

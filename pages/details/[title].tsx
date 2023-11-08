@@ -6,7 +6,8 @@ import DarkButton from "../../app/but"
 import { Providers } from "../../src/components/ThemeContext"
 import Contactme from "../../src/components/contactme";
 import { Download } from "lucide-react";
-import PlatformList from "../../src/components/storeicons";
+import PlatformList from "../../src/components/platformlist";
+import StoreIcons from "../../src/components/storeicons";
 import DeviceList from "../../src/components/devicelist";
 
 export async function getStaticPaths() {
@@ -72,7 +73,6 @@ export default function Details({ data }) {
                   {app.description}
                   </div>
         <h3 className="font-bold text-center text-4xl">{app.title}</h3>
-<PlatformList platformname={app.tags}/>
         </div>
 
     <div className="flex justify-center">
@@ -106,9 +106,9 @@ target="_blank">
           
           {/* <noscript> */}
           
-                 <div className="text-center p-5" >
+                 {/* <div className="text-center p-5" >
                   {app.content}
-                  </div>
+                  </div> */}
                   
                 {/* </noscript> */}
           {/* <LineClamp text={app.content} lines={2} /> */}
@@ -128,7 +128,10 @@ target="_blank">
           
             </div>
             </div>
+<PlatformList platformname={app.tags}/>
+
             <DeviceList platformname={app.tags}/>
+            <StoreIcons storename={app.tags} w={1}/>
             {/* <Contactme/> */}
           {/* <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p> */}
             </div>

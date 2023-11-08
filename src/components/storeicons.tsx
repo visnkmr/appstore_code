@@ -2,63 +2,34 @@ import Aas from "../stores/aas";
 import Gp from "../stores/gp";
 import Mas from "../stores/mas";
 
-export default function PlatformList(k:{platformname:string |string[]}){
-    var showaas,showgps,showmas,showgh,showwin,showmos,showlx,showaos
-    // if(k.w===0 ){
-    //     var platformname=k.platformname;
-    //     showaas = false; 
-    //     showgps =  false; 
-    //     showmas =  false; 
-    //     showgh =  false;
-    //     showwin =  platformname===('win');
-    //     showlx =  platformname===('lx');
-    //     showmos =  platformname===('mos');
+export default function StoreIcons(k:{storename:string |string[],w:number}){
+    var showaas,showgps,showmas,showgh
+    if(k.w===0 ){
+        var storename=k.storename;
+        showaas = storename==='aas'; 
+        showgps =  storename===('gp'); 
+        showmas =  storename===('ms'); 
+        showgh =  storename===('gh');
 
-    // }
-    // else 
-    if(Array.isArray(k.platformname))
+    }
+    else 
+    if(Array.isArray(k.storename))
     {
-        var tags=k.platformname;
-         showaas = false; 
-         showgps = false; 
-         showmas = false; 
-         showgh =false;
-         showwin =  tags.includes('win');
-        showlx =  tags.includes('lx');
-        showaos =  tags.includes('aos');
-        showmos =  tags.includes('mos');
+        var tags=k.storename;
+         showaas = tags.includes('aas'); 
+         showgps = tags.includes('gp'); 
+         showmas = tags.includes('ms'); 
+         showgh = tags.includes('gh');
     }
     return (
         <>
         
         <div className="flex items-center justify-center">
-      {/* {showaas && (
+      {showaas && (
       <Aas/>
       )} 
       {showgps && (
       <Gp/>
-      )}  */}
-      {showwin && (
-      <p className="border border-gray-300  m-3 p-2">Windows</p>
-      )} 
-      {showlx && (
-      <p className="m-3 p-2 border border-gray-300 ">Linux</p>
-      )} 
-      {showmos && (
-      <p className="m-3 p-2 border border-gray-300 ">Mac OS</p>
-      )} 
-      {showaos && (
-        <div>
-        <div className="flex justify-center">
-      <p className="m-3 p-2 border border-gray-300 ">Android</p>
-      <p className="m-3 p-2 border border-gray-300 ">Graphene OS</p>
-      <p className="m-3 p-2 border border-gray-300 ">AOSP</p>
-      <p className="m-3 p-2 border border-gray-300 ">Fire OS</p>
-      </div>
-      {/* <div>
-        <p className="text-xs">Should work on Android Phone, Tablets, Android TVs, Fire TVs, Fire Tablets, Windows Subsystem for Linux (WSL). </p>
-      </div> */}
-      </div>
       )} 
       {/* {showmas && (
       <Mas/>

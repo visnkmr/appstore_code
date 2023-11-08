@@ -4,7 +4,7 @@
 
    
 import { findLatestapps } from "../posts";
-import StoreIcons from "./storeicons";
+// import StoreIcons from "./storeicons";
 import LineClamp from "./LineClamp";
 import { Download } from "lucide-react/";
 import Llimage from "./llimage";
