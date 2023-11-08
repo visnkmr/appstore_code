@@ -5,7 +5,7 @@ description: ''
 excerpt: ''
 download: '50k+ '
 image: 'calc'
-tags: [aas,mas,gp,gh]
+tags: [aas,mas,gp,gh,aos]
 oss: f
 ---
 

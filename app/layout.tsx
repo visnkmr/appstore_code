@@ -7,8 +7,9 @@ import Footer from "../src/components/footer"
 import Topthread from "../src/components/topthread"
 import { useLocalStorage } from "../src/components/useLocalStorage"
 import '../styles/globals.css'
-import DarkButton from "./but"
+import DarkButton from "../src/components/Themetogglebutton"
 import {Metadata} from 'next'
+import { open } from "../precompile/makejsonfromfile"
 
 export const metadata:Metadata = {
   title: 'Vishnu N K',
@@ -20,7 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
+  open();
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
     <html suppressHydrationWarning className="" lang="en">
@@ -33,7 +34,7 @@ export default function RootLayout({
 
         {/* <Thedarkhtml> */}
         {/* <Topthread/> */}
-        <DarkButton/>
+        <DarkButton showback={false}/>
         {children}
         <Footer/>
         {/* </Thedarkhtml> */}

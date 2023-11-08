@@ -1,5 +1,6 @@
 {
   "include": [
+    "precompile/*.ts",
     "src/*.d.ts",
     "src/shared/*.d.ts",
     "src/shared/*.tsx",

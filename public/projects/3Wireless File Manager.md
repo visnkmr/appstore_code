@@ -5,7 +5,7 @@ description: 'Transfer, Manage files on your Android, Fire TV, Tablet, Phone (In
 excerpt: '#2 on Fire TV '
 download: '500k+ '
 image: 'wfm'
-tags: [aas,mas,gp,gh]
+tags: [aas,mas,gp,gh,aos]
 oss: f
 ---
 
