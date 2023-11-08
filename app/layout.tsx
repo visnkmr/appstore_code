@@ -9,7 +9,7 @@ import { useLocalStorage } from "../src/components/useLocalStorage"
 import '../styles/globals.css'
 import DarkButton from "./but"
 import {Metadata} from 'next'
-import { findLatestapps } from "../precompile/makejsonfromfile"
+import { open } from "../precompile/makejsonfromfile"
 
 export const metadata:Metadata = {
   title: 'Vishnu N K',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // findLatestapps("projects/other");
+  open();
   // const [showon, setshow] = useLocalStorage("dark",true);
   return (
     <html suppressHydrationWarning className="" lang="en">

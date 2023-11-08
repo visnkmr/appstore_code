@@ -8,7 +8,10 @@ import path, { join } from 'path';
 // const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 // console.log(BLOG_DIR)
 
-
+export const open= async ()=> {
+  fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
+  fs.writeFileSync('./public/list.json', JSON.stringify(await findLatestapps("projects")));
+};
 
 const load = async (fromwhere:string) => 
 // {
@@ -91,7 +94,7 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
   } catch (e) {
     console.log("exception")
   }
-
+  
   return null;
 };
 
@@ -117,6 +120,3 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
 //       console.log(slug+title+image)
 //     ));
 // }
-
-fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
-fs.writeFileSync('./public/list.json', JSON.stringify(await findLatestapps("projects")));

@@ -54,6 +54,7 @@ export async function getStaticProps({ params }) {
 
 export default function Details({ data }) {
   var app=data
+  console.log(app)
   return (
     <>
     <Providers>
@@ -78,6 +79,12 @@ export default function Details({ data }) {
             <img src={`http://localhost:3000/images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
             </div>
             </div>
+            <div className="slider p-5">
+  {app.screenshot.map((image, index) => (
+    <img key={index} src={image} className="slide w-60 p-5" />
+  ))}
+  
+</div>
             <div className="text-center" >
                   {app.description}
                   </div>
@@ -95,7 +102,7 @@ target="_blank">
 <Download className="mr-5"/>Download
 </a> 
 </div>
-                 <div className="text-center p-20" >
+                 <div className="text-center p-5" >
                   {app.content}
                   </div>
                   
@@ -118,8 +125,8 @@ target="_blank">
             </div>
             </div>
             
-            <Contactme/>
-          <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p>
+            {/* <Contactme/> */}
+          {/* <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p> */}
             </div>
             <Footer/>
             </Providers>
