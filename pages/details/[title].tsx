@@ -85,7 +85,7 @@ export default function Details({ data }) {
   ))}
   
 </div>
-            <div className="text-center" >
+            <div className="m-3 text-center" >
                   {app.description}
                   </div>
             <div className="rounded-xl">
