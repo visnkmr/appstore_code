@@ -1,4 +1,7 @@
 import React from "react";
+import * as fs from 'node:fs';
+import path, { join } from 'path';
+
 import Navbar from "../../src/components/navbar";
 import '../../styles/globals.css'
 import Footer from "../../src/components/footer"
@@ -14,13 +17,17 @@ import {asseturl} from "../../precompile/consturls"
 export async function getStaticPaths() {
   // Get the path to the JSON file
    // Get the path to the JSON file
-   const others = await fetch(
-    asseturl+`otherappslist.json`
-  ).then((res) => res.json())
-  const apps = await fetch(
-    asseturl+`list.json`
-    // `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
-  ).then((res) => res.json())
+   let data = fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
+const others = JSON.parse(data);
+data = fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
+const apps = JSON.parse(data);
+  //  const others = await fetch(
+  //   asseturl+`otherappslist.json`
+  // ).then((res) => res.json())
+  // const apps = await fetch(
+  //   asseturl+`list.json`
+  //   // `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
+  // ).then((res) => res.json())
   const products=[...others,...apps];
   // Read the JSON file
   
@@ -38,15 +45,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 
   // Get the path to the JSON file
-  const others = await fetch(
-    asseturl+`otherappslist.json`
-  ).then((res) => res.json())
-  const apps = await fetch(
-    asseturl+`list.json`
-  ).then((res) => res.json())
+  let data = fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
+const others = JSON.parse(data);
+data = fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
+const apps = JSON.parse(data);
   const products=[...others,...apps];
   // Find the object that matches the id
-  const data = products.find((item) => item.title === params.title);
+  data = products.find((item) => item.title === params.title);
   // Return the data as props
   return {
     props: {
