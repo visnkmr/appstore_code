@@ -4,6 +4,7 @@ title: 'Taotlus'
 description: ''
 excerpt: '#1 on Fire TV '
 download: '100k+ '
+downloadurl: https://github.com/visnkmr/taotlus
 image: 'taotlus'
 tags: [aas,mas,gp,gh,aos]
 oss: f

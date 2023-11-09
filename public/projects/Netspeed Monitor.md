@@ -2,6 +2,7 @@
 publishDate: ''
 title: 'Netspeed monitor'
 description: 'Monitor live bandwidth usage/ network speed.'
+downloadurl: https://github.com/visnkmr/timenetspeed
 excerpt: ''
 download: '100k+ '
 image: 'nsm'

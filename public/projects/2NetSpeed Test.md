@@ -3,6 +3,7 @@ publishDate: ''
 title: 'Netspeed Test'
 description: 'Test Internet download speed, latency (ping), scan LAN / WiFi for connected devices; all while consuming the minimum amount of data required.'
 excerpt: '#2 on Fire TV '
+downloadurl: https://github.com/visnkmr/netspeed-test
 download: '2.5m+ '
 image: 'nst'
 tags: [aas,mas,gp,gh,aos]
