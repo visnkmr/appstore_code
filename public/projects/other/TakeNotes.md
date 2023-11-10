@@ -4,7 +4,7 @@ title: 'Take notes'
 description: 'A note taking, time tracker app for android. '
 download: '50k+ '
 downloadurl: https://github.com/visnkmr/takenotes
-image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images'
+image: ''
 tags: [gp,gh,aos]
 ---
 
