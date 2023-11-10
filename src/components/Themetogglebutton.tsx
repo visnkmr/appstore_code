@@ -59,13 +59,25 @@ export default function DarkButton(k:{showback:boolean}) {
         <div className='float-left p-2.5'>
           <div className="flex justify-start " >
 
-        {k.showback && <div className='m-3  border border-gray-300'>
+        {<div className='m-3  border border-gray-300'>
           
-          <button onClick={()=>history.back()} className='p-2 ml-1'>
-            <div className='flex items-center  whitespace-nowrap'>
-            <ArrowLeft />Back
-            </div>
-          </button>
+          {!k.showback ? (
+    <a href="/" target="_blank" rel="noopener noreferrer">
+      <button className="p-2 ml-1">
+        <div className="flex items-center whitespace-nowrap">
+          <ArrowLeft />
+          Back
+        </div>
+      </button>
+    </a>
+  ) : (
+    <button onClick={() => history.back()} className="p-2 ml-1">
+      <div className="flex items-center whitespace-nowrap">
+        <ArrowLeft />
+        Back
+      </div>
+    </button>
+  )}
         </div>}
 
       </div>
