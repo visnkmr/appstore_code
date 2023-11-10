@@ -4,3 +4,5 @@ out/
 tsconfig.tsbuildinfo
 synch.sh
 .git/
+public/list.json
+public/otherappslist.json

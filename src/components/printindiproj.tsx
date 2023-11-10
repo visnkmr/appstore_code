@@ -16,7 +16,9 @@ export function indiotherproj(app,searchfor){
     // if(!searchfor){
     //   searchfor=""
     // }
-    if (!app.title.toLowerCase().includes(searchfor.toLowerCase()) && !app.content.toLowerCase().includes(searchfor.toLowerCase())) {
+    if (!app.title.toLowerCase().includes(searchfor.toLowerCase()) && !app.content.toLowerCase().includes(searchfor.toLowerCase()) 
+    || !app.image
+  ) {
         return (
           <>
           
@@ -27,6 +29,8 @@ export function indiotherproj(app,searchfor){
       {
 
           return ( 
+            
+
         <div 
         key={app.title} 
         className="eachapp">             

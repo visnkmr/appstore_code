@@ -4,7 +4,7 @@ title: 'Perlink'
 description: ''
 excerpt: ''
 download: ''
-image: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images'
+image: ''
 tags: [gh]
 oss: t
 ---
