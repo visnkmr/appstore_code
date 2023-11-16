@@ -13,8 +13,11 @@ import PlatformList from "../../src/components/platformlist";
 import StoreIcons from "../../src/components/storeicons";
 import DeviceList from "../../src/components/devicelist";
 import {asseturl} from "../../precompile/consturls"
+import {open} from "../../precompile/makejsonfromfile"
+
 
 export async function getStaticPaths() {
+  await open();
   // Get the path to the JSON file
    // Get the path to the JSON file
    let data = fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
