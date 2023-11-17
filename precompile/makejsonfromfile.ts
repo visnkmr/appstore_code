@@ -9,8 +9,8 @@ import path, { join } from 'path';
 // console.log(BLOG_DIR)
 
 export const open= async ()=> {
-  fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
-  fs.writeFileSync('./public/list.json', JSON.stringify(await findLatestapps("projects")));
+  // fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
+  fs.writeFileSync('./public/list.json', JSON.stringify([...await findLatestapps("projects"),...await findLatestapps("projects/other")]));
 };
 
 const load = async (fromwhere:string) => 

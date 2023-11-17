@@ -73,9 +73,9 @@ export default function Page({
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-      <div>
-        <h1 className="title">Appstore</h1>
-        <Navbar/>
+      <div className='flex justify-center'>
+        {/* <h1 className="title">Appstore</h1> */}
+        {/* <Navbar/> */}
         <Input 
         className='m-5 w-[50%]' 
         value={ss}
@@ -89,8 +89,8 @@ export default function Page({
         </div>
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <OtherProjects searchfor={ss}/>
           <Projects searchfor={ss}/>
+          {/* <OtherProjects searchfor={ss}/> */}
           <Ct/>
           {/* <Commits/> */}
           <Contactme/>

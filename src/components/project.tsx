@@ -26,7 +26,7 @@ export default function Project({searchfor}) {
     // const [scroll, setScroll] = useState(false);
     return (
       <>
-      <h1 className="sectitle">Android Apps</h1>
+      {/* <h1 className="sectitle">Android Apps</h1> */}
       <div className="box dark:bg-gray-900 dark:text-white">
       {appsfetcher(searchfor)}
       </div>
