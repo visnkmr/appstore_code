@@ -5,7 +5,7 @@ import LineClamp from "./LineClamp";
 import Llimage from "./llimage";
 import StoreIcons from "./storeicons";
 import Link from "next/link";
-import {asseturl} from "../../precompile/consturls"
+import {asseturl, detpageurl} from "../../precompile/consturls"
 // import { useSearchParams } from "next/navigation";
 
 export function indiotherproj(app,searchfor){
@@ -41,7 +41,7 @@ export function indiotherproj(app,searchfor){
               className="w-120 "/>
           </div> */}
           <div className="text-center w-full m-5">
-          <Link href={`/appstore/details/${app.title}`}>
+          <Link href={`${detpageurl}/details/${app.title}`}>
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
             </div> */}
