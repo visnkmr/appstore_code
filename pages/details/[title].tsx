@@ -20,9 +20,11 @@ export async function getStaticPaths() {
   await open();
   // Get the path to the JSON file
    // Get the path to the JSON file
-   let data = fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
-const others = JSON.parse(data);
-data = fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
+   let data = 
+//    fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
+// const others = JSON.parse(data);
+// data = 
+fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
 const apps = JSON.parse(data);
   //  const others = await fetch(
   //   asseturl+`otherappslist.json`
@@ -31,7 +33,9 @@ const apps = JSON.parse(data);
   //   asseturl+`list.json`
   //   // `https://cdn.jsdelivr.net/gh/visnkmr/appstore@add_search/src/projects/list.json`
   // ).then((res) => res.json())
-  const products=[...others,...apps];
+  const products=[
+    // ...others,
+    ...apps];
   // Read the JSON file
   
   // Map over the array of objects and return their ids as paths
@@ -48,11 +52,15 @@ const apps = JSON.parse(data);
 export async function getStaticProps({ params }) {
 
   // Get the path to the JSON file
-  let data = fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
-const others = JSON.parse(data);
-data = fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
+  let data = 
+//   fs.readFileSync(join(process.cwd(),"public","otherappslist.json"), 'utf-8');
+// const others = JSON.parse(data);
+// data = 
+fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
 const apps = JSON.parse(data);
-  const products=[...others,...apps];
+  const products=[
+    // ...others,
+    ...apps];
   // Find the object that matches the id
   data = products.find((item) => item.title === params.title);
   // Return the data as props
