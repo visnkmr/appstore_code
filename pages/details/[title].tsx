@@ -101,7 +101,7 @@ export default function Details({ data }) {
     
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <img src={asseturl+`images/${app.image}.png`} className="w-40 object-contain flex justify-center rounded-2xl "/> 
+            <img src={asseturl+`images/${app.image}.png`} className="w-40 img-box-papp"/> 
             </div>
             {/* <div className="w-[20%]"></div> */}
             
@@ -118,7 +118,8 @@ target="_blank">
 </div>
             <div className="slider m-5">
   {app.screenshot && app.screenshot.map((image, index) => (
-    <img key={index} src={image} className="slide w-60 p-5" />
+
+      <img key={index} src={image} className="slide w-36 img-box-pscr" />
   ))}
   
 </div>
