@@ -17,6 +17,11 @@ nav{
   gap: 2em;
   
 }
+.img-box-papp{
+  border:0;
+  box-shadow: 0 1px 2px 0 rgba(115, 118, 121, 0.804),0 1px 3px 1px rgba(101, 106, 109, 0.771);
+
+}
 .box {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
