@@ -1,5 +1,6 @@
 import Aas from "../stores/aas";
 import Gp from "../stores/gp";
+import Gh from "../stores/gh";
 import Mas from "../stores/mas";
 
 export default function StoreIcons(k:{storename:string |string[],w:number}){
@@ -35,14 +36,7 @@ export default function StoreIcons(k:{storename:string |string[],w:number}){
       <Mas/>
       )}  */}
       {showgh && (
-      <span className="flex items-center justify-center">
-        <a 
-        href="https://github.com/visnkmr" 
-        rel="noopener" 
-        target="_blank">
-        Github
-        </a>
-      </span>
+      <Gh/>
       )}
       </div>
         </>
