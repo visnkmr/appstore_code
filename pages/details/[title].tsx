@@ -82,7 +82,7 @@ export default function Details({ data }) {
 {/* <Topthread/> */}
 <DarkButton showback={true}/>
     <div className="dark:bg-gray-900">
-      <div>
+      {/* <div> */}
         {/* <h1 className="title">Appstore</h1> */}
         <div className="h-1">
 
@@ -97,7 +97,7 @@ export default function Details({ data }) {
         <h3 className="font-bold text-center text-4xl">{app.title}</h3>
         </div>
 
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
     
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
@@ -116,15 +116,17 @@ target="_blank">
 <Download className="mr-5"/>Download
 </a> 
 </div>
-            <div className="slider m-5 sm:flex sm:justify-center">
+<div className="sliderpar">
+
+            <div className="slider">
   {app.screenshot && app.screenshot.map((image, index) => (
 
       <img key={index} src={asseturl+`${image}`} className="slide w-36 img-box-pscr" />
   ))}
   
-</div>
+{/* </div> */}
             
-            <div className="rounded-xl">
+            {/* <div className="rounded-xl"> */}
     
           
           {/* <noscript> */}
@@ -149,8 +151,9 @@ target="_blank">
           {/* <StoreIcons storename={app.tags} w={1}/> */}
           {/* <h5 className="line-clamp-2 font-bold text-center m-4">{download}</h5> */}
           
+            {/* </div> */}
             </div>
-            </div>
+</div>
             <PlatformList platformname={app.tags}/>
 
             <StoreIcons storename={app.tags} w={1}/>
