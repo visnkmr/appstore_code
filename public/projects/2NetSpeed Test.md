@@ -8,6 +8,8 @@ download: '2.5m+ '
 image: 'nst'
 tags: [aas,mas,gp,gh,aos]
 oss: f
+screenshot: [images/nsm.webp]
+
 ---
 Test Internet download speed, latency (ping), scan LAN / WiFi for connected devices; all while consuming the minimum amount of data required.
 

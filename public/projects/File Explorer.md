@@ -7,6 +7,7 @@ downloadurl: https://github.com/visnkmr/file_explorer/releases/latest/download/a
 download: '1m+ '
 image: 'fx'
 tags: [aas,ms,gh,aos]
+screenshot: [images/fx.webp]
 ---
 
 Uses ForkJoin pool, Fuzzy Logic based search, Memoization, Glide, GSON, Recycleview.

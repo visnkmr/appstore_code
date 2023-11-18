@@ -8,6 +8,8 @@ downloadurl: https://github.com/visnkmr/taotlus
 image: 'taotlus'
 tags: [aas,mas,gp,gh,aos]
 oss: f
+screenshot: [images/taotlus.webp]
+
 ---
 
 A launcher with fuzzy logic based search, iconless list.

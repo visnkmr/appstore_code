@@ -8,6 +8,8 @@ download: '500k+ '
 image: 'wfm'
 tags: [aas,mas,gp,gh,aos]
 oss: f
+screenshot: [images/wfm.webp]
+
 ---
 
 Transfer, Manage files on your Android, Fire TV, Tablet, Phone (Internal Storage, External Storage) using any web browser.

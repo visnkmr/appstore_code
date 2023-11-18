@@ -7,6 +7,8 @@ excerpt: ''
 download: '50k+ '
 image: 'nokb'
 tags: [gp,gh,aos]
+screenshot: [images/nokb.webp]
+
 ---
 
 A Simple, secure yet functional minimise able, hide able keyboard to keep you productive.
