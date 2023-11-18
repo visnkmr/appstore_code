@@ -18,10 +18,10 @@ nav{
   
 }
 .img-box-papp{
-  border:0;
-  box-shadow: 0 1px 2px 0 rgba(115, 118, 121, 0.804),0 1px 3px 1px rgba(101, 106, 109, 0.771);
+  /* border:0; */
+  /* box-shadow: 0 1px 2px 0 rgba(115, 118, 121, 0.804),0 1px 3px 1px rgba(101, 106, 109, 0.771); */
   border-radius: 0.75rem;
-  margin: 0.25rem;
+  /* margin: 0.25rem; */
 
 }
 .img-box-pscr{
