@@ -9,8 +9,19 @@ import path, { join } from 'path';
 // console.log(BLOG_DIR)
 
 export const open= async ()=> {
+  var jsonitemarr=[...await findLatestapps("projects"),...await findLatestapps("projects/other")];
   // fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
-  fs.writeFileSync('./public/list.json', JSON.stringify([...await findLatestapps("projects"),...await findLatestapps("projects/other")]));
+  fs.writeFileSync('./public/list.json', JSON.stringify(jsonitemarr));
+  var minlist=[{}]
+  jsonitemarr.map((app:any) => {
+    var eachapp={}
+    eachapp.title=app.title;
+    eachapp.packagename=app.pkgname;
+    eachapp.version=app.version;
+    // eachapp.packagename && eachapp.version && 
+    minlist.push(eachapp)
+})
+fs.writeFileSync('./public/minlist.json', JSON.stringify(minlist));
 };
 
 const load = async (fromwhere:string) => 
