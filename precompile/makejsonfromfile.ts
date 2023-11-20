@@ -16,10 +16,12 @@ export const open= async ()=> {
   jsonitemarr.map((app:any) => {
     var eachapp={}
     eachapp.title=app.title;
-    eachapp.packagename=app.pkgname;
+    eachapp.packagename=app.packagename;
     eachapp.version=app.version;
-    // eachapp.packagename && eachapp.version && 
-    minlist.push(eachapp)
+    if (eachapp.packagename && eachapp.version) 
+    {
+      minlist.push(eachapp);
+    }
 })
 fs.writeFileSync('./public/minlist.json', JSON.stringify(minlist));
 };
