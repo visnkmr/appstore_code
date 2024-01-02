@@ -1,3 +1,4 @@
+// for vercel deploy
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
@@ -30,7 +31,7 @@ module.exports = withBundleAnalyzer({
   
   // basePath: '/tmp/webpage/out',
   // basePath: '/home/roger/Downloads/github/webpage/out',
-  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/appstore',
+  // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/appstore',
   // assetPrefix: 'https://visnkmr.github.io/appstore',
   // assetPrefix: 'https://visnk.pages.dev/',
   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
