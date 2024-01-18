@@ -23,9 +23,10 @@ import DarkButton from "../src/components/Themetogglebutton";
 import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';
-import React, { useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useDebounce } from 'use-debounce';
+import React, { useEffect, useState } from 'react';
+// import { useRouter, useSearchParams } from 'next/navigation';
+// import { useDebounce } from 'use-debounce';
+// import { findLatestapps } from '../src/posts';
 // import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
 // import { useContext } from "react";
 // import { createServerContext } from 'react';
@@ -36,14 +37,25 @@ import { useDebounce } from 'use-debounce';
 export default function Page({
   // searchParams
 }) {
+  // const [apps,setapps]=useState([])
+  //   useEffect(()=>{
+
+  //     const trasy=async ()=> {
+  //       let appst= await findLatestapps("list.json")
+  //       console.log("here------>"+appst)
+  //       setapps(appst)
+  //   };
+  //   trasy()
+  //   },[]);
+    // console.log(apps)
   // console.log(searchParams)
   // const router=useRouter();
   // const urlitems=useSearchParams();
-  const [ss, setss] = React.useState("")
+  // const [ss, setss] = React.useState("")
   // console.log("--------->"+urlitems!.get('searchfor'))
   // if(urlitems!.get('searchfor')==="" && ss==="")
   {
-    const [debounced]=useDebounce(ss,1000);
+    // const [debounced]=useDebounce(ss,1000);
   // if()
   // useEffect(()=>{
   //   // debounce(()=>{
@@ -73,10 +85,10 @@ export default function Page({
       {/* <ThemeProvider> */}
       {/* <div className={dark ? 'dark' : ''}> */}
       <div className="dark:bg-gray-900">
-      <div className='flex justify-center'>
+      {/* <div className='flex justify-center'> */}
         {/* <h1 className="title">Appstore</h1> */}
         {/* <Navbar/> */}
-        <Input 
+        {/* <Input 
         className='m-5 w-[50%]' 
         value={ss}
         placeholder="Search.."
@@ -85,11 +97,11 @@ export default function Page({
               setss(event.target.value)
               // || table.getColumn('reponame')?.setFilterValue(event.target.value)
             }
-          }/>
-        </div>
+          }/> */}
+        {/* </div> */}
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <Projects searchfor={ss}/>
+          <Projects/>
           {/* <OtherProjects searchfor={ss}/> */}
           <Ct/>
           {/* <Commits/> */}

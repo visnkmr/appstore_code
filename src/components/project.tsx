@@ -25,7 +25,7 @@ async function appsfetcher() {
   // </>
   // );
 }
-export default async function Project({searchfor}) {
+export default async function Project() {
 
     // const [scroll, setScroll] = useState(false);
     return (
