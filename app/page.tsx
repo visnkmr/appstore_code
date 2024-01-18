@@ -2,16 +2,16 @@
 import dynamic from 'next/dynamic'
 
 // import Project from "../src/components/project";
-const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
+// const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
 const Projects =dynamic(()=>import ("../src/components/project"));
-const Search =dynamic(()=>import ("../src/components/search"));
-const Navbar =dynamic(()=>import ("../src/components/navbar"));
+// const Search =dynamic(()=>import ("../src/components/search"));
+// const Navbar =dynamic(()=>import ("../src/components/navbar"));
 
-import Homepage from "../src/components/homepage";
+// import Homepage from "../src/components/homepage";
 // import Planglist from "../src/components/planlist";
 // import Stats from "../src/components/stats";
 // import Workinp from "../src/components/wip";
-import Footer from "../src/components/footer";
+// import Footer from "../src/components/footer";
 import '../styles/globals.css'
 // import Ct from "../src/components/ct";
 const Ct =dynamic(()=>import ("../src/components/ct"));
