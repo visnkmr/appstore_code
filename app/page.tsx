@@ -16,7 +16,7 @@ import '../styles/globals.css'
 // import Ct from "../src/components/ct";
 const Ct =dynamic(()=>import ("../src/components/ct"));
 
-const Commits =dynamic(()=>import ("../src/components/commits"));
+// const Commits =dynamic(()=>import ("../src/components/commits"));
 // import Commits from "../src/components/commits";
 import Topthread from "../src/components/topthread";
 import DarkButton from "../src/components/Themetogglebutton";
