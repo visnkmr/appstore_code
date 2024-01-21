@@ -68,7 +68,6 @@
     "next-optimized-images": "3.0.0-canary.10",
     "react-fast-marquee": "^1.6.2",
     "react-lazy-load-image-component": "^1.6.0",
-    "use-debounce": "^9.0.4",
     "yarn": "^1.22.21"
   }
 }

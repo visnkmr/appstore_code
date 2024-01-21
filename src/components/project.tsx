@@ -9,26 +9,31 @@ import LineClamp from "./LineClamp";
 import { Download } from "lucide-react/";
 import Llimage from "./llimage";
 import { indiotherproj, indiprojs } from "./printindiproj";
-async function appsfetcher(searchfor) {
+import FilteredList from "./filteredlist";
+async function appsfetcher() {
   var apps = await findLatestapps("list.json");
+  console.log("here2--->"+apps)
+  console.log("reloaded")
+  return apps
   // var apps = [] as any;
   //  apps = await findLatestapps("projects/inp");
-  return (
-    <>
-  {apps.map((app:any) => {
-      return indiotherproj(app,searchfor)
-  })}
-  </>
-  );
+  // return (
+  //   <>
+  // {apps.map((app:any) => {
+  //     return indiotherproj(app,searchfor)
+  // })}
+  // </>
+  // );
 }
-export default function Project({searchfor}) {
+export default async function Project() {
 
     // const [scroll, setScroll] = useState(false);
     return (
       <>
+      <FilteredList appst={await appsfetcher()}/>
       {/* <h1 className="sectitle">Android Apps</h1> */}
       <div className="box dark:bg-gray-900 dark:text-white">
-      {appsfetcher(searchfor)}
+      {/* {appsfetcher(searchfor)} */}
       </div>
       </>
     );
