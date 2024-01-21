@@ -20,7 +20,9 @@ const load = async (fromwhere:string) =>
     const response = await axios.get(asseturl+`${fromwhere}`)
     console.log(response.data)
       return await response.data
-  } })
+  },
+// refetchOnWindowFocus:false
+ })
   if(!data){
     data=[]
   }
