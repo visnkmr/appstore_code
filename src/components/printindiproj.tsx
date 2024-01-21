@@ -41,7 +41,7 @@ export function indiotherproj(app){
               className="w-120 "/>
           </div> */}
           <div className="text-center w-full m-5">
-          <Link href={`/appstore/details/${app.title}`}>
+          <Link href={`/details/${app.title}`}>
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
             </div> */}
