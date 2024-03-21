@@ -33,7 +33,7 @@ function FilteredList({appst}) {
  const filteredList = useMemo(() => {
     if(filter.trim().length>1){
         console.log("condition1")
-
+        if(initialList)
         return initialList.filter(item=>item.image).filter(app => app.title.toLowerCase().includes(filter.toLowerCase()) || app.content.toLowerCase().includes(filter.toLowerCase()));
     }
     else{
