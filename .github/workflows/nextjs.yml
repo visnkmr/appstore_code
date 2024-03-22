@@ -50,12 +50,12 @@ jobs:
           path: ./out
 
       - name: Clone Target Repo
-        run: git clone https://github.com/visnkmr/appstore_code
+        run: git clone https://github.com/visnkmr/appstore
 
       - name: Copy Output files to github pages repo for jsdelivr cdn
         run: |
           # mkdir -p ./visnkmr.github.io/appstore
-          cp -R ./out/* ./appstore_code/
+          cp -R ./out/* ./appstore/
 
       - name: Push to Target Repo
         run: |
@@ -64,8 +64,8 @@ jobs:
           git config --global init.defaultBranch main 
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic push from source repo"
-          git push -f https://git:${{ secrets.TOKEN }}@github.com/visnkmr/appstore_code main
-        working-directory: ./appstore_code
+          git push -f https://git:${{ secrets.TOKEN }}@github.com/visnkmr/appstore main
+        working-directory: ./appstore
 
   # Deployment job
   deploy:
