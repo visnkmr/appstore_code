@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 // import Project from "../src/components/project";
 // const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
-const Projects =dynamic(()=>import ("../src/components/project"));
+import Project  from '../src/components/project'; ("../src/components/project");
 // const Search =dynamic(()=>import ("../src/components/search"));
 // const Navbar =dynamic(()=>import ("../src/components/navbar"));
 
@@ -24,6 +24,7 @@ import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';
 import React, { useEffect, useState } from 'react';
+import { getapps } from '../lib/getapps';
 // import { useRouter, useSearchParams } from 'next/navigation';
 // import { useDebounce } from 'use-debounce';
 // import { findLatestapps } from '../src/posts';
@@ -37,6 +38,7 @@ import React, { useEffect, useState } from 'react';
 export default function Page({
   // searchParams
 }) {
+  let apps= getapps();
   // const [apps,setapps]=useState([])
   //   useEffect(()=>{
 
@@ -101,7 +103,7 @@ export default function Page({
         {/* </div> */}
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <Projects/>
+          <Project apps={apps}/>
           {/* <OtherProjects searchfor={ss}/> */}
           <Ct/>
           {/* <Commits/> */}

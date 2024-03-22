@@ -2,7 +2,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { findLatestapps } from '../posts';
 import { indiotherproj } from './printindiproj';
-import { useDebounce } from 'use-debounce';
 import { Input } from '../../components/ui/input';
 
 function FilteredList({appst}) {
@@ -33,7 +32,7 @@ function FilteredList({appst}) {
  const filteredList = useMemo(() => {
     if(filter.trim().length>1){
         console.log("condition1")
-        if(initialList)
+        // if(initialList)
         return initialList.filter(item=>item.image).filter(app => app.title.toLowerCase().includes(filter.toLowerCase()) || app.content.toLowerCase().includes(filter.toLowerCase()));
     }
     else{
@@ -53,6 +52,7 @@ function FilteredList({appst}) {
         placeholder="Search.."
         onChange={(event) =>
             {
+              console.log(event.target.value)
               setFilter(event.target.value)
               // || table.getColumn('reponame')?.setFilterValue(event.target.value)
             }

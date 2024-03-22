@@ -16,8 +16,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import {asseturl} from "../../precompile/consturls"
 import {getapps} from "../../lib/getapps"
-export default async function Project() {
-  let apps=await getapps();
+export default function Project({apps}) {
+  
   // const [apps,setapps]=useState([])
   // useEffect(()=>{
   //   axios.get(asseturl+"list.json").then((appslist)=>{
@@ -25,10 +25,10 @@ export default async function Project() {
   //     setapps((appslist).data)
   //   }).catch(e=>console.log(e))
   // },[]);
-  let a=5;
     // const [scroll, setScroll] = useState(false);
     return (
       <>
       <FilteredList appst={(apps)}/>
+      </>
     );
   }
