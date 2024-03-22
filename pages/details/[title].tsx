@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 // const others = JSON.parse(data);
 // data = 
 fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
-const apps = JSON.parse(data);
+const apps = JSON.parse(data).applist;
   //  const others = await fetch(
   //   asseturl+`otherappslist.json`
   // ).then((res) => res.json())
@@ -57,7 +57,7 @@ export async function getStaticProps({ params }) {
 // const others = JSON.parse(data);
 // data = 
 fs.readFileSync(join(process.cwd(),"public","list.json"), 'utf-8');
-const apps = JSON.parse(data);
+const apps = JSON.parse(data).applist;
   const products=[
     // ...others,
     ...apps];
