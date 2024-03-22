@@ -24,7 +24,7 @@ import Mq from "../src/components/mq";
 import Contactme from "../src/components/contactme";
 import { Input } from '../components/ui/input';
 import React, { useEffect, useState } from 'react';
-import { getapps } from '../lib/getapps';
+// import { getapps } from '../lib/getapps';
 // import { useRouter, useSearchParams } from 'next/navigation';
 // import { useDebounce } from 'use-debounce';
 // import { findLatestapps } from '../src/posts';
@@ -38,7 +38,7 @@ import { getapps } from '../lib/getapps';
 export default function Page({
   // searchParams
 }) {
-  let apps= getapps();
+  // let apps= getapps();
   // const [apps,setapps]=useState([])
   //   useEffect(()=>{
 
@@ -103,7 +103,7 @@ export default function Page({
         {/* </div> */}
           {/* <Homepage/> */}
           {/* <Planglist/> */}
-          <Project apps={apps}/>
+          <Project/>
           {/* <OtherProjects searchfor={ss}/> */}
           <Ct/>
           {/* <Commits/> */}

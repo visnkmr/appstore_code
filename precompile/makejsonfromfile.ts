@@ -10,7 +10,7 @@ import path, { join } from 'path';
 
 export const open= async ()=> {
   // fs.writeFileSync('./public/otherappslist.json', JSON.stringify(await findLatestapps("projects/other")));
-  fs.writeFileSync('./public/list.json', JSON.stringify([...await findLatestapps("projects"),...await findLatestapps("projects/other")]));
+  fs.writeFileSync('./public/list.json', (`{ "applist":${JSON.stringify([...await findLatestapps("projects"),...await findLatestapps("projects/other")])}}`));
 };
 
 const load = async (fromwhere:string) => 

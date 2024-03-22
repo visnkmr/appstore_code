@@ -1,4 +1,4 @@
-'use client';
+
 
 // import { useState } from "react";
 
@@ -10,14 +10,14 @@ import { Download } from "lucide-react/";
 import Llimage from "./llimage";
 import { indiotherproj, indiprojs } from "./printindiproj";
 import FilteredList from "./filteredlist";
-
+import {applist} from "../../public/list.json"
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import {asseturl} from "../../precompile/consturls"
-import {getapps} from "../../lib/getapps"
-export default function Project({apps}) {
-  
+// import {getapps} from "../../lib/getapps"
+export default function Project() {
+  console.log(applist)
   // const [apps,setapps]=useState([])
   // useEffect(()=>{
   //   axios.get(asseturl+"list.json").then((appslist)=>{
@@ -28,7 +28,7 @@ export default function Project({apps}) {
     // const [scroll, setScroll] = useState(false);
     return (
       <>
-      <FilteredList appst={(apps)}/>
+      <FilteredList appst={(applist)}/>
       </>
     );
   }
