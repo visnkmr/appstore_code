@@ -120,3 +120,5 @@ export const findPostBySlug = async (fromwhere:string,slug:any) => {
 //       console.log(slug+title+image)
 //     ));
 // }
+
+open();
