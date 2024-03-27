@@ -9,6 +9,8 @@ import {asseturl} from "../../precompile/consturls"
 // import { useSearchParams } from "next/navigation";
 
 export function indiotherproj(app){
+  let url=typeof window !== 'undefined' ? window.location.hostname : '/'
+  let goto=url.includes("vercel")?`/details/${app.title}`:`/appstore/details/${app.title}`
     // console.log(app.title+"---"+searchfor+app.title.includes(searchfor))
     // const searchParams = useSearchParams()
     // // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
@@ -41,7 +43,7 @@ export function indiotherproj(app){
               className="w-120 "/>
           </div> */}
           <div className="text-center w-full m-5">
-          <Link href={`/appstore/details/${app.title}`}>
+          <Link href={goto}>
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
             </div> */}

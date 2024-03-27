@@ -17,7 +17,7 @@ module.exports = withBundleAnalyzer({
     // appDir: true,
     // optimizeCss: true,
     esmExternals: true,
-    forceSwcTransforms: true,
+    // forceSwcTransforms: true,
     scrollRestoration: true,
     legacyBrowsers: false,
   },
