@@ -18,7 +18,7 @@ export default async function Project() {
   
   const [apps,setapps]=useState([])
   useEffect(()=>{
-    axios.get(asseturl+"list.json").then((appslist)=>{
+    axios.get(asseturl+"/list.json").then((appslist)=>{
       // console.log("======?  "+JSON.stringify(appslist.data))
       setapps((appslist).data)
     }).catch(e=>console.log(e))

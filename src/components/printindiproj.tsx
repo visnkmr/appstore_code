@@ -51,7 +51,7 @@ export function indiotherproj(app){
             <div className="flex justify-center">
              <div className="overflow-hidden">
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <Llimage url={asseturl+`images/${app.image}.png`} label={app.title}/>
+            <Llimage url={asseturl+`/images/${app.image}.png`} label={app.title}/>
              {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
             </div>
             </div>
@@ -117,7 +117,7 @@ export function indiprojs(app,searchfor){
         <div className="flex justify-center">
          <div className="overflow-hidden">
          {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-        <Llimage url={asseturl+`images/${app.image}.png`} label={app.title}/>
+        <Llimage url={asseturl+`/images/${app.image}.png`} label={app.title}/>
          {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
         </div>
         </div>

@@ -13,14 +13,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   output: 'export',
   // withOptimizedImages,
-  experimental: {
-    // appDir: true,
-    // optimizeCss: true,
-    esmExternals: true,
-    forceSwcTransforms: true,
-    scrollRestoration: true,
-    legacyBrowsers: false,
-  },
+  // experimental: {
+  //   // appDir: true,
+  //   // optimizeCss: true,
+  //   esmExternals: true,
+  //   forceSwcTransforms: true,
+  //   scrollRestoration: true,
+  //   legacyBrowsers: false,
+  // },
   typescript: {
     ignoreBuildErrors: true
   },
