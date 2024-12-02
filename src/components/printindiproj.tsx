@@ -48,13 +48,13 @@ export function indiotherproj(app){
             {/* <div className="">
             <LineClamp text={app.excerpt} className="font-bold text-center m-4" lines={1}/>
             </div> */}
-            <div className="flex justify-center">
-             <div className="overflow-hidden">
+            {/* <div className="flex justify-center">
+             <div className="overflow-hidden"> */}
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
             <Llimage url={asseturl+`/images/${app.image}.png`} label={app.title}/>
              {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
-            </div>
-            </div>
+            {/* </div>
+            </div> */}
             <div className="rounded-xl">
     
           <h3 className="font-bold text-center">{app.title}</h3>
