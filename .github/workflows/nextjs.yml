@@ -82,23 +82,16 @@ jobs:
         with:
           path: ./out
 
-      - name: Clone Target Repo
-        run: git clone https://github.com/visnkmr/visnkmr.github.io.git
-
-      - name: Copy Output files to github pages repo for jsdelivr cdn
-        run: |
-          mkdir -p ./visnkmr.github.io/appstore
-          cp -R ./out/* ./visnkmr.github.io/appstore/
-
-      - name: Push to Target Repo
+       - name: Set configs
         run: |
           git config --global user.email "12533753+visnkmr@users.noreply.github.com"
           git config --global user.name "fromghrunner"
-          git config --global init.defaultBranch main 
+          git config --global init.defaultBranch main
+          git init
           git add .
-          git diff-index --quiet HEAD || git commit -m "Automatic push from source repo"
-          git push https://git:${{ secrets.TOKEN }}@github.com/visnkmr/visnkmr.github.io.git main
-        working-directory: ./visnkmr.github.io
+          git commit -m "based on latest release on https://github.com/visnkmr/appstore_code"
+          git push -f https://git:${{ secrets.TOKEN }}@github.com/visnkmr/appstore.git main
+        working-directory: ./out
 
   # Deployment job
   deploy:
