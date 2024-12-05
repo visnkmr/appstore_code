@@ -124,7 +124,7 @@ export default function DarkButton(k:{showback:boolean}) {
       {/* </span> */}
 {/* <span className='p-2.5 absolute left-0 z-10'>
 
-                    <LazyLoadImage alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/profpic.webp" />
+                    <img alt="image of Vishnu N K" className="topimg rounded-full w-9 sm:w-20" src="https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/profpic.webp" />
 </span> */}
     </div>
 

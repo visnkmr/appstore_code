@@ -5,6 +5,7 @@ description: 'Test Internet download speed, latency (ping), scan LAN / WiFi for 
 excerpt: '#2 on Fire TV '
 downloadurl: https://github.com/visnkmr/netspeed-test/releases/latest/download/app-release.apk
 download: '2.5m+ '
+version: '2.35a12i'
 image: 'nst'
 tags: [aas,mas,gp,gh,aos]
 oss: f

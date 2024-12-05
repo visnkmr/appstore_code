@@ -17,7 +17,7 @@ const load = async (fromwhere:string) =>
     { 
       queryKey:[`${fromwhere}`],
       queryFn: async()=>{
-    const response = await axios.get(asseturl+`${fromwhere}`)
+    const response = await axios.get(asseturl+`/${fromwhere}`)
     console.log(response.data)
       return await response.data
   },
