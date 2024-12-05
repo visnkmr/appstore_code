@@ -6,6 +6,7 @@ downloadurl: https://github.com/visnkmr/timenetspeed/releases/latest/download/ap
 excerpt: ''
 download: '100k+ '
 image: 'nsm'
+version: '1.2A4i'
 tags: [aas,mas,gp,gh,aos,mos,lx,win]
 oss: t
 techused: [sse,http,tauri,rust,tkinter,python,tcl,serde,chrono,prefstore,json,tiny_http,human-panic]
