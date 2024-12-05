@@ -82,7 +82,7 @@ jobs:
         with:
           path: ./out
 
-       - name: Set configs
+      - name: Set configs
         run: |
           git config --global user.email "12533753+visnkmr@users.noreply.github.com"
           git config --global user.name "fromghrunner"
