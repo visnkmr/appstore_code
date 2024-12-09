@@ -6,6 +6,7 @@ excerpt: '#2 on Fire TV '
 downloadurl: https://github.com/visnkmr/wfm/releases/latest/download/app-release.apk
 download: '500k+ '
 image: 'wfm'
+youtube: ['fsbbjDMcFtw']
 version: '2.3A12i'
 tags: [aas,mas,gp,gh,aos]
 oss: f

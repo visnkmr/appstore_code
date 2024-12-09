@@ -6,6 +6,7 @@ description: 'A Simple, secure yet functional minimise able, hide able keyboard 
 excerpt: ''
 download: '50k+ '
 image: 'nokb'
+youtube: ['cEaka8F9coc']
 tags: [gp,gh,aos]
 screenshot: [images/nokb.webp]
 

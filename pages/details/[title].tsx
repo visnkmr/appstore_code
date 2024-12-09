@@ -156,6 +156,12 @@ target="_blank">
             {/* </div> */}
             </div>
 </div>
+{app.youtube &&  app.youtube.map((url, index) => (
+
+<div className='flex justify-center p-5' key={index}>
+
+        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>))}
             <PlatformList platformname={app.tags}/>
 
             <StoreIcons storename={app.tags} w={1}/>
