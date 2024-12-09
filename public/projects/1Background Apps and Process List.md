@@ -5,6 +5,7 @@ description: 'Force close apps that are running in the background.'
 downloadurl: 'https://github.com/visnkmr/backgroundappslist/releases/latest/download/app-release.apk'
 download: '5m+ '
 excerpt: '#2 on Fire TV '
+lastupdated: 'Dec 2024'
 image: 'bapl'
 version: '1.3A17i'
 tags: [aas, gp, ms, gh,aos]

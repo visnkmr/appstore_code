@@ -95,6 +95,8 @@ export default function Details({ data }) {
                   {app.description}
                   </div>
         <h3 className="font-bold text-center text-4xl">{app.title}</h3>
+        <div className="m-3 text-center" >Latest version: {app.version} </div>
+        <div className="m-3 text-center" >Last Updated: {app.lastupdated} </div>
         </div>
 
     <div className="flex justify-center ">
@@ -108,7 +110,7 @@ export default function Details({ data }) {
             </div>
             <div className="grid place-items-center">
 
-<a 
+<a  
 href={`${app.downloadurl}`} 
 className="flex justify-center m-4 mr-2 rounded-md border shadow-md p-5 bg-green-400 hover:bg-green-700 dark:bg-green-800 w-40 "
 rel="noopener" 
