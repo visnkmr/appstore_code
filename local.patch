@@ -1,0 +1,36 @@
+diff --git a/next.config.js b/next.config.js
+index 9376206..a1d9336 100644
+--- a/next.config.js
++++ b/next.config.js
+@@ -30,7 +30,7 @@ module.exports = withBundleAnalyzer({
+   
+   // basePath: '/tmp/webpage/out',
+   // basePath: '/home/roger/Downloads/github/webpage/out',
+-  assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/appstore@main',
++  // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/appstore@main',
+   // assetPrefix: 'https://visnkmr.github.io/appstore',
+   // assetPrefix: 'https://visnk.pages.dev/',
+   // assetPrefix: 'https://cdn.jsdelivr.net/gh/visnkmr/hv2static@main/',
+diff --git a/precompile/consturls.tsx b/precompile/consturls.tsx
+index c75bfc2..a6b239a 100644
+--- a/precompile/consturls.tsx
++++ b/precompile/consturls.tsx
+@@ -1,2 +1,3 @@
+-export const asseturl="https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/";
++// export const asseturl="https://cdn.jsdelivr.net/gh/visnkmr/appstore@main/";
++export const asseturl="";
+ // export const asseturl="https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/appstore/";
+\ No newline at end of file
+diff --git a/src/components/printindiproj.tsx b/src/components/printindiproj.tsx
+index 78d4d39..044d71b 100644
+--- a/src/components/printindiproj.tsx
++++ b/src/components/printindiproj.tsx
+@@ -41,7 +41,7 @@ export function indiotherproj(app){
+               className="w-120 "/>
+           </div> */}
+           <div className="text-center w-full m-5 ">
+-          <Link href={`/appstore/details/${app.title}`}>
++          <Link href={`/details/${app.title}`}>
+           {/* <div className="flex justify-center m-4">
+             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
+             </div> */}
