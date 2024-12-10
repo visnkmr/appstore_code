@@ -95,8 +95,8 @@ export default function Details({ data }) {
                   {app.description}
                   </div>
         <h3 className="font-bold text-center text-4xl">{app.title}</h3>
-        <div className="m-3 text-center" >Latest version: {app.version} </div>
-        <div className="m-3 text-center" >Last Updated: {app.lastupdated} </div>
+        {app.version && <div className="m-3 text-center" >Latest version: {app.version} </div>}
+        {app.lastupdated && <div className="m-3 text-center" >Last Updated: {app.lastupdated} </div>}
         </div>
 
     <div className="flex justify-center ">
