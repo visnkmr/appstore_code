@@ -9,7 +9,7 @@
     "src/*.tsx",
     "js/*.ts",
     "app/*.tsx",
-    ".next/types/**/*.ts" ],
+    ".next/types/**/*.ts", "components/ui/card.tsx" ],
   "compilerOptions": {
     // "typeRoots": [
     //   "./node_modules/@types",

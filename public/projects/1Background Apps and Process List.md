@@ -8,6 +8,8 @@ excerpt: '#2 on Fire TV '
 lastupdated: 'Dec 2024'
 image: 'bapl'
 youtube: ['XyVs-uYl3do']
+# manuals: ['https://github.com/visnkmr/backgroundappslist/blob/main/README.md','https://github.com/visnkmr/backgroundappslist/blob/main/README.md']
+# manualtext: ['How to','How to']
 version: '1.3A17i'
 tags: [aas, gp, ms, gh,aos]
 screenshot: [images/bapl.webp]

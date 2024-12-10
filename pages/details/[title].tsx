@@ -14,7 +14,14 @@ import StoreIcons from "../../src/components/storeicons";
 import DeviceList from "../../src/components/devicelist";
 import {asseturl} from "../../precompile/consturls"
 import {open} from "../../precompile/makejsonfromfile"
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
 
 export async function getStaticPaths() {
   await open();
@@ -162,6 +169,23 @@ target="_blank">
 
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>))}
+
+        {app.manuals && app.manuals.map((helptexttitle, index) => (
+<div className='flex justify-center p-5' key={index}>
+<Card key={index}>
+  <CardHeader>
+    {/* <CardTitle>{helptexttitle}</CardTitle> */}
+    {/* <CardDescription>{app.manualtext[index]}</CardDescription>  */}
+  </CardHeader>
+  {/* <CardContent>
+    <p>Card Content</p>
+  </CardContent>
+  <CardFooter>
+    <p>Card Footer</p>
+  </CardFooter> */}
+</Card>
+</div>
+))}        
             <PlatformList platformname={app.tags}/>
 
             <StoreIcons storename={app.tags} w={1}/>
