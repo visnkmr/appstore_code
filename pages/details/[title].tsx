@@ -169,21 +169,14 @@ target="_blank">
 
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         </div>))}
-
-        {app.manuals && app.manuals.map((helptexttitle, index) => (
-<div className='flex justify-center p-5' key={index}>
-<Card key={index}>
-  <CardHeader>
-    {/* <CardTitle>{helptexttitle}</CardTitle> */}
-    {/* <CardDescription>{app.manualtext[index]}</CardDescription>  */}
-  </CardHeader>
-  {/* <CardContent>
-    <p>Card Content</p>
-  </CardContent>
-  <CardFooter>
-    <p>Card Footer</p>
-  </CardFooter> */}
-</Card>
+      {
+        app.manualtext && <h2 className="m-3 text-center">Articles</h2>
+      }
+        {app.manualtext && app.manualtext.map((helptexttitle, index) => (
+<div className='flex justify-center p-2' key={index}>
+<a href={`${app.manuallink[index]}`} target="_blank">
+ {helptexttitle}
+  </a>
 </div>
 ))}        
             <PlatformList platformname={app.tags}/>
