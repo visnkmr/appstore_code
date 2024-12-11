@@ -6,6 +6,8 @@ downloadurl: https://github.com/visnkmr/timenetspeed/releases/latest/download/ap
 excerpt: ''
 youtube: ['0-iec44RquM','4RHkOOJDkec']
 download: '100k+ '
+manuallink: ['https://appchoose.blogspot.com/p/time-netspeed-overlay-adb-help-for.html','https://appchoose.blogspot.com/p/allowing-systemalertwindow-on-tv-using.html']
+manualtext: ['Allowing SYSTEM_ALERT_WINDOW on TV using another android device','Enabling Time Netspeed overlay using ADB Remote, Keyboard & Shell']
 image: 'nsm'
 version: '1.2A4i'
 tags: [aas,mas,gp,gh,aos,mos,lx,win]

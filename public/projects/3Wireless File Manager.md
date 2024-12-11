@@ -7,6 +7,8 @@ downloadurl: https://github.com/visnkmr/wfm/releases/latest/download/app-release
 download: '500k+ '
 image: 'wfm'
 youtube: ['fsbbjDMcFtw']
+manuallink: ['https://appchoose.blogspot.com/2020/05/transfer-from-macos-ios-to-fire-tv.html','hhttps://appchoose.blogspot.com/2020/05/explained-install-apk-android-tv.html']
+manualtext: ['Transfer Files from MacOS, iOS to Fire TV','Explained: How to install App APKs on Android TVs ']
 version: '2.3A12i'
 tags: [aas,mas,gp,gh,aos]
 oss: f
