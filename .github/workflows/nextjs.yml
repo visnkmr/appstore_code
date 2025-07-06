@@ -82,16 +82,16 @@ jobs:
         with:
           path: ./out
 
-      - name: Set configs
-        run: |
-          git config --global user.email "12533753+visnkmr@users.noreply.github.com"
-          git config --global user.name "fromghrunner"
-          git config --global init.defaultBranch main
-          git init
-          git add .
-          git commit -m "based on latest release on https://github.com/visnkmr/appstore_code"
-          git push -f https://git:${{ secrets.TOKEN }}@github.com/visnkmr/appstore.git main
-        working-directory: ./out
+      # - name: Set configs
+      #   run: |
+      #     git config --global user.email "12533753+visnkmr@users.noreply.github.com"
+      #     git config --global user.name "fromghrunner"
+      #     git config --global init.defaultBranch main
+      #     git init
+      #     git add .
+      #     git commit -m "based on latest release on https://github.com/visnkmr/appstore_code"
+      #     git push -f https://git:${{ secrets.TOKEN }}@github.com/visnkmr/appstore.git main
+      #   working-directory: ./out
 
   # Deployment job
   deploy:

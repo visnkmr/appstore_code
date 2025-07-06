@@ -1,6 +1,4 @@
-
-'use client'; 
-
+'use client'
  
 import { findLatestapps } from "../posts";
 // import StoreIcons from "./storeicons";
@@ -10,27 +8,36 @@ import Llimage from "./llimage";
 import { indiotherproj, indiprojs } from "./printindiproj";
 import FilteredList from "./filteredlist";
 import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import {asseturl} from "../../precompile/consturls"
+import { asseturl } from "../../precompile/consturls";
+import fs from 'fs';
+import path from 'path';
 
-export default async function Project() {
+interface ProjectProps {
+  appsData: any[];
+}
+
+export default function Project() {
+  // const [apps, setapps] = useState<any[]>([]);
+   // Read the JSON file from the public directory (on the server)
+  const filePath = path.join(process.cwd(), 'public', 'list.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const apps = JSON.parse(jsonData);
+
   
-  const [apps,setapps]=useState([])
-  useEffect(()=>{
-    axios.get(asseturl+"/list.json").then((appslist)=>{
-      // console.log("======?  "+JSON.stringify(appslist.data))
-      setapps((appslist).data)
-    }).catch(e=>console.log(e))
-  },[]);
-    // const [scroll, setScroll] = useState(false);
-    return (
-      <>
-      <FilteredList appst={apps}/>
-      {/* <h1 className="sectitle">Android Apps</h1> */}
-      <div className="box dark:bg-gray-900 dark:text-white">
-      {/* {appsfetcher(searchfor)} */}
-      </div>
-      </>
-    );
-  }
+  // useEffect(() => {
+  //   if (appsData && appsData.length > 0) {
+  //     setapps(appsData);
+  //   }
+  // }, [appsData]);
+  
+  return (
+    <>
+    <FilteredList appst={apps}/>
+    {/* <h1 className="sectitle">Android Apps</h1> */}
+    <div className="box dark:bg-gray-900 dark:text-white">
+    {/* {appsfetcher(searchfor)} */}
+    </div>
+    </>
+  );
+}

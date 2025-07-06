@@ -13,30 +13,11 @@ import take from "lodash.take";
 export default function Mq(fromwhere:number){
     if(fromwhere===1){
         return(
-            <Marquee pauseOnHover direction="left" className="pt-5">
-                {/* <div className="text-bold pe-4 text-4xl ps-20">Recently updated:</div>
-                <div className="text-bold pe-4 text-4xl">Background apps and Process List || </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div> */}
-              {/* <Reviews/> */}
-              {/* <div   
-                // key={review.} 
-                className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 w-302 ">              */}
-                {/* <div className="w-120 p-4">
-                    <img
-                    src={image}
-                    className="w-120 "/>
-                </div> */}
-    
-                {/* {take(reviews,5).map((review) => { */}
+            <div className="grid sm:grid-cols-2 xl:grid-cols-8 pt-5">
                 {reviews.map((review) => {
                     return indireview(review);
                 })}
-                {/* </div> */}
-    
-            </Marquee>
+            </div>
         )
     }
     else{
