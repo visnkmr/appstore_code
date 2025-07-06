@@ -55,67 +55,67 @@ module.exports = withBundleAnalyzer({
       //   './node_modules/@tanstack/react-query'
       // );
     
-      config.resolve.fallback = {
-        fs: false,
-        net: false,
-        tls: false
-      };
-      config.optimization = {
-        minimize: true,
-        minimizer: [
-          new TerserPlugin({
-            // minify: TerserPlugin.swcMinify,
-            parallel: true,
-            extractComments:false,
-            terserOptions: {
-              ecma: 10,
-              warnings: false,
-              output: {
-                comments: false,
-                indent_level: 2,
-                ecma:10,
-                indent_start: 0,
-                quote_keys: false,
-                wrap_iife: true,
-              },
-              compress: {
-                drop_console: true,
-                drop_debugger: true,
-                hoist_funs: true,
-                hoist_props: true,
-                hoist_vars: true,
-                inline: true,
-                loops: true,
-                negate_iife: true,
-                passes: 3,
-                reduce_funcs: true,
-                reduce_vars: true,
-                switches: true,
-                toplevel: true,
-                typeofs: true,
-                unsafe: true,
-                unsafe_arrows: true,
-                unsafe_comps: true,
-                unsafe_Function: true,
-                unsafe_math: true,
-                unsafe_methods: true,
-                unsafe_proto: true,
-                unsafe_regexp: true,
-                unsafe_undefined: true,
-              },
-              ie8: false
-            }
-          }),
-          new CssMinimizerPlugin({
-            parallel: true,
-            minify: [
-              CssMinimizerPlugin.cssnanoMinify,
-              CssMinimizerPlugin.cleanCssMinify
-            ],
-          }),
-        ],
+      // config.resolve.fallback = {
+      //   fs: false,
+      //   net: false,
+      //   tls: false
+      // };
+      // config.optimization = {
+      //   minimize: true,
+      //   minimizer: [
+      //     new TerserPlugin({
+      //       // minify: TerserPlugin.swcMinify,
+      //       parallel: true,
+      //       extractComments:false,
+      //       terserOptions: {
+      //         ecma: 10,
+      //         warnings: false,
+      //         output: {
+      //           comments: false,
+      //           indent_level: 2,
+      //           ecma:10,
+      //           indent_start: 0,
+      //           quote_keys: false,
+      //           wrap_iife: true,
+      //         },
+      //         compress: {
+      //           drop_console: true,
+      //           drop_debugger: true,
+      //           hoist_funs: true,
+      //           hoist_props: true,
+      //           hoist_vars: true,
+      //           inline: true,
+      //           loops: true,
+      //           negate_iife: true,
+      //           passes: 3,
+      //           reduce_funcs: true,
+      //           reduce_vars: true,
+      //           switches: true,
+      //           toplevel: true,
+      //           typeofs: true,
+      //           unsafe: true,
+      //           unsafe_arrows: true,
+      //           unsafe_comps: true,
+      //           unsafe_Function: true,
+      //           unsafe_math: true,
+      //           unsafe_methods: true,
+      //           unsafe_proto: true,
+      //           unsafe_regexp: true,
+      //           unsafe_undefined: true,
+      //         },
+      //         ie8: false
+      //       }
+      //     }),
+      //     new CssMinimizerPlugin({
+      //       parallel: true,
+      //       minify: [
+      //         CssMinimizerPlugin.cssnanoMinify,
+      //         CssMinimizerPlugin.cleanCssMinify
+      //       ],
+      //     }),
+      //   ],
         
-      };
+      // };
     // Set the output path to /tmp/next
     // config.output.path = '/tmp/.next';
     // if (!isServer) {
@@ -132,7 +132,7 @@ module.exports = withBundleAnalyzer({
     // };
 
     // Merge chunks instead of creating new ones
-    config.optimization.minimize = true;
+    // config.optimization.minimize = true;
 //     if (typeof nextRuntime === "undefined") {
 //       config.resolve.fallback = {
 //                 ...config.resolve.fallback,
@@ -140,11 +140,11 @@ module.exports = withBundleAnalyzer({
 //          };  
 // }
     // Always create a single chunk for all code
-    config.optimization.splitChunks = {
-      cacheGroups: {
-        default: false,
-      },
-    };
+    // config.optimization.splitChunks = {
+    //   cacheGroups: {
+    //     default: false,
+    //   },
+    // };
 
     // Disable file-based dynamic imports
     // config.module.rules.push({
