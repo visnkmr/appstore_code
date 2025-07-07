@@ -33,7 +33,7 @@ export function indiotherproj(app){
 
         <div 
         key={app.title} 
-        className="eachapp">             
+        className="flex justify-center ">             
         
           {/* <div className="w-120 p-4">
               <img
@@ -42,6 +42,7 @@ export function indiotherproj(app){
           </div> */}
           <div className="text-center w-full m-5 ">
           <Link href={`/appstore/details/${app.title}`}>
+            <div className="hover:bg-slate-200 hover:rounded-xl hover:text-gray-700 p-2">
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
             </div> */}
@@ -79,6 +80,7 @@ export function indiotherproj(app){
           
             </div>
             </Link>
+            </div>
           </div>
         </div>
           );

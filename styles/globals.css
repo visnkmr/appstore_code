@@ -64,9 +64,9 @@ nav{
 .eachplatform{
   @apply m-3 p-2 border border-gray-300 whitespace-nowrap ;
 }
-.eachapp{
+/* .eachapp{
   @apply flex justify-center hover:bg-slate-200 hover:rounded-xl hover:text-gray-700;
-}
+} */
 .sectitle{
   margin: 0 0 0 1.75em;
   /* padding-left: 5%; */
