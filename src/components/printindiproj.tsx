@@ -33,14 +33,14 @@ export function indiotherproj(app){
 
         <div 
         key={app.title} 
-        className="flex justify-center ">             
+        className="flex ">             
         
           {/* <div className="w-120 p-4">
               <img
               src={image}
               className="w-120 "/>
           </div> */}
-          <div className="text-center w-full m-5 ">
+          <div className="w-full">
             <div className="hover:bg-slate-200 hover:rounded-xl hover:text-gray-700 p-2">
           <Link href={`/appstore/details/${app.title}`}>
           {/* <div className="flex justify-center m-4">
@@ -52,13 +52,13 @@ export function indiotherproj(app){
             {/* <div className="flex justify-center">
              <div className="overflow-hidden"> */}
              {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-            <Llimage url={asseturl+`/images/${app.image}.png`} label={app.title} version={app.version}/>
+            <Llimage app={app}/>
              {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
             {/* </div>
             </div> */}
             <div className="rounded-xl">
     
-          <h3 className="font-bold text-center">{app.title}</h3>
+          {/* <h3 className="font-bold text-center">{app.title}</h3> */}
           <noscript>
     
                  <div >{app.content}</div>

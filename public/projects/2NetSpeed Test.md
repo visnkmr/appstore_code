@@ -1,7 +1,7 @@
 ---
 publishDate: ''
 title: 'Netspeed Test'
-description: 'Test Internet download speed on any app using multiwindow and smart test'
+description: 'Smart test lets you Check bandwidth in any app using multiwindow'
 excerpt: '#2 on Fire TV '
 downloadurl: https://github.com/visnkmr/netspeed-test/releases/latest/download/app-release.apk
 download: '2.5m+ '
