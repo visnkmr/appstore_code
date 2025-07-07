@@ -34,7 +34,7 @@ export default function Llimage({app}:valsofapp){
         <img  src={asseturl+`/images/${app.image}.png`} className="img-box-papp w-24 h-24 dark:border-2 border-0 border-gray-600 " aria-label={app.title}/>
         <div className="ps-4 ">
           <p className="">{app.title}</p>
-          <span className="text-slate-400 hover:text-slate-500">
+          <span className="text-slate-600 dark:text-slate-400  hover:dark:text-slate-500">
 
           <div className="flex flex-row ">
           {app.download?(<><p className="text-sm ">{app.download}</p>

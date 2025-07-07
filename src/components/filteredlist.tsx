@@ -58,7 +58,7 @@ function FilteredList({appst}) {
             }
           }/>
     </div>
-         <div className="box dark:bg-gray-900 dark:text-white">
+         <div className="sm:m-4 lg:m-20 box dark:bg-gray-900 dark:text-white">
        {filteredList.map((item, index) => (
          indiotherproj(item)
        ))}

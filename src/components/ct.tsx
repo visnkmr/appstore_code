@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 export default function Ct(){
     return (
         <>
-        <div className="block dark:bg-gray-900 dark:text-white">
+        <div className="mt-20 block dark:bg-gray-900 dark:text-white">
         <div className="text-center md:mb-0 ">
           <div className="font-bold font-heading text-4xl lg:text-5xl text-[#039de1] xl:text-6xl">
             {/* <noscript> */}
