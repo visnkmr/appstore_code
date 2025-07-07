@@ -11,9 +11,10 @@ manualtext: ['Allowing SYSTEM_ALERT_WINDOW on TV using another android device','
 image: 'nsm'
 version: '1.2A4i'
 tags: [aas,mas,gp,gh,aos,mos,lx,win]
-oss: t
 techused: [sse,http,tauri,rust,tkinter,python,tcl,serde,chrono,prefstore,json,tiny_http,human-panic]
 screenshot: [images/nst.webp]
+oss: t
+reponame: 'netspeed_pc'
 ---
 
-Monitor live bandwidth usage/ network speed on PC.
+Monitor live bandwidth usage/ network speed on PC (OSS) and smartphones (not OSS). 

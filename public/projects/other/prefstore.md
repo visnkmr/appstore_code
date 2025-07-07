@@ -7,6 +7,7 @@ download: ''
 downloadurl: https://github.com/visnkmr/prefstore
 image: ''
 tags: [gh]
+reponame: 'prefstore'
 oss: t
 ---
 

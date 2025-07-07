@@ -13,6 +13,8 @@ manualtext: ['How to close background apps on Android TV','How to close backgrou
 version: '1.3A17i'
 tags: [aas, gp, ms, gh,aos]
 screenshot: [images/bapl.webp]
+reponame: 'backgroundappslist'
+oss: f
 ---
 
 Force close apps that are running in the background.

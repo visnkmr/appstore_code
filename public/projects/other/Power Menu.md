@@ -7,6 +7,8 @@ downloadurl: https://github.com/visnkmr/powermenu/releases/latest/download/app-r
 image: 'pm'
 youtube: ['Z1WQyq5ux0Q']
 tags: [gp,gh,aos]
+oss: f
+reponame: 'powermenu'
 ---
 
-Software power menu for android.
+A Simple, secure software power menu for android. No root needed, uses Accessibility permission.

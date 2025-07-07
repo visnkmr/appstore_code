@@ -8,4 +8,4 @@ image: 'nsm'
 tags: [pc,gh,win,lx,mos]
 ---
 
-Rust based netspeed monitor for PC.
+Monitor live bandwidth usage/ network speed on PC (OSS) and smartphones (not OSS). 

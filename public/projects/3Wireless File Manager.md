@@ -11,10 +11,10 @@ manuallink: ['https://appchoose.blogspot.com/2020/05/transfer-from-macos-ios-to-
 manualtext: ['Transfer Files from MacOS, iOS to Fire TV','Explained: How to install App APKs on Android TVs ']
 version: '2.3A12i'
 tags: [aas,mas,gp,gh,aos]
-oss: f
 screenshot: [images/wfm.webp]
-
+oss: f
+reponame: 'wfm'
 ---
 
 
-Transfer files between your android device and any device that has a browser/supports web data transfer.
+Send, Browse, Download files between devices between devices on your home network using your android.

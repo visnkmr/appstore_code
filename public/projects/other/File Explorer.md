@@ -8,7 +8,10 @@ download: '1m+ '
 image: 'fx'
 version: '1.7A4i'
 tags: [aas,ms,gh,aos]
+oss: t
+reponame: 'netspeed_pc'
 screenshot: [images/fx.webp]
+techused: [sse,http,tauri,rust,tkinter,python,tcl,serde,chrono,prefstore,json,tiny_http,human-panic]
 ---
 
-Uses ForkJoin pool, Fuzzy Logic based search, Memoization, Glide, GSON, Recycleview.
+Fast, clean file explorer for android.
