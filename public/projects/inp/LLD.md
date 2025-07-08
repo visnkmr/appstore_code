@@ -7,6 +7,8 @@ download: ''
 image: ''
 tags: [gh]
 oss: t
+indev: t
+reponame: 'LogLink2Disk_chrome'
 ---
 
 An extension for browsers that allow you to save link to local Markdown file. Multiple various version available complete list available on Github.

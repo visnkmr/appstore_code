@@ -4,7 +4,7 @@ title: 'Netspeed Test'
 description: 'Smart test lets you Check bandwidth in any app using multiwindow'
 excerpt: '#2 on Fire TV '
 downloadurl: https://github.com/visnkmr/netspeed-test/releases/latest/download/app-release.apk
-download: '2.5m+ '
+download: '3m+ '
 version: '2.35a12i'
 image: 'nst'
 tags: [aas,mas,gp,gh,aos]

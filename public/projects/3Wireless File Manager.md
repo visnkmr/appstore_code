@@ -4,7 +4,7 @@ title: 'Wireless File Manager'
 description: 'Transfer, Manage files on your Android, Fire TV, Tablet, Phone (Internal Storage, External Storage) using any web browser.'
 excerpt: '#2 on Fire TV '
 downloadurl: https://github.com/visnkmr/wfm/releases/latest/download/app-release.apk
-download: '500k+ '
+download: '750k+ '
 image: 'wfm'
 youtube: ['fsbbjDMcFtw']
 manuallink: ['https://appchoose.blogspot.com/2020/05/transfer-from-macos-ios-to-fire-tv.html','hhttps://appchoose.blogspot.com/2020/05/explained-install-apk-android-tv.html']
