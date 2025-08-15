@@ -3,7 +3,7 @@ publishDate: ''
 title: 'Software Volume Button'
 description: 'Software Volume button for android.'
 excerpt: ''
-downloadurl: https://github.com/visnkmr/volumebutton
+downloadurl: https://github.com/visnkmr/volumebutton/releases/latest/download/app-release.apk
 download: '250k+ '
 image: 'vc'
 tags: [gp,gh,aos]
