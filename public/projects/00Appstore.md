@@ -12,7 +12,7 @@ manuallink: []
 manualtext: []
 version: '1'
 tags: [aas, gp, ms, gh,aos]
-screenshot: [images/storeapp.webp]
+screenshot: ['images/storeapp_tv.webp','images/storeapp_phone.tv'] 
 reponame: 'storeapp'
 oss: t
 ---
