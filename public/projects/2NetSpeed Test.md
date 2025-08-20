@@ -8,7 +8,16 @@ download: '3m+ '
 version: '2.35a14i'
 image: 'nst'
 tags: [aas,mas,gp,gh,aos]
-screenshot: [images/nsm.webp]
+screenshot: ['images/nst_screenshot_20250819_022738.webp',
+    'images/nst_screenshot_20250819_023819.webp',
+    'images/nst_screenshot_20250819_191203.webp',
+    'images/nst_screenshot_20250819_191301.webp',
+    'images/nst_screenshot_20250819_191316.webp',
+    'images/nst_screenshot_20250819_191752.webp',
+    'images/nst_screenshot_20250819_191801.webp',
+    'images/nst_screenshot_20250819_191812.webp',
+    'images/nst_screenshot_20250819_191829.webp'
+]
 oss: f
 reponame: 'netspeed-test'
 

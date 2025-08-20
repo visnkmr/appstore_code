@@ -10,9 +10,9 @@ image: 'storeapp'
 youtube: []
 manuallink: []
 manualtext: []
-version: '1'
+version: '2'
 tags: [aas, gp, ms, gh,aos]
-screenshot: ['images/storeapp_tv.webp','images/storeapp_phone.tv'] 
+screenshot: ['images/storeapp_tv.webp','images/storeapp_phone.webp'] 
 reponame: 'storeapp'
 oss: t
 ---
