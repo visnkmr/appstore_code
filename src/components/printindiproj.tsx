@@ -33,7 +33,7 @@ export function indiotherproj(app){
 
         <div 
         key={app.title} 
-        className="flex ">             
+        className="flex hover:scale-105 ">             
         
           {/* <div className="w-120 p-4">
               <img
@@ -41,7 +41,7 @@ export function indiotherproj(app){
               className="w-120 "/>
           </div> */}
           <div className="w-full">
-            <div className="hover:bg-slate-200 hover:rounded-xl hover:text-gray-700 p-2">
+            <div className=" hover:rounded-xl hover:text-gray-700 p-2">
           <Link href={`/appstore/details/${app.title}`}>
           {/* <div className="flex justify-center m-4">
             <Download className="mr-2"/><LineClamp className="font-bold" text={app.download} lines={2}/>
@@ -119,7 +119,7 @@ export function indiprojs(app,searchfor){
         <div className="flex justify-center">
          <div className="overflow-hidden">
          {/* https://cdn.jsdelivr.net/gh/visnkmr/visnkmr.github.io@main/images/ */}
-        <Llimage url={asseturl+`/images/${app.image}.png`} label={app.title}/>
+        <Llimage app={app}/>
          {/* <img src={app.image} className="w-full object-contain flex justify-center rounded-2xl " style={{ marginTop: '-15px' }}/> */}
         </div>
         </div>

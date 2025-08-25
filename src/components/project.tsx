@@ -14,23 +14,22 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import {asseturl} from "../../precompile/consturls"
 
-export default async function Project() {
-  
-  const [apps,setapps]=useState([])
-  useEffect(()=>{
-    axios.get(asseturl+"/list.json").then((appslist)=>{
-      // console.log("======?  "+JSON.stringify(appslist.data))
-      setapps((appslist).data)
-    }).catch(e=>console.log(e))
-  },[]);
-    // const [scroll, setScroll] = useState(false);
-    return (
-      <>
-      <FilteredList appst={apps}/>
-      {/* <h1 className="sectitle">Android Apps</h1> */}
-      {/* <div className="box dark:bg-gray-900 dark:text-white"> */}
-      {/* {appsfetcher(searchfor)} */}
-      {/* </div> */}
-      </>
-    );
-  }
+interface ProjectProps {
+   searchQuery?: string;
+}
+
+export default function Project({ searchQuery = '' }: ProjectProps) {
+   const [apps, setApps] = useState([])
+
+   useEffect(() => {
+     axios.get(asseturl + "/list.json").then((appslist) => {
+       setApps(appslist.data)
+     }).catch(e => console.log(e))
+   }, []);
+
+   return (
+     <>
+       <FilteredList appst={apps} searchQuery={searchQuery} />
+     </>
+   );
+}

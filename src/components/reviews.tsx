@@ -1,38 +1,57 @@
 import { apab, reviews } from "../shared/data";
 import LineClamp from "./LineClamp";
 import StoreIcons from "./storeicons";
+import { Star, Quote } from "lucide-react";
 
 export default function Reviews(){
     return (
-        <>
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4">
-        {reviews.map((review) => {
-      
-      return ( 
-    <div 
-    // key={review.} 
-    className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 w-302 ">             
-      {/* <div className="w-120 p-4">
-          <img
-          src={image}
-          className="w-120 "/>
-      </div> */}
-      <div className="text-center w-full">
-      <h3 className="font-bold text-center m-4">{apab.get(review.appname)!}</h3>
-      <noscript>
+        <div className="py-12 px-4">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold text-foreground mb-4">Customer Reviews</h2>
+                    <p className="text-muted-foreground">What our users are saying about our apps</p>
+                </div>
 
-             <div className="text-center">{review.review}</div>
-            </noscript>
-      <LineClamp className="text-center" lines={2} text={review.review}/>
-      {/* <h5 className="font-bold text-center m-4">{storename}</h5> */}
+                {/* Reviews Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {reviews.map((review, index) => (
+                        <div
+                            key={review.appname + index}
+                            className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-200 dark:border-gray-700"
+                        >
+                            {/* App Name */}
+                            <h3 className="font-semibold text-lg text-foreground mb-3 text-center">
+                                {apab.get(review.appname)!}
+                            </h3>
 
-      {/* <img src={image} className="w-32"/> */}
-      <StoreIcons{...{storename:review.storename,w:0}}/>
-      </div>
-    </div>
-      );
-  })}
+                            {/* Review Text */}
+                            <div className="mb-4">
+                                <LineClamp
+                                    className="text-muted-foreground leading-relaxed text-center text-sm"
+                                    lines={3}
+                                    text={review.review}
+                                />
+                            </div>
+
+                            {/* Rating Stars */}
+                            <div className="flex items-center justify-center space-x-1 mb-4">
+                                {[...Array(5)].map((_, starIndex) => (
+                                    <Star
+                                        key={starIndex}
+                                        className="h-4 w-4 text-yellow-400 fill-current"
+                                    />
+                                ))}
+                            </div>
+
+                            {/* Store Icons */}
+                            <div className="flex justify-center">
+                                <StoreIcons {...{storename: review.storename, w: 0}} />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-        </>
     );
 }

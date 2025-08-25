@@ -1,70 +1,95 @@
-// 'use client'
-import React, { useState, useMemo, useEffect } from 'react';
-import { findLatestapps } from '../posts';
+'use client'
+import React, { useState, useMemo } from 'react';
 import { indiotherproj } from './printindiproj';
-import { useDebounce } from 'use-debounce';
-import { Input } from '../../components/ui/input';
+import { Search, Filter } from 'lucide-react';
 
-function FilteredList({appst}) {
+interface App {
+  title: string;
+  content: string;
+  image: string;
+  [key: string]: any;
+}
 
+interface FilteredListProps {
+   appst: App[];
+   searchQuery?: string;
+   onSearchChange?: (query: string) => void;
+}
 
-    // var apps;
-    // const [apps,setapps]=useState([])
-    // useEffect(() => {
-    //     const trasy = async () => {
-    //         let appst = await findLatestapps("list.json");
-    //         console.log("here" + appst);
-    //         setapps(appst);
-    //     };
-    //     trasy();
-    //  }, []);
-    //  useEffect(() => {
-    //     console.log("new"+apps);
-    //  }, [apps]);
-     
-    
-    console.log("here4----->"+appst)
+function FilteredList({ appst, searchQuery = '', onSearchChange }: FilteredListProps) {
 
+  const filteredList = useMemo(() => {
+    if (!appst) return [];
 
- const initialList = appst;
- console.log("list now is ----->"+initialList)
- const [filter, setFilter] = useState('');
-
- const filteredList = useMemo(() => {
-    if(filter.trim().length>1){
-        console.log("condition1")
-
-        return initialList.filter(item=>item.image).filter(app => app.title.toLowerCase().includes(filter.toLowerCase()) || app.content.toLowerCase().includes(filter.toLowerCase()));
+    if (searchQuery.trim().length > 1) {
+      return appst.filter(item =>
+        item.image &&
+        (item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         item.content.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    } else {
+      return appst.filter(item => item.image);
     }
-    else{
-        console.log("condition2")
+  }, [searchQuery, appst]);
 
-        return initialList.filter(item=>item.image)
-    }
- }, [filter,initialList]);
+  if (!appst || appst.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <div className="text-muted-foreground">
+          <Filter className="h-12 w-12 mx-auto mb-4 opacity-50" />
+          <p>Loading applications...</p>
+        </div>
+      </div>
+    );
+  }
 
- return (
-   <div>
-    <div className='flex justify-center'>
+  return (
+    <div className="space-y-6" role="main" aria-label="Applications list">
+      {/* Apps Count and Filter Info */}
+      <div className="flex items-center justify-between px-4">
+        <div className="flex items-center space-x-3">
+          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+            <Filter className="h-4 w-4 text-primary" />
+          </div>
+          <span className="text-sm font-medium text-muted-foreground" aria-live="polite">
+            {filteredList.length} app{filteredList.length !== 1 ? 's' : ''} available
+          </span>
+        </div>
+      </div>
 
-    <Input 
-        className='m-5 w-[50%]' 
-        value={filter}
-        placeholder="Search.."
-        onChange={(event) =>
-            {
-              setFilter(event.target.value)
-              // || table.getColumn('reponame')?.setFilterValue(event.target.value)
-            }
-          }/>
+      {/* Applications Grid */}
+      <div
+        className="app-grid"
+        role="grid"
+        aria-label="Applications grid"
+        aria-rowcount={Math.ceil(filteredList.length / 3)}
+      >
+        {filteredList.map((item, index) => (
+          <div
+            key={item.title || index}
+            // className="fade-in-up"
+            role="gridcell"
+            aria-label={`Application: ${item.title}`}
+          >
+            {indiotherproj(item)}
+          </div>
+        ))}
+      </div>
+
+      {/* Enhanced Empty State */}
+      {filteredList.length === 0 && (
+        <div className="text-center py-16 px-4" role="status" aria-live="polite">
+          <div className="w-16 h-16 bg-muted/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Search className="h-8 w-8 text-muted-foreground" />
+          </div>
+          <h3 className="text-lg font-semibold mb-2 text-foreground">No apps found</h3>
+          <p className="text-muted-foreground text-sm max-w-sm mx-auto">
+            Try different search terms or browse all available applications.
+          </p>
+        </div>
+      )}
     </div>
-         <div className="sm:m-4 lg:m-20 box dark:bg-gray-900 dark:text-white">
-       {filteredList.map((item, index) => (
-         indiotherproj(item)
-       ))}
-     </div>
-   </div>
- );
+  );
 }
 
 export default FilteredList;

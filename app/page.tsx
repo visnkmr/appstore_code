@@ -1,118 +1,120 @@
 'use client'
 import dynamic from 'next/dynamic'
-
-// import Project from "../src/components/project";
-// const OtherProjects =dynamic(()=>import ("../src/components/otherprojs"));
-const Projects =dynamic(()=>import ("../src/components/project"));
-// const Search =dynamic(()=>import ("../src/components/search"));
-// const Navbar =dynamic(()=>import ("../src/components/navbar"));
-
-// import Homepage from "../src/components/homepage";
-// import Planglist from "../src/components/planlist";
-// import Stats from "../src/components/stats";
-// import Workinp from "../src/components/wip";
-// import Footer from "../src/components/footer";
 import '../styles/globals.css'
-// import Ct from "../src/components/ct";
-const Ct =dynamic(()=>import ("../src/components/ct"));
+import { Search, Grid, Palette } from 'lucide-react'
+import Link from 'next/link'
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react'
 
-// const Commits =dynamic(()=>import ("../src/components/commits"));
-// import Commits from "../src/components/commits";
-import Topthread from "../src/components/topthread";
-import DarkButton from "../src/components/Themetogglebutton";
-import Mq from "../src/components/mq";
-import Contactme from "../src/components/contactme";
-import { Input } from '../components/ui/input';
-import React, { useEffect, useState } from 'react';
-// import { useRouter, useSearchParams } from 'next/navigation';
-// import { useDebounce } from 'use-debounce';
-// import { findLatestapps } from '../src/posts';
-// import { ThemeContext, ThemeProvider } from "../src/components/ThemeContext";
-// import { useContext } from "react";
-// import { createServerContext } from 'react';
+const Projects = dynamic(() => import("../src/components/project"));
+const Ct = dynamic(() => import("../src/components/ct"));
 
-// import dwc from "../src/dealcommits";
-// import gtr from "./api/gtr";
+export default function Page() {
+   const [searchQuery, setSearchQuery] = useState('');
+  const { theme, setTheme } = useTheme()
+    // const { dark, toggle } = useContext(ThemeContext);
+    // const [ dark, setdark ] = useState(false);
+    // const [showon, setshow] = useLocalStorage("dark",true);
+    // console.log("onload"+showon)
+    useEffect(() => {
+      // dark?setTheme('light'):setTheme('dark');
+      const darkIcon = document.getElementById("theme-toggle-dark-icon")!;
+      const lightIcon = document.getElementById("theme-toggle-light-icon")!;
+      if (theme === 'dark') {
+        darkIcon.style.display = "block";
+        lightIcon.style.display = "none";
+      } else {
+        darkIcon.style.display = "none";
+        lightIcon.style.display = "block";
+      }
+    }, [theme]);
+   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+     setSearchQuery(event.target.value);
+   };
 
-export default function Page({
-  // searchParams
-}) {
-  // const [apps,setapps]=useState([])
-  //   useEffect(()=>{
+   return (
+     <div className="min-h-screen bg-background">
+       {/* Top Search Section - Google Play Store Style */}
+       <section className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border/40">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="py-4">
+             <div className="flex items-center justify-between gap-4">
+               <div className="flex-1 max-w-2xl">
+                 <div className="relative">
+                   <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+                   <input
+                     type="text"
+                     placeholder="Search apps, games, or developers..."
+                     value={searchQuery}
+                     onChange={handleSearchChange}
+                     className="w-full pl-12 pr-4 py-3 rounded-full border border-border/50 bg-muted/30 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all duration-200"
+                     aria-label="Search applications"
+                   />
+                 </div>
+               </div>
+               <div className="hidden sm:flex items-center space-x-4">
+                 <span className="text-sm text-muted-foreground font-medium">
+                   {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                 </span>
+                 
+                 {/* <Link
+                   href="/alternate"
+                   className="flex items-center space-x-1 px-3 py-1 rounded-full bg-primary/10 hover:bg-primary/20 text-primary text-sm font-medium transition-all duration-200"
+                   aria-label="View creative design version"
+                 >
+                   <Palette className="h-4 w-4" />
+                   <span>Creative</span>
+                 </Link> */}
+                 <button
+        id="theme-toggle"
+        type="button"
+        aria-label='light dark mode toggle'
+        className="text-gray-500  rounded-lg text-sm p-2.5"
+        onClick={()=>setTheme(theme === 'light' ? 'dark' : 'light')}
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          className="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          style={{display: "none"}}
+        >
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          className="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          style={{display: "none"}}
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          ></path>
+        </svg>
+      </button>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
 
-  //     const trasy=async ()=> {
-  //       let appst= await findLatestapps("list.json")
-  //       console.log("here------>"+appst)
-  //       setapps(appst)
-  //   };
-  //   trasy()
-  //   },[]);
-    // console.log(apps)
-  // console.log(searchParams)
-  // const router=useRouter();
-  // const urlitems=useSearchParams();
-  // const [ss, setss] = React.useState("")
-  // console.log("--------->"+urlitems!.get('searchfor'))
-  // if(urlitems!.get('searchfor')==="" && ss==="")
-  {
-    // const [debounced]=useDebounce(ss,1000);
-  // if()
-  // useEffect(()=>{
-  //   // debounce(()=>{
-  //       // router.push(`/?searchfor=${debounced}`)
-  //       setss(debounced)
-  //       console.log(debounced)
-  //   // },500)
-  // },[debounced])
-  
-  }
-  
-  //  const searchParams = useSearchParams()
-  //   // const search= if typeof searchParams.get("searchfor") === 'string'?searchParams.get("searchfor")=='string':undefined;
-  //   let searchfor = searchParams.get('searchfor')!==null?searchParams.get('searchfor'):""
-  //   if(!searchfor){
-  //     searchfor=""
-  //   }
-  // console.log(ss)
-  // console.log("hello world")
-  // console.log(JSON.parse(gtr()))
-  // console.log(dwc())
-  // console.log("hello")
-  // const { dark } = useContext(ThemeContext);
+       {/* Apps Grid Section */}
+       <section className="py-6">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+           {/* Apps Grid */}
+           <div className="fade-in-up">
+             <Projects searchQuery={searchQuery}/>
+           </div>
+         </div>
+       </section>
 
-    return (
-      <>
-      {/* <ThemeProvider> */}
-      {/* <div className={dark ? 'dark' : ''}> */}
-      <div className="dark:bg-gray-900">
-      {/* <div className='flex justify-center'> */}
-        {/* <h1 className="title">Appstore</h1> */}
-        {/* <Navbar/> */}
-        {/* <Input 
-        className='m-5 w-[50%]' 
-        value={ss}
-        placeholder="Search.."
-        onChange={(event) =>
-            {
-              setss(event.target.value)
-              // || table.getColumn('reponame')?.setFilterValue(event.target.value)
-            }
-          }/> */}
-        {/* </div> */}
-          {/* <Homepage/> */}
-          {/* <Planglist/> */}
-          <Projects/>
-          {/* <OtherProjects searchfor={ss}/> */}
-          <Ct/>
-          {/* <Commits/> */}
-          {/* <Contactme/>
-          <p className="text-center flex justify-center italic">This page was made using NextJS, React and Tailwind.</p> */}
-      </div>
-      
-
-        {/* </div> */}
-      {/* </ThemeProvider> */}
-      </>
-
-    );
-  }
+       {/* Additional Content Section */}
+       <section className="bg-muted/20">
+         {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8"> */}
+           <Ct/>
+         {/* </div> */}
+       </section>
+     </div>
+   );
+ }

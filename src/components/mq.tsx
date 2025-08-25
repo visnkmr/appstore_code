@@ -13,30 +13,32 @@ import take from "lodash.take";
 export default function Mq(fromwhere:number){
     if(fromwhere===1){
         return(
-            <Marquee pauseOnHover direction="left" className="pt-5">
-                {/* <div className="text-bold pe-4 text-4xl ps-20">Recently updated:</div>
-                <div className="text-bold pe-4 text-4xl">Background apps and Process List || </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div>
-                <div className="text-bold pe-4 text-4xl">Hello|| </div> */}
-              {/* <Reviews/> */}
-              {/* <div   
-                // key={review.} 
-                className="sm:flex shadow-indigo-500/50 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-2xl col-span-1 mx-5 xl:mx-4 mb-8  p-4 w-302 ">              */}
-                {/* <div className="w-120 p-4">
-                    <img
-                    src={image}
-                    className="w-120 "/>
-                </div> */}
-    
-                {/* {take(reviews,5).map((review) => { */}
-                {reviews.map((review) => {
-                    return indireview(review);
-                })}
-                {/* </div> */}
-    
-            </Marquee>
+            <div className="block h-full w-full">
+                <style jsx>{`
+                    .marquee-container::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .marquee-container {
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
+                `}</style>
+                <Marquee
+                    pauseOnHover
+                    direction="left"
+                    className="pt-5 marquee-container overflow-hidden"
+                    style={{
+                        scrollbarWidth: 'none',
+                        msOverflowStyle: 'none'
+                    }}
+                    loop={0}
+                    speed={50}
+                >
+                    {reviews.map((review) => {
+                        return indireview(review);
+                    })}
+                </Marquee>
+            </div>
         )
     }
     else{
