@@ -5,7 +5,7 @@ description: 'Completely Open Source Chrome, Firefox extension and a companion O
 downloadurl: https://github.com/visnkmr/LogLink2Disk_chrome
 download: ''
 image: ''
-tags: [chrome,firefox,pc,gh,win,lx,mos]
+tags: [chrome,firefox,pc,gh,win,lx,mos,homepage]
 oss: t
 indev: t
 reponame: 'LogLink2Disk_chrome'

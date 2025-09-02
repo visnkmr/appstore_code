@@ -6,7 +6,7 @@ description: 'An addon for filedime.'
 excerpt: 'Open Source'
 download: ''
 image: 'fx'
-tags: [pc,gh,win,lx,mos]
+tags: [pc,gh,win,lx,mos,homepage]
 oss: t
 reponame: 'filegpt-filedime'
 ---

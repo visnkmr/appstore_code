@@ -5,7 +5,7 @@ description: 'Choose browser on a per link basis.'
 download: '5k+'
 downloadurl: https://github.com/visnkmr/perlink
 image: ''
-tags: [pc,gh,win,lx,mos]
+tags: [pc,gh,win,lx,mos,homepage]
 oss: t
 reponame: 'perlink'
 ---

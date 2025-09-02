@@ -6,7 +6,7 @@ description: 'The rust based file explorer for PC.'
 excerpt: 'Open Source'
 download: ''
 image: 'fx'
-tags: [pc,gh,win,lx,mos]
+tags: [pc,gh,win,lx,mos,homepage]
 oss: t
 reponame: 'filedimespeech-extension'
 ---

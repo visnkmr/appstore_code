@@ -17,4 +17,4 @@ oss: f
 reponame: 'netspeed'
 ---
 
-Monitor live bandwidth usage/ network speed on your device. This appstore exclusive can only be installed on SDK > 34 android devices using adb.
+Monitor live bandwidth usage/ network speed on your device. 

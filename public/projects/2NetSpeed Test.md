@@ -7,7 +7,7 @@ downloadurl: https://github.com/visnkmr/netspeed-test/releases/latest/download/a
 download: '3m+ '
 version: '2.35a14i'
 image: 'nst'
-tags: [aas,mas,gp,gh,aos]
+tags: [aas,mas,gp,gh,aos,homepage]
 screenshot: ['images/nst_screenshot_20250819_022738.webp',
     'images/nst_screenshot_20250819_023819.webp',
     'images/nst_screenshot_20250819_191203.webp',

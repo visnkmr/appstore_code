@@ -7,7 +7,7 @@ excerpt: ''
 download: '200k+ '
 image: 'nokb'
 youtube: ['cEaka8F9coc']
-tags: [exclusive,gp,gh,aos]
+tags: [exclusive,gp,gh,aos,homepage]
 screenshot: [images/nokb.webp]
 oss: f
 reponame: 'nokeyboard'

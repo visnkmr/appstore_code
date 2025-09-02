@@ -6,7 +6,7 @@ excerpt: ''
 download: '1k+'
 downloadurl: https://github.com/visnkmr/prefstore
 image: ''
-tags: [gh]
+tags: [gh,homepage]
 reponame: 'prefstore'
 oss: t
 ---
