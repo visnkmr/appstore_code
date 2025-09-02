@@ -7,7 +7,7 @@ downloadurl:
 download: ''
 version: ''
 image: 'hemo'
-tags: [aas,mas,gp,gh,aos,homepage]
+tags: [web,gh,homepage]
 screenshot: []
 oss: f
 reponame: 'hemo'
