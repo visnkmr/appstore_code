@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState, useRef } from 'react';
-import imageCompression from 'browser-image-compression';
-import JSZip from 'jszip';
 import { Upload, Download, FileImage, Archive } from 'lucide-react';
+
+export const dynamic = 'force-dynamic';
 
 export default function Page() {
   const [zipStatus, setZipStatus] = useState('');
@@ -83,11 +83,15 @@ export default function Page() {
     }
 
     const zipFile = zipInput.files[0];
-    const newZip = new JSZip();
     setZipStatus('Processing ZIP file...');
     setImagePreviews([]); // Clear previous previews
 
     try {
+      // Dynamically import JSZip and imageCompression
+      const { default: JSZip } = await import('jszip');
+      const imageCompression = (await import('browser-image-compression')).default;
+
+      const newZip = new JSZip();
       // Load the ZIP file
       const zip = await JSZip.loadAsync(zipFile);
 
@@ -217,6 +221,9 @@ export default function Page() {
     setImageStatus('Processing single image...');
 
     try {
+      // Dynamically import imageCompression
+      const imageCompression = (await import('browser-image-compression')).default;
+
       // Max compression options
       const maxCompressionOptions = {
         maxSizeMB: imageOptions.maxSizeMB,
