@@ -5,6 +5,7 @@ description: 'Text, image gen GUI.'
 excerpt: ''
 downloadurl: 
 download: ''
+browseurl: 'https://visnkmr.github.io/hemo'
 version: ''
 image: 'hemo'
 tags: [web,gh,homepage]

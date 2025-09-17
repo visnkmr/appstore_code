@@ -3,7 +3,7 @@
 import { Badge } from "../../components/ui/badge"
 import '../../styles/globals.css'
 import { asseturl } from "../../precompile/consturls";
-import { Laptop, Smartphone, Tv, Download, Star } from "lucide-react";
+import { Laptop, Smartphone, Tv, Download, Star, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 interface AppData {
@@ -15,6 +15,7 @@ interface AppData {
   version?: string;
   tags: string;
   downloadurl?: string;
+  browseurl?: string;
 }
 
 interface LlimageProps {
@@ -58,7 +59,7 @@ export default function Llimage({ app }: LlimageProps) {
        >
          <div className="flex items-start space-x-4">
            {/* App Icon */}
-           <div className="flex flex-col space-y-2 place-items-center">
+           {app.image?(<div className="flex flex-col space-y-2 place-items-center">
              <img
                src={asseturl + `/images/${app.image}.png`}
                alt={`${app.title} app icon`}
@@ -70,7 +71,7 @@ export default function Llimage({ app }: LlimageProps) {
                    {getPlatformIcon()}
                    <span>{getPlatformName()}</span>
                  </div>
-           </div>
+           </div>):null}
 
            {/* App Details */}
            <div className="flex-1 min-w-0">
@@ -114,6 +115,17 @@ export default function Llimage({ app }: LlimageProps) {
            target="_blank"
          >
            <Download className="h-6 w-6 text-green-500 group-hover/download:scale-150 transition-transform duration-200" />
+           
+         </a>
+       )}{app.browseurl && (
+         <a
+           href={app.browseurl}
+           className="absolute top-5 right-5 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all duration-200 group/download"
+           aria-label={`Open ${app.title} app`}
+           rel="noopener"
+           target="_blank"
+         >
+           <ExternalLink className="h-6 w-6 text-green-500 group-hover/download:scale-150 transition-transform duration-200" />
            
          </a>
        )}
