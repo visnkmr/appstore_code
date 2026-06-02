@@ -10,7 +10,7 @@ image: 'bapl'
 youtube: ['XyVs-uYl3do']
 manuallink: ['https://appchoose.blogspot.com/2019/07/close-background-apps-on-android-tv.html','https://appchoose.blogspot.com/2017/10/close-background-process-firetv.html']
 manualtext: ['How to close background apps on Android TV','How to close background running process on Amazon FireTV stick']
-version: '1.3A23i'
+version: ''
 tags: [trending,aas, gp, ms, gh,aos,homepage]
 screenshot: [images/bapl.webp]
 reponame: 'backgroundappslist'

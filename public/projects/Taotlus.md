@@ -6,7 +6,7 @@ excerpt: '#1 on Fire TV '
 download: '200k+ '
 downloadurl: https://github.com/visnkmr/taotlus/releases/latest/download/app-release.apk
 image: 'taotlus'
-version: '1.7A'
+version: ''
 tags: [aas,mas,gp,gh,aos]
 oss: f
 reponame: 'taotlus'

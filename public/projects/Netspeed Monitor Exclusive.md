@@ -9,7 +9,7 @@ download: '250k+ '
 manuallink: ['https://appchoose.blogspot.com/p/time-netspeed-overlay-adb-help-for.html','https://appchoose.blogspot.com/p/allowing-systemalertwindow-on-tv-using.html']
 manualtext: ['Allowing SYSTEM_ALERT_WINDOW on TV using another android device','Enabling Time Netspeed overlay using ADB Remote, Keyboard & Shell']
 image: 'nsm'
-version: '1.2A6i'
+version: ''
 tags: [exclusive,aas,mas,gp,gh,aos,mos,lx,win]
 techused: [sse,http,tauri,rust,tkinter,python,tcl,serde,chrono,prefstore,json,tiny_http,human-panic]
 screenshot: [images/nst.webp]
